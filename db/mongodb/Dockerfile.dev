@@ -1,0 +1,4 @@
+FROM mongo:6
+
+# Copy setup files into MongoDB database
+# initialization directory.
