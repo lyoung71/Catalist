@@ -1,0 +1,5 @@
+FROM mongo:6
+
+# Copy setup files into MongoDB database
+# initialization directory.
+COPY 01-create-unique-tasks.js /docker-entrypoint-initdb.d/01-create-tasks.js

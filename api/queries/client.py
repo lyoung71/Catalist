@@ -1,9 +1,9 @@
 import os
-import pymongo
+from pymongo import MongoClient
 
 
 MONGO_URL = os.environ["MONGO_URL"]
-client = pymongo.MongoClient(MONGO_URL)
+client = MongoClient(MONGO_URL)
 
 
 class Queries:
