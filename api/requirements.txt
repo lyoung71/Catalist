@@ -1,3 +1,5 @@
 fastapi[all]==0.78.0
+pydantic==1.10.0
 uvicorn[standard]==0.17.6
 pytest
+pymongo[srv]==4.2.0
