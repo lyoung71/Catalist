@@ -1,5 +1,5 @@
-fastapi[all]==0.78.0
-pydantic==1.10.0
-uvicorn[standard]==0.17.6
+fastapi[all]==0.103.1
+pydantic==2.3.0
+uvicorn[standard]==0.23.2
 pytest
 pymongo[srv]==4.2.0

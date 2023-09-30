@@ -30,4 +30,4 @@ app.add_middleware(
 # @app.get("/api/journals")
 # def journals():
 
-app.include_router(journals.router, prefix="/journals")
+app.include_router(journals.router, prefix="/api/journals")
