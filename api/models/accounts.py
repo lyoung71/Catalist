@@ -1,15 +1,19 @@
 from pydantic import BaseModel
 
 
-class Account(BaseModel):
+class AccountIn(BaseModel):
     first_name: str
     last_name: str
-    email: str
+    username: str
+    password: str
 
 
-class AccountWithId(Account):
+class AccountOut(BaseModel):
     id: str
+    first_name: str
+    last_name: str
+    username: str
 
 
-class AccountWithPassword(AccountWithId):
+class AccountOutWithPassword(AccountOut):
     hashed_password: str

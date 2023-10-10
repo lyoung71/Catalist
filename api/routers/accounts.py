@@ -1,32 +1,66 @@
-from fastapi import APIRouter, Depends, status, Response
-from models.accounts import Account, AccountWithPassword
-from models.errors import Error
-from queries.accounts import AccountQueries
-
+from fastapi import (
+    APIRouter,
+    Depends,
+    status,
+    Response,
+    HTTPException,
+    Request,
+)
+from jwtdown_fastapi.authentication import Token
+from authenticator import authenticator
+from pydantic import BaseModel
+from models.errors import DuplicateAccountError
+from queries.accounts import (
+    AccountIn,
+    AccountOut,
+    AccountOutWithPassword,
+    AccountQueries
+)
 
 router = APIRouter()
 
 
-@router.get('/', response_model=list[AccountWithPassword] | Error)
-def get_accounts(queries: AccountQueries = Depends()):
-    return queries.get_accounts()
+class AccountForm(BaseModel):
+    username: str
+    password: str
 
 
-@router.get('/{id}', response_model=AccountWithPassword | Error)
-def get_account_by_id(id: str, queries: AccountQueries = Depends()):
-    return queries.get_account_by_id(id)
+class AccountToken(Token):
+    account: AccountOut
 
 
-@router.post("/", response_model=AccountWithPassword | Error)
-def create_account(account: Account, queries: AccountQueries = Depends()):
-    return queries.create_account(account)
+class HttpError(BaseModel):
+    detail: str
 
 
-@router.put("/{id}", response_model=AccountWithPassword | Error)
-def update_account(id: str, account: AccountWithPassword, queries: AccountQueries = Depends()):
-    return queries.update_account(id, account)
+@router.get("/token", response_model=AccountToken | None)
+async def get_token(
+    request: Request,
+    account: AccountOutWithPassword = Depends(authenticator.try_get_current_account_data)
+) -> AccountToken | None:
+    if authenticator.cookie_name in request.cookies:
+        return {
+            "access_token": request.cookies[authenticator.cookie_name],
+            "type": "Bearer",
+            "account": account,
+        }
 
 
-@router.delete("/{id}", response_model=bool | Error)
-def delete_account(id: str, queries: AccountQueries = Depends()):
-    return queries.delete_account(id)
+@router.post("/api/accounts", response_model=AccountToken | HttpError)
+async def create_account(
+    info: AccountIn,
+    request: Request,
+    response: Response,
+    accounts: AccountQueries = Depends(),
+):
+    hashed_password = authenticator.hash_password(info.password)
+    try:
+        account = accounts.create(info, hashed_password)
+    except DuplicateAccountError:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Cannot create an account with those credentials",
+        )
+    form = AccountForm(username=info.username, password=info.password)
+    token = await authenticator.login(response, request, form, accounts)
+    return AccountToken(account=account, **token.dict())
