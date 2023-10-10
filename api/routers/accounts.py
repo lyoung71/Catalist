@@ -36,7 +36,8 @@ class HttpError(BaseModel):
 @router.get("/token", response_model=AccountToken | None)
 async def get_token(
     request: Request,
-    account: AccountOutWithPassword = Depends(authenticator.try_get_current_account_data)
+    account: AccountOutWithPassword = Depends(
+        authenticator.try_get_current_account_data)
 ) -> AccountToken | None:
     if authenticator.cookie_name in request.cookies:
         return {

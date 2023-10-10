@@ -33,7 +33,11 @@ class AccountQueries(Queries):
         props["id"] = str(props["_id"])
         return AccountOutWithPassword(**props)
 
-    def create(self, info: AccountIn, hashed_password: str) -> AccountOutWithPassword:
+    def create(
+        self,
+        info: AccountIn,
+            hashed_password: str) -> AccountOutWithPassword:
+
         props = info.dict()
         props["password"] = hashed_password
         try:
