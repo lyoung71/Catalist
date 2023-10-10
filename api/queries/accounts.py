@@ -1,6 +1,5 @@
 from .client import Queries
-from bson.objectid import ObjectId
-from models.errors import DuplicateAccountError, Error
+from models.errors import DuplicateAccountError
 from pymongo.errors import DuplicateKeyError
 from pydantic import BaseModel
 
