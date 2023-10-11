@@ -6,3 +6,7 @@
 9/27
 - Attempted implementing o.auth, could not get it to work
 - Started watching Material UI tutorials and focus on the front-end
+
+10/9
+- Watched mongodb/fastapi tutorials
+- did not update files as of eod yet
