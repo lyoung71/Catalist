@@ -3,21 +3,12 @@ volumes:
     external: true
 
 services:
-  fastapi:
-    environment:
-      CORS_HOST: http://localhost:3000
-    build:
-      context: api
-      dockerfile: Dockerfile.dev
-    ports:
-      - 8000:8000
-    volumes:
-      - ./api:/app
   mongo:
     image: mongo:6
     volumes:
       - ./db/mongodb:/docker-entrypoint-initdb.d
       - mongodb-data:/data/db
+    container_name: mongo
     environment:
       MONGO_INITDB_ROOT_USERNAME: admin
       MONGO_INITDB_ROOT_PASSWORD: password
@@ -34,6 +25,21 @@ services:
       WAIT_HOSTS: mongo:27017
       WAIT_BEFORE: 5
       WAIT_TIMEOUT: 60
+
+  fastapi:
+    environment:
+      CORS_HOST: http://localhost:3000
+      MONGO_URL: mongodb://admin:password@mongo/admin
+      SIGNING_KEY: 2e97f7d36479a8d7a1ada350e5073d5b4af63673e091af3eedc60d692e986fe6
+      WAIT_HOSTS: mongo:27017
+    build:
+      context: api
+      dockerfile: Dockerfile.dev
+    ports:
+      - 8000:8000
+    volumes:
+      - ./api:/app
+  
   ghi:
     image: node:lts-bullseye
     command: /bin/bash run.sh
