@@ -1,18 +1,8 @@
 volumes:
   mongodb-data:
     external: true
-services:
-  # fastapi:
-  #   environment:
-  #     CORS_HOST: http://localhost:3000
-  #   build:
-  #     context: api
-  #     dockerfile: Dockerfile.dev
-  #   ports:
-  #     - 8000:8000
-  #   volumes:
-  #     - ./api:/app
 
+services:
   ghi:
     image: node:lts-bullseye
     command: /bin/bash run.sh

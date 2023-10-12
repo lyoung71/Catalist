@@ -1,5 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from routers import accounts
+from authenticator import authenticator
 import os
 from routers import journals
 
@@ -27,7 +29,7 @@ app.add_middleware(
 #     }
 
 
-# @app.get("/api/journals")
-# def journals():
-
 app.include_router(journals.router, prefix="/api/journals")
+
+app.include_router(accounts.router, prefix="/accounts")
+app.include_router(authenticator.router)
