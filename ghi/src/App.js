@@ -6,6 +6,7 @@ function App() {
 
   return (
     <AuthProvider baseUrl='http://localhost:3000'>
+      Pineapple
       <Outlet />
     </AuthProvider>);
 }
