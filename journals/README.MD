@@ -21,3 +21,6 @@ Update\*\* 4:52 am - I changed the fast api and pydantic version again and now I
 
 10/1/23 -
 I have resolved the error and I do not exactly know what I did, but I do remember that I deleted all the data in the mongodb express site and then tried the post requests again for the journals and then I did a get request and it stored all the info in the database and was showing all the journals in the GET endpoint. Not sure what I did, I think also deleted the collection and made it again. Even though models were good for the BaseModels, I changed the type to all str already but I guess FastAPI just did not catch up or was working too slow or maybe when I deleted the collection before had the date field for the journal_date in my journals.py models file, maybe it was still thinking the type was a date or int type attribute. Note\* Just make a new collection or database.
+
+10/9/23 -
+I really did nothing but watch coding videos
