@@ -5,5 +5,5 @@ class Error(BaseModel):
     message: str
 
 
-class DuplicateAccountError(ValueError):
-    pass
+# class DuplicateAccountError(ValueError):
+#     pass
