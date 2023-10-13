@@ -10,3 +10,6 @@
 10/9
 - Watched mongodb/fastapi tutorials
 - did not update files as of eod yet
+
+10/13
+- Added journalform.js (WIP)
