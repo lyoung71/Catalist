@@ -2,9 +2,10 @@ from pydantic import BaseModel
 
 
 class Journal(BaseModel):
+    mood: str
     desc: str
-    emotion: str
+    journal_date: str
 
 
 class JournalWithId(Journal):
-    id: int
+    id: str
