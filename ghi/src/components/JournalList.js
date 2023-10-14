@@ -31,15 +31,8 @@ function JournalList() {
           {journals.map((journal) => {
             return (
               <tr key={journal.id}>
-                <td>{sales.salesperson.employee_id}</td>
-                <td>
-                  {sales.salesperson.first_name} {sales.salesperson.last_name}
-                </td>
-                <td>
-                  {sales.customer.first_name} {sales.customer.last_name}
-                </td>
-                <td>{sales.automobile.vin}</td>
-                <td>${sales.price}</td>
+                <td>{journal.date}</td>
+                <td>{journal.mood}</td>
               </tr>
             );
           })}
@@ -48,3 +41,5 @@ function JournalList() {
     </>
   );
 }
+
+export default JournalList;
