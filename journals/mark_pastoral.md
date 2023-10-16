@@ -13,3 +13,8 @@
 
 10/13
 - Added journalform.js (WIP)
+
+10/16
+- Working on journalform.js
+- Added a test.js page
+- group installed tailwind.css
