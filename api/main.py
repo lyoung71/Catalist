@@ -1,9 +1,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from routers import accounts
+from routers import journals
 from authenticator import authenticator
 import os
-from routers import journals
 
 app = FastAPI()
 

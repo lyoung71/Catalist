@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom";
 const SignupForm = () => {
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
-  const [first_name, setFirstName] = useState();
-  const [last_name, setLastName] = useState();
+  const [firstName, setFirstName] = useState();
+  const [lastName, setLastName] = useState();
   const { register } = useToken();
   const navigate = useNavigate();
 
@@ -14,13 +14,14 @@ const SignupForm = () => {
     e.preventDefault();
 
     const userData = {
-      first_name: first_name,
-      last_name: last_name,
+      first_name: firstName,
+      last_name: lastName,
       username: username,
       password: password,
     };
 
     await register(userData, "http://localhost:8000/api/accounts");
+    e.target.reset();
     // navigate("/info");
   };
 
