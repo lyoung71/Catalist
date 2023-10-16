@@ -1,29 +1,27 @@
 import useToken from "@galvanize-inc/jwtdown-for-react";
 import { useState } from "react";
-import { Form, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-const SignupForm = () => {
+function SignupForm() {
     const [username, setUsername] = useState();
     const [password, setPassword] = useState();
     const [firstName, setFirstName] = useState();
     const [lastName, setLastName] = useState();
-    const [email, setEmail] = useState();
     const { register } = useToken();
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         const userData = {
+            first_name: firstName,
+            last_name: lastName,
             username: username,
             password: password,
-            firstName: firstName,
-            lastName: lastName,
-            email: email,
-            disabled: false
-        }
+        };
 
-        await register(userData, "http://localhost:3000/user/create")
-        navigate("/info")
+        register(userData, "http://localhost:8000/api/accounts");
+        e.target.reset();
+        // navigate("/");
     }
 
     return (
@@ -36,8 +34,6 @@ const SignupForm = () => {
             <input name="firstName" onChange={(e) => setFirstName(e.target.value)}></input>
             <label htmlFor="lastName">Last Name: </label>
             <input name="lastName" onChange={(e) => setLastName(e.target.value)}></input>
-            <label htmlFor="email">Email: </label>
-            <input name="email" type="email" onChange={(e) => setEmail(e.target.value)}></input>
             <button type="submit">Signup</button>
         </form>
     )

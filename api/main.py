@@ -29,5 +29,5 @@ app.add_middleware(
 #         }
 #     }
 
-app.include_router(accounts.router, prefix="/accounts")
+app.include_router(accounts.router)
 app.include_router(authenticator.router)
