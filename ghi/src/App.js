@@ -1,6 +1,7 @@
 // import { Outlet, RouterProvider } from "react-router-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
+import "./fonts.css";
 import { AuthProvider } from "@galvanize-inc/jwtdown-for-react";
 import LoginForm from "./components/LoginForm";
 import SignupForm from "./components/SignUpForm";

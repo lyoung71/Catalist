@@ -20,8 +20,8 @@ const SignupForm = () => {
       password: password,
     };
 
-    await register(userData, "http://localhost:8000/accounts/api/accounts");
-    navigate("/info");
+    await register(userData, "http://localhost:8000/api/accounts");
+    // navigate("/info");
   };
 
   return (

@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "Pokemon";
+  src: local("Pokemon"), url(./fonts/Pokemon.woff) format("woff");
+}
+
+.Pokemon {
+  font-family: Pokemon;
+}
