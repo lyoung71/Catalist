@@ -24,3 +24,10 @@ I have resolved the error and I do not exactly know what I did, but I do remembe
 
 10/9/23 -
 I really did nothing but watch coding videos
+
+10/11/23-
+I started the JournalList page and I am trying to make it look like my sales list page from project beta so that it can show the journals in the table by the date and mood.
+
+10/13/23 -
+Its Friday the 13th in October yet again, Camp Crystal Lake becomes one of the most places on Earth during this time.
+I got the signup and login to show with the use of BrowserRouter instead of Outlet and the Router.js file that I deleted and the index.js is an important file as well when it comes to rendering your localhost 3000, apparently it already has <App/> in it so we don't have to put that in the routes for the App.js file. I kept getting an error says "Browser Router is used more than once and you must use it once only in your entire application" I was confused for a while because I did not see any extra <BrowserRouter> tags or bugs of that sort. So I commented out the {/_ <Route path="/" element={<App />} /> _/} and then magically appeared on the screen and the error went away. Now I cannot login on react page and console says "Failed to get Token". The console also keeps showing this SyntaxError: Unexpected token '<', "<!DOCTYPE ... is not valid JSON. It may or may not have to do with the fetch calls, its thinks its HTML??

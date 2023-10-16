@@ -6,6 +6,7 @@ import LoginForm from "./components/LoginForm";
 import SignupForm from "./components/SignUpForm";
 import JournalList from "./components/JournalList";
 import NavBar from "./components/NavBar";
+// import UserInfo from "./components/UserInfo";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             {/* <Route path="/" element={<App />} /> */}
             <Route path="login" element={<LoginForm />} />
             <Route path="signup" element={<SignupForm />} />
+            {/* <Route path="userinfo" element={<UserInfo />} /> */}
             <Route path="journals" element={<JournalList />} />
           </Routes>
         </div>

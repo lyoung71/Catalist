@@ -1,12 +1,12 @@
 import useToken from "@galvanize-inc/jwtdown-for-react";
 import { useState } from "react";
-import { Form, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const SignupForm = () => {
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
-  const [firstName, setFirstName] = useState();
-  const [lastName, setLastName] = useState();
+  const [first_name, setFirstName] = useState();
+  const [last_name, setLastName] = useState();
   const { register } = useToken();
   const navigate = useNavigate();
 
@@ -14,8 +14,8 @@ const SignupForm = () => {
     e.preventDefault();
 
     const userData = {
-      firstName: firstName,
-      lastName: lastName,
+      first_name: first_name,
+      last_name: last_name,
       username: username,
       password: password,
     };
@@ -47,7 +47,6 @@ const SignupForm = () => {
         type="password"
         onChange={(e) => setPassword(e.target.value)}
       ></input>
-
       <button type="submit">Signup</button>
     </form>
   );

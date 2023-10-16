@@ -6,12 +6,28 @@ const NavBar = () => {
     <>
       <nav>
         <div>
-          <NavLink to="/login" activeStyle>
-            Login
-          </NavLink>
-          <NavLink to="/signup" activeStyle>
-            Sign Up
-          </NavLink>
+          <ul>
+            <li>
+              <NavLink to="/login" activeStyle>
+                Login
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/signup" activeStyle>
+                Sign Up
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/journals" activeStyle>
+                Journals
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/userinfo" activeStyle>
+                My Account
+              </NavLink>
+            </li>
+          </ul>
         </div>
       </nav>
     </>
