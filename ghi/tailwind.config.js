@@ -1,9 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./src/**/*.{js,jsx}",
+  ],
   theme: {
-    extend: {},
+    colors: {
+      'PokeBlue': '#0245a3',
+      'PokeYellow': '#fad933'
+    },
   },
   plugins: [],
-};
-
+}
