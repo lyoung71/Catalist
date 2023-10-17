@@ -12,31 +12,42 @@ function Nav() {
         }
     };
 
+    if (token) {
+        return (
+            <>
+            <nav>
+                <div>
+                <ul>
+                    <li>
+                        <button onClick={handleLogout}>Log Out</button>
+                    </li>
+                </ul>
+                </div>
+            </nav>
+            </>
+        );
+    }
     return (
         <>
-        <nav>
+            <nav>
             <div>
-            <ul>
+                <ul>
                 <li>
-                <Link to="/login">
+                    <Link to="/login">
                     <button>Log In</button>
-                </Link>
+                    </Link>
                 </li>
                 <li>
-                <Link to="/signup">
+                    <Link to="/signup">
                     <button>Get Started</button>
-                </Link>
+                    </Link>
                 </li>
-                {token ? (
-                <li>
-                    <button onClick={handleLogout}>Log Out</button>
-                </li>
-                ) : null}
-            </ul>
+                </ul>
             </div>
-        </nav>
+            </nav>
         </>
     );
+
 }
 
 export default Nav;

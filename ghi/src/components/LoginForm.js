@@ -1,5 +1,5 @@
 import useToken from "@galvanize-inc/jwtdown-for-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
