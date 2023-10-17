@@ -14,11 +14,11 @@ function Nav1() {
                                 </a>
                             </div>
                         </div>
-                        <div className="md:flex items-center space-x-20 text-PokeBlue">
-                            <a href="/" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-4 py-2">Home</a>
-                            <a href="/" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-4 py-2">Services</a>
-                            <a href="/" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-4 py-2">About</a>
-                            <a href="/" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-4 py-2">Contact</a>
+                        <div className="md:flex items-center space-x-20">
+                            <a href="/" className="bg-PokeBlue text-White hover:bg-opacity-80 rounded px-4 py-2">Home</a>
+                            <a href="/" className="bg-PokeBlue text-White hover:bg-opacity-80 rounded px-4 py-2">Services</a>
+                            <a href="/" className="bg-PokeBlue text-White hover:bg-opacity-80 rounded px-4 py-2">About</a>
+                            <a href="/" className="bg-PokeBlue text-White hover:bg-opacity-80 rounded px-4 py-2">Contact</a>
                         </div>
                         <div className="md:flex items-center space-x-4 py-5 px-6">
                             <a href="/signup" className="text-PokeYellow bg-PokeBlue hover:bg-opacity-80 rounded px-4 py-2">Sign Up</a>
