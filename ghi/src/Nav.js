@@ -23,6 +23,11 @@ function Nav() {
               </Link>
             </li>
             <li>
+              <Link to="/journals">
+                <button>Journals</button>
+              </Link>
+            </li>
+            <li>
               <Link to="/signup">
                 <button>Get Started</button>
               </Link>
