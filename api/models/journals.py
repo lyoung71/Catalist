@@ -1,10 +1,11 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
+from datetime import date
 
 
 class Journal(BaseModel):
     mood: str
     desc: str
-    journal_date: str
+    created: date = Field(default_factory=date.today)
 
 
 class JournalWithId(Journal):
