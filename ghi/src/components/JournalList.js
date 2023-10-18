@@ -1,9 +1,9 @@
-import useToken from "@galvanize-inc/jwtdown-for-react";
+// import useToken from "@galvanize-inc/jwtdown-for-react";
 import { useState, useEffect } from "react";
 
 function JournalList() {
   const [journals, setJournals] = useState([]);
-  const { token } = useToken();
+  // const { token } = useToken();
 
   const getData = async () => {
     const response = await fetch("http://localhost:8000/api/journals/");

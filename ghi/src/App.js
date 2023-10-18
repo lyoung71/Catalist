@@ -6,7 +6,7 @@ import { AuthProvider } from "@galvanize-inc/jwtdown-for-react";
 import LoginForm from "./components/LoginForm";
 import SignupForm from "./components/SignUpForm";
 import JournalList from "./components/JournalList";
-import Nav from "./Nav";
+import Nav from "./components/Nav";
 // import UserInfo from "./components/UserInfo";
 
 function App() {

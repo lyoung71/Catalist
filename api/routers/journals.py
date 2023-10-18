@@ -2,14 +2,18 @@ from fastapi import APIRouter, Depends
 from queries.journals import JournalQueries
 from models.journals import Journal, JournalWithId
 from models.errors import Error
+from authenticator import authenticator
 
 
 router = APIRouter()
 
 
 @router.get("/", response_model=list[JournalWithId] | Error)
-def get_journals(queries: JournalQueries = Depends()):
-    return queries.get_journals()
+def get_journals(
+    queries: JournalQueries = Depends(),
+    account_data: dict = Depends(authenticator.get_current_account_data),
+):
+    return queries.get_journals(account_data["id"])
 
 
 @router.get("/{id}", response_model=JournalWithId | Error)
@@ -18,8 +22,12 @@ def get_journal_by_id(id: str, queries: JournalQueries = Depends()):
 
 
 @router.post("/", response_model=JournalWithId | Error)
-def create_journal(journal: Journal, queries: JournalQueries = Depends()):
-    return queries.create_journal(journal)
+def create_journal(
+    journal: Journal,
+    queries: JournalQueries = Depends(),
+    account_data: dict = Depends(authenticator.get_current_account_data),
+):
+    return queries.create_journal(journal, account_data["id"])
 
 
 @router.put("/{id}", response_model=JournalWithId | Error)
