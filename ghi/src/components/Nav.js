@@ -41,10 +41,10 @@ function Nav() {
                   Home
                 </a>
                 <a
-                  href="/"
+                  href="/journals"
                   className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-4 py-2"
                 >
-                  Services
+                  Journals
                 </a>
                 <a
                   href="/"
