@@ -29,13 +29,13 @@ function Nav() {
                                 </div>
                             </div>
                             <div className="md:flex items-center space-x-20 text-PokeBlue">
-                                <a href="/" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-4 py-2">Home</a>
-                                <a href="/" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-4 py-2">Services</a>
-                                <a href="/" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-4 py-2">About</a>
+                                <Link to="/" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-4 py-2">Home</Link>
+                                <Link to="/" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-4 py-2">Journals</Link>
+                                <Link to="calendar" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-4 py-2">Calendar</Link>
                                 <a href="/" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-4 py-2">Contact</a>
                             </div>
                             <div className="md:flex items-center space-x-4 py-5 px-6">
-                                <button onClick={handleLogout}> Log out </button>
+                                <button onClick={handleLogout} className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-4 py-2"> Log out </button>
                             </div>
                         </div>
                     </div>

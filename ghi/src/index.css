@@ -313,3 +313,20 @@ h1 {
     background-color: #ff4081;
     color: white;
 }
+
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 2rem;
+}
+
+form label {
+    margin: 5px
+}
+
+form input {
+    margin: 5px
+}

@@ -17,7 +17,8 @@ const CalendarComp = () => {
         setEventName(event.target.value);
     };
 
-    const Create_Event_Fun = () => {
+    const Create_Event_Fun = async (event) => {
+        event.preventDefault();
         if (selectedDate && eventName) {
         const newEvent = {
             id: new Date().getTime(),

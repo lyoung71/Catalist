@@ -19,22 +19,22 @@ const LoginForm = () => {
         navigate("/")
     }
     return (
-        <form>
-            <label>Username:
+        <form className="form-container">
+            <label className="form-label">Username:
                 <input
                     type="text"
                     name="username"
                     onChange={handleChange}
                 />
             </label>
-            <label>Password:
-                <input
+            <label className="form-label">Password:
+                <input 
                     type="password"
                     name="password"
                     onChange={handleChange}
                 />
             </label>
-            <button type="button" onClick={handleSubmit}>Login</button>
+            <button type="button" onClick={handleSubmit} className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-4 py-2">Login</button>
         </form>
     )
 }
