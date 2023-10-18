@@ -1,5 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from routers import accounts
+from routers import journals
+from authenticator import authenticator
 import os
 
 app = FastAPI()
@@ -13,19 +16,20 @@ app.add_middleware(
 )
 
 
-@app.get("/api/launch-details")
-def launch_details():
-    return {
-        "launch_details": {
-            "module": 3,
-            "week": 17,
-            "day": 5,
-            "hour": 19,
-            "min": "00",
-        }
-    }
+# @app.get("/api/launch-details")
+# def launch_details():
+#     return {
+#         "launch_details": {
+#             "module": 3,
+#             "week": 17,
+#             "day": 5,
+#             "hour": 19,
+#             "min": "00",
+#         }
+#     }
 
 
-@app.get("/api/journals")
-def get_journal():
-    return {"placeholder": "journal"}
+app.include_router(journals.router, prefix="/api/journals")
+
+app.include_router(accounts.router)
+app.include_router(authenticator.router)

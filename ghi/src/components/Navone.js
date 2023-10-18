@@ -1,28 +1,28 @@
-import React from "react";
+import logo from "../content/logo.png"
 
 function Nav1() {
-
     return (
         <>
-            <nav class="bg-white shadow-lg">
-                <div class="max-w-6xl mx-auto px-4">
-                    <div class="flex justify-between">
-                        <div class="flex space-x-7">
-                            <div>
-                                <a href="#" class="flex items-center py-4 px-2">
-                                    <span class="font-extrabold text-gray-900 text-xl">Catalist</span>
+            <nav>
+                <div className="px-14">
+                    <div className="flex justify-between Pokemon tracking-widest">
+                        <div className="flex px-6">
+                            <div className="items-center">
+                                <a href="/" className="flex py-4 px-2">
+                                    <img src={logo} alt="Brand Logo" className="h-10 w-10"></img>
+                                    <span className="ml-3  text-PokeYellow bg-PokeBlue px-4 py-2 rounded hover:bg-opacity-80">Catalist</span>
                                 </a>
                             </div>
-                            <div class="hidden md:flex items-center space-x-1">
-                                <a href="#" class="py-4 px-2 text-gray-700 hover:text-gray-800">Home</a>
-                                <a href="#" class="py-4 px-2 text-gray-700 hover:text-gray-800">Services</a>
-                                <a href="#" class="py-4 px-2 text-gray-700 hover:text-gray-800">About</a>
-                                <a href="#" class="py-4 px-2 text-gray-700 hover:text-gray-800">Contact</a>
-                            </div>
                         </div>
-                        <div class="hidden md:flex items-center space-x-3">
-                            <a href="#" class="py-2 px-2 font-medium text-white bg-green-500 rounded hover:bg-green-400">Sign Up</a>
-                            <a href="#" class="py-2 px-2 font-medium text-gray-700 rounded hover:bg-green-200">Log in</a>
+                        <div className="md:flex items-center space-x-20 text-PokeBlue">
+                            <a href="/" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-4 py-2">Home</a>
+                            <a href="/" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-4 py-2">Services</a>
+                            <a href="/" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-4 py-2">About</a>
+                            <a href="/" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-4 py-2">Contact</a>
+                        </div>
+                        <div className="md:flex items-center space-x-4 py-5 px-6">
+                            <a href="/signup" className="text-PokeYellow bg-PokeBlue hover:bg-opacity-80 rounded px-4 py-2">Sign Up</a>
+                            <a href="/login" className="text-PokeBlue bg-PokeYellow hover:bg-opacity-70 rounded px-4 py-2">Log in</a>
                         </div>
                     </div>
                 </div>

@@ -18,3 +18,6 @@
 - Working on journalform.js
 - Added a test.js page
 - group installed tailwind.css
+
+10/17
+- stuck on actually creating a post request for a journal in journal form

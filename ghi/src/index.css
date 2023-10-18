@@ -4,4 +4,67 @@
 
 body {
   background-color: whitesmoke;
+  height: 100%
+}
+
+.div {
+  background: aqua;
+}
+
+.carousel-container {
+  background: #f1f1f1;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.carousel-item {
+  height: 20rem;
+  min-width: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+#journal {
+  width: 50%;
+  margin: auto;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+#journal-title {
+  width: auto;
+  margin: auto;
+  color: grey;
+}
+
+#textarea {
+  display: block;
+  width: 100%;
+  overflow: scroll;
+  resize: both;
+  min-height: 40px;
+  line-height: 20px;
+  border: 2px solid #bdc7d9;
+  padding: 2px 6px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#image {
+  height: 2440px;
+  background-image: url("https://archives.bulbagarden.net/media/upload/8/83/Hoenn_Route_119_E.png");
+  filter: blur(3px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
