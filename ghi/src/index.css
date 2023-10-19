@@ -2,13 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 body {
   background-color: whitesmoke;
   height: 100%
-}
-
-.div {
-  background: aqua;
 }
 
 .carousel-container {
@@ -29,6 +27,7 @@ body {
 }
 
 #journal {
+  /* font-family: url('./fonts/rainyhearts.ttf'); */
   width: 50%;
   margin: auto;
   position: absolute;
@@ -41,13 +40,13 @@ body {
   text-align: center;
 }
 
-#journal-title {
+.input {
   width: auto;
   margin: auto;
-  color: grey;
 }
 
 #textarea {
+  /* font-family: url('./fonts/rainyhearts.ttf'); */
   display: block;
   width: 100%;
   overflow: scroll;
@@ -61,9 +60,9 @@ body {
 }
 
 #image {
-  height: 2440px;
-  background-image: url("https://archives.bulbagarden.net/media/upload/8/83/Hoenn_Route_119_E.png");
-  filter: blur(3px);
+  height: 700px;
+  background-image: url("./content/route119.png");
+  filter: blur(5px);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
