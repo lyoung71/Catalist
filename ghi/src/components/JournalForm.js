@@ -1,6 +1,7 @@
 import { useState } from "react";
 import '../mark.css';
 import Carousel from "./Carousel";
+import RandomPokemon from "./RandomPokemon";
 import useToken from "@galvanize-inc/jwtdown-for-react";
 
 export default function JournalForm() {
@@ -59,7 +60,7 @@ export default function JournalForm() {
         //         <input onChange={(e) => handleSubmit(e)} id="mood" value={journal.desc} placeholder="mood" type="text"></input>
         //     </form>
         // </>
-        <>
+        <div id="entirething">
             <div id="image"></div>
             <div id="journal">
                 <form onSubmit={handleSubmit}>
@@ -80,11 +81,12 @@ export default function JournalForm() {
                         </textarea>
 
                     </div>
-                    <button id="submit-button" className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+                    <button id="submit-button" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
                         Submit
                     </button>
                 </form >
+                <div id="RandomPokemon">{RandomPokemon()}</div>
             </div >
-        </>
+        </div>
     )
 }

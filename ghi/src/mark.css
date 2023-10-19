@@ -16,6 +16,11 @@
   transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
+/* #entirething {
+    display: inline-block;
+    vertical-align:auto;
+} */
+
 #journal {
   /* font-family: url('./fonts/rainyhearts.ttf'); */
   width: 50%;
@@ -23,16 +28,19 @@
   position: absolute;
   top: 60%;
   left: 50%;
+  right: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
   width: 80%;
   padding: 20px;
-  text-align: center;
+  opacity: 90%;
 }
 
 .input {
   width: auto;
   margin: auto;
+  margin-right: 5px;
+  border-radius: 5px;
 }
 
 #textarea {
@@ -47,13 +55,26 @@
   padding: 2px 6px;
   margin-top: 5px;
   margin-bottom: 5px;
+  border-radius: 10px;
 }
 
 #image {
-  height: 700px;
+  height: 1000px;
   background-image: url("./content/route119.png");
   filter: blur(5px);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+#RandomPokemon {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 15px 50px 30px;
+}
+
+#pokeDiv {
+    vertical-align: middle;
 }
