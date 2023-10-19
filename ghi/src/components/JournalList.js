@@ -1,9 +1,8 @@
-// import useToken from "@galvanize-inc/jwtdown-for-react";
 import { useState, useEffect } from "react";
+import "./index.css";
 
 function JournalList() {
   const [journals, setJournals] = useState([]);
-  // const { token } = useToken();
 
   const getData = async () => {
     const fetchConfig = {
@@ -26,7 +25,7 @@ function JournalList() {
 
   return (
     <>
-      <table className="table table-striped">
+      <table className="table-auto">
         <thead>
           <tr>
             <th>Mood</th>
