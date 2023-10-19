@@ -6,20 +6,19 @@ import LandingPage from "./components/LandingPage";
 import LoginForm from "./components/LoginForm";
 import SignupForm from "./components/SignUpForm";
 import JournalList from "./components/JournalList";
-import CalendarComp from "./components/CalendarComp";
-
+// import CalendarComp from "./components/CalendarComp";
 
 function App() {
   return (
     <AuthProvider baseUrl="http://localhost:8000">
       <BrowserRouter>
-      <Nav/>
+        <Nav />
         <Routes>
           <Route path="/" element={<LandingPage />} />
-          <Route path="login" element={<LoginForm />}/>
-          <Route path="signup" element={<SignupForm />}/>
+          <Route path="login" element={<LoginForm />} />
+          <Route path="signup" element={<SignupForm />} />
           <Route path="journals" element={<JournalList />} />
-          <Route path="calendar" element={<CalendarComp />} />
+          {/* <Route path="calendar" element={<CalendarComp />} /> */}
         </Routes>
       </BrowserRouter>
     </AuthProvider>
