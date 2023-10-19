@@ -3,21 +3,6 @@ volumes:
     external: true
 
 services:
-  ghi:
-    image: node:lts-bullseye
-    command: /bin/bash run.sh
-    working_dir: /app
-    volumes:
-      - ./ghi:/app
-    ports:
-      - "3000:3000"
-    environment:
-      HOST_OS: ${OS}
-      NODE_ENV: development
-      HOST: "0.0.0.0"
-      PUBLIC_URL: http://localhost:3000
-      REACT_APP_API_HOST: ${REACT_APP_API_HOST}
-
   mongo:
     image: mongo:6
     volumes:
@@ -39,7 +24,8 @@ services:
       WAIT_HOSTS: mongo:27017
       WAIT_BEFORE: 5
       WAIT_TIMEOUT: 60
-  api:
+
+  fastapi:
     build:
       context: api
       dockerfile: Dockerfile.dev
@@ -53,3 +39,18 @@ services:
       WAIT_HOSTS: mongo:27017
       WAIT_BEFORE: 5
       WAIT_TIMEOUT: 60
+
+  ghi:
+    image: node:lts-bullseye
+    command: /bin/bash run.sh
+    working_dir: /app
+    volumes:
+      - ./ghi:/app
+    ports:
+      - "3000:3000"
+    environment:
+      HOST_OS: ${OS}
+      NODE_ENV: development
+      HOST: "0.0.0.0"
+      PUBLIC_URL: http://localhost:3000
+      REACT_APP_API_HOST: ${REACT_APP_API_HOST}
