@@ -9,7 +9,6 @@ import JournalList from "./components/JournalList";
 import Nav from "./components/Nav";
 import LandingPage from "./components/LandingPage";
 
-
 function App() {
   return (
     <AuthProvider baseUrl="http://localhost:8000">

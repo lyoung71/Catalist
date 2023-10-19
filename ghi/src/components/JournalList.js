@@ -6,7 +6,13 @@ function JournalList() {
   // const { token } = useToken();
 
   const getData = async () => {
-    const response = await fetch("http://localhost:8000/api/journals/");
+    const fetchConfig = {
+      credentials: "include",
+    };
+    const response = await fetch(
+      "http://localhost:8000/api/journals/",
+      fetchConfig
+    );
 
     if (response.ok) {
       const data = await response.json();
