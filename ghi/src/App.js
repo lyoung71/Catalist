@@ -1,6 +1,5 @@
 import { AuthProvider } from "@galvanize-inc/jwtdown-for-react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./App.css";
 import "./fonts.css";
 import Nav from "./components/Nav";
 import LandingPage from "./components/LandingPage";

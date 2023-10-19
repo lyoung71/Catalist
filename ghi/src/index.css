@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f7fa;
@@ -333,7 +329,4 @@ form label {
 
 form input {
     margin: 5px
-
-body {
-  background-color: whitesmoke;
 }
