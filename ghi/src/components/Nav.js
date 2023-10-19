@@ -3,12 +3,15 @@ import logo from "../content/logo.png"
 import React from "react";
 import { Link } from "react-router-dom";
 import useToken from "@galvanize-inc/jwtdown-for-react";
+import { useNavigate } from "react-router-dom";
 
 function Nav() {
     const { token, logout } = useToken();
+    const navigate = useNavigate();
     const handleLogout = async () => {
         try {
         await logout();
+        navigate("/");
         } catch (error) {
         console.error("Logout Unsuccessful:", error);
         }

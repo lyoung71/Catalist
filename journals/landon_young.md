@@ -12,3 +12,6 @@ Managed to get backend authentication pushed to main branch and begin working on
 
 10/17/2023 and 10/18/2023
 Worked with Emre to make navigation bar and add conditional rendering to change appearance of navbar based on login status of user. Then configured LoginForm and SignUpForm to redirect to the homepage upon logging in or signing up. Pulled tailwind and other styling files into my branch. Going to converse with teammates to figure out what I should work on next.
+
+10/19/2023
+Worked on calendar but we ultimately decided that it would be better left as a stretch goal. Added some styling to the log in and signup forms. Currently experiencing problems with the navbar not rerendering automatically upon logging in. Will try some more tomorrow.
