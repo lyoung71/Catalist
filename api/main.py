@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from routers import accounts
+from routers import journals
 from authenticator import authenticator
 import os
 
@@ -23,9 +24,11 @@ app.add_middleware(
 #             "week": 17,
 #             "day": 5,
 #             "hour": 19,
-#             "min": "00"
+#             "min": "00",
 #         }
 #     }
 
+
+app.include_router(journals.router, prefix="/api/journals")
 app.include_router(accounts.router)
 app.include_router(authenticator.router)

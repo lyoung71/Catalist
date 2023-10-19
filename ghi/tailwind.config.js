@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     colors: {
       'PokeBlue': '#0245a3',
-      'PokeYellow': '#fad933'
+      'PokeYellow': '#fad933',
+      'White': '#FFFFFF',
     },
   },
   plugins: [],

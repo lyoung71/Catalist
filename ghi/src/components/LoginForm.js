@@ -3,15 +3,15 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
-    const [inputs, setInputs] = useState({});
+  const [inputs, setInputs] = useState({});
 
-    const handleChange = (event) => {
-        const name = event.target.name;
-        const value = event.target.value;
-        setInputs(values => ({ ...values, [name]: value}))
-    }
-    const { login } = useToken();
-    const navigate = useNavigate();
+  const handleChange = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setInputs((values) => ({ ...values, [name]: value }));
+  };
+  const { login } = useToken();
+  const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -28,7 +28,7 @@ const LoginForm = () => {
                 />
             </label>
             <label className="form-label">Password:
-                <input 
+                <input
                     type="password"
                     name="password"
                     onChange={handleChange}
