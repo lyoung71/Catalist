@@ -1,7 +1,6 @@
 volumes:
   mongodb-data:
     external: true
-
 services:
   mongo:
     image: mongo:6

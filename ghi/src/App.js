@@ -6,7 +6,13 @@ import LandingPage from "./components/LandingPage";
 import LoginForm from "./components/LoginForm";
 import SignupForm from "./components/SignUpForm";
 import JournalList from "./components/JournalList";
+<<<<<<< HEAD
 // import CalendarComp from "./components/CalendarComp";
+=======
+import CalendarComp from "./components/CalendarComp";
+import JournalForm from "./components/JournalForm";
+
+>>>>>>> 9002b2cb70dccd162df8d6d89fef2b790c3f9e85
 
 function App() {
   return (
@@ -18,7 +24,12 @@ function App() {
           <Route path="login" element={<LoginForm />} />
           <Route path="signup" element={<SignupForm />} />
           <Route path="journals" element={<JournalList />} />
+<<<<<<< HEAD
           {/* <Route path="calendar" element={<CalendarComp />} /> */}
+=======
+          <Route path="calendar" element={<CalendarComp />} />
+          <Route path="journalform" element={<JournalForm />} />
+>>>>>>> 9002b2cb70dccd162df8d6d89fef2b790c3f9e85
         </Routes>
       </BrowserRouter>
     </AuthProvider>
