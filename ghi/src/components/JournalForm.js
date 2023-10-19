@@ -1,5 +1,5 @@
 import { useState } from "react";
-import '../index.css';
+import '../mark.css';
 import Carousel from "./Carousel";
 import useToken from "@galvanize-inc/jwtdown-for-react";
 
