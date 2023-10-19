@@ -22,6 +22,9 @@ function LandingPage() {
       getData();
     }
   }, [token]);
+  {
+    /* {token && accounts ? <h1>Hello, {accounts?.account.first_name} </h1> : <h1>Hello World</h1>} */
+  }
 
   return (
     <>

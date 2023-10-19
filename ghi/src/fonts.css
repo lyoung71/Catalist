@@ -1,10 +1,19 @@
 @font-face {
-  font-family: "Pokemon";
-  src: local("Pokemon"), url(./fonts/Pokemon.woff) format("woff");
+    font-family: 'Pokemon';
+    src: local('Pokemon'), url(./fonts/Pokemon.woff) format('woff');
 }
 
 .Pokemon {
-  font-family: Pokemon;
+    font-family: Pokemon;
+}
+
+@font-face {
+    font-family: 'PokemonDigital';
+    src: local('PokemonDigital'), url(./fonts/PokemonDigital.woff) format('woff');
+}
+
+.PokemonDigital {
+    font-family: PokemonDigital;
 }
 
 @font-face {
