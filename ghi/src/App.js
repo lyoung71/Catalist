@@ -1,11 +1,11 @@
 import { AuthProvider } from "@galvanize-inc/jwtdown-for-react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import "./fonts.css";
-import SignupForm from './components/SignUpForm';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Nav from "./components/Nav";
-import LoginForm from "./components/LoginForm";
 import LandingPage from "./components/LandingPage";
+import LoginForm from "./components/LoginForm";
+import SignupForm from "./components/SignUpForm";
 import JournalList from "./components/JournalList";
 import CalendarComp from "./components/CalendarComp";
 
