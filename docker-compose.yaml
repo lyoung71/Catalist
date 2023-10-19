@@ -1,37 +1,10 @@
 volumes:
   mongodb-data:
     external: true
-
 services:
-  mongo:
-    image: mongo:6
-    volumes:
-      - ./db/mongodb:/docker-entrypoint-initdb.d
-      - mongodb-data:/data/db
-    container_name: mongo
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: admin
-      MONGO_INITDB_ROOT_PASSWORD: password
-  mongo-express:
-    build:
-      context: db/mongo-express
-      dockerfile: Dockerfile.dev
-    ports:
-      - 8081:8081
-    environment:
-      ME_CONFIG_MONGODB_SERVER: mongo
-      ME_CONFIG_MONGODB_ADMINUSERNAME: admin
-      ME_CONFIG_MONGODB_ADMINPASSWORD: password
-      WAIT_HOSTS: mongo:27017
-      WAIT_BEFORE: 5
-      WAIT_TIMEOUT: 60
-
   fastapi:
     environment:
       CORS_HOST: http://localhost:3000
-      MONGO_URL: mongodb://admin:password@mongo/admin
-      SIGNING_KEY: 2e97f7d36479a8d7a1ada350e5073d5b4af63673e091af3eedc60d692e986fe6
-      WAIT_HOSTS: mongo:27017
     build:
       context: api
       dockerfile: Dockerfile.dev
@@ -55,3 +28,24 @@ services:
       PUBLIC_URL: http://localhost:3000
       REACT_APP_API_HOST: ${REACT_APP_API_HOST}
 
+  mongo:
+    image: mongo:6
+    volumes:
+      - ./db/mongodb:/docker-entrypoint-initdb.d
+      - mongodb-data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password
+  mongo-express:
+    build:
+      context: db/mongo-express
+      dockerfile: Dockerfile.dev
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_SERVER: mongo
+      ME_CONFIG_MONGODB_ADMINUSERNAME: admin
+      ME_CONFIG_MONGODB_ADMINPASSWORD: password
+      WAIT_HOSTS: mongo:27017
+      WAIT_BEFORE: 5
+      WAIT_TIMEOUT: 60
