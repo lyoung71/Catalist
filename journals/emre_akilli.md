@@ -18,3 +18,5 @@ Were at the halfway mark of this week and we have been mob coding a lot. We were
 October 13th: Its the end of the week and we have finished backend and frontend auth. Now our priority is to get on finishing the rest off the frontend. We are on a good track to finish the project and everyone is fulfilling their role. I have designed a elaborate nav bar, landing page and footer which I will start coding next weeek.
 
 October 16th: I Have installed tailwind css and started refactoring the ghi to start coding the front end. I created a folder for the components, content, and the fonts so everything is organized. I have listened to feedback from my teammates and I will take in their considerations when coding the frontend this week.
+
+October 18th: I have finished coding the Navbar and the Landing page and so far it looks great according to the feedback from my group. Later on, it will need tweaking so I will follow up with that later but right now I am going to focus on helping my teammtes with their features and get a feel for the final design of the user page to work on together.
