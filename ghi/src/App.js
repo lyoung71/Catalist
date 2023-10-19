@@ -21,7 +21,7 @@ function App() {
           <Route path="signup" element={<SignupForm />} />
           <Route path="journals" element={<JournalList />} />
           <Route path="calendar" element={<CalendarComp />} />
-          <Route path="journals" element={<JournalForm />} />
+          <Route path="journalform" element={<JournalForm />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>
