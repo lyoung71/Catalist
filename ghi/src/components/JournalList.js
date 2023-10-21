@@ -1,9 +1,7 @@
-// import useToken from "@galvanize-inc/jwtdown-for-react";
 import { useState, useEffect } from "react";
 
 function JournalList() {
   const [journals, setJournals] = useState([]);
-  // const { token } = useToken();
 
   const getData = async () => {
     const fetchConfig = {
@@ -26,22 +24,42 @@ function JournalList() {
 
   return (
     <>
-      <div className="flex justify-center mt-10 shadow overflow-hidden rounded border-b border-gray-200">
-        <table className="border-separate border-spacing-2 border border-slate-400 min-w-full bg-white">
-          <thead className="bg-gray-800 text-white">
-            <tr>
-              <th>Mood</th>
-              <th>Date</th>
+      <div className="p-4 flex">
+        <h1 className="text-3xl">My Journals</h1>
+      </div>
+      <div className="px-3 py-4flex justify-center">
+        <table className="w-full text-md bg-white shadow-md rounded mb-4">
+          <thead>
+            <tr className="border-b">
+              <th className="text-left p-3 px-5">Mood</th>
+              <th className="text-left p-3 px-5">Date</th>
             </tr>
           </thead>
           <tbody>
             {journals.map((journal) => {
               return (
-                <tr key={journal.id}>
+                <tr
+                  className="border-b hover:bg-orange-100 bg-gray-100"
+                  key={journal.id}
+                >
                   <td className="px-6">
                     <a href={journal.mood}>{journal.mood}</a>
                   </td>
                   <td className="px-6">{journal.journal_date}</td>
+                  <td className="p-3 px-5 flex justify-end">
+                    <button
+                      type="button"
+                      className="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"
+                    >
+                      Edit
+                    </button>
+                    <button
+                      type="button"
+                      className="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"
+                    >
+                      Delete
+                    </button>
+                  </td>
                 </tr>
               );
             })}
