@@ -16,21 +16,27 @@ const LoginForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     login(inputs.username, inputs.password);
-    // navigate("/")
+    navigate("/");
   };
   return (
-    <form>
-      <label>
+    <form className="form-container">
+      <label className="form-label">
         Username:
         <input type="text" name="username" onChange={handleChange} />
       </label>
-      <label>
+      <label className="form-label">
         Password:
         <input type="password" name="password" onChange={handleChange} />
       </label>
-      <button type="button" onClick={handleSubmit}>
-        Login
-      </button>
+      <div>
+        <button
+          type="button"
+          onClick={handleSubmit}
+          className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-2 py-2"
+        >
+          Login
+        </button>
+      </div>
     </form>
   );
 };
