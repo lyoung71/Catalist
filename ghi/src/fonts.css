@@ -15,3 +15,12 @@
 .PokemonDigital {
     font-family: PokemonDigital;
 }
+
+@font-face {
+  font-family: "PokemonDigital";
+  src: local("PokemonDigital"), url(./fonts/PokemonDigital.woff) format("woff");
+}
+
+.PokemonDigital {
+  font-family: PokemonDigital;
+}

@@ -1,9 +1,7 @@
-// import useToken from "@galvanize-inc/jwtdown-for-react";
 import { useState, useEffect } from "react";
 
 function JournalList() {
   const [journals, setJournals] = useState([]);
-  // const { token } = useToken();
 
   const getData = async () => {
     const fetchConfig = {
@@ -26,24 +24,26 @@ function JournalList() {
 
   return (
     <>
-      <table className="table table-striped">
-        <thead>
-          <tr>
-            <th>Mood</th>
-            <th>Date</th>
-          </tr>
-        </thead>
-        <tbody>
-          {journals.map((journal) => {
-            return (
-              <tr key={journal.id}>
-                <td>{journal.mood}</td>
-                <td>{journal.journal_date}</td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
+      <div className="flex justify-center mt-10">
+        <table className=" border-separate border-spacing-2 border border-slate-400">
+          <thead>
+            <tr>
+              <th>Mood</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            {journals.map((journal) => {
+              return (
+                <tr key={journal.id}>
+                  <td className="px-6">{journal.mood}</td>
+                  <td className="px-6">{journal.journal_date}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
     </>
   );
 }
