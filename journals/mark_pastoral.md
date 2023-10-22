@@ -26,3 +26,8 @@
 - issue with journalform creating a form resolved.
 - added in token on frontend
 - works only if logged in with Hamzah's updated fastapi files, temporarily will keep files unupdated on my end so I don't have to log in
+
+10/19
+- fixed formatting on journalform
+- added pokemon of the day section
+- git pulled/pushed everything to main
