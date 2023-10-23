@@ -46,6 +46,7 @@ export default function JournalForm() {
         const response = await fetch(journalUrl, fetchConfig)
         if (response.ok) {
             // const newJournal = await response.json()
+            console.log("journal created!")
             setMood('')
             setDesc('')
             setJournalDate('')
