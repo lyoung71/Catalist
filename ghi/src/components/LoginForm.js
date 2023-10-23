@@ -17,8 +17,11 @@ const LoginForm = () => {
     e.preventDefault();
     login(inputs.username, inputs.password);
     navigate("/");
+    navigate("/");
   };
   return (
+    <form className="form-container">
+      <label className="form-label">
     <form className="form-container">
       <label className="form-label">
         Username:
