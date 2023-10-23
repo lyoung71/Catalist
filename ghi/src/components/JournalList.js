@@ -44,7 +44,7 @@ function JournalList() {
                   key={journal.id}
                 >
                   <td className="px-6">
-                    <a href={journal.mood}>{journal.mood}</a>
+                    <a href={journal.desc}>{journal.mood}</a>
                   </td>
                   <td className="px-6">{journal.created}</td>
                   <td className="p-3 px-5 flex justify-end">
