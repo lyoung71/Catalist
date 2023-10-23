@@ -15,14 +15,16 @@ function App() {
     <AuthProvider baseUrl="http://localhost:8000">
       <BrowserRouter>
         <Nav />
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="login" element={<LoginForm />} />
-          <Route path="signup" element={<SignupForm />} />
-          <Route path="journals" element={<JournalList />} />
-          <Route path="calendar" element={<CalendarComp />} />
-          <Route path="journalform" element={<JournalForm />} />
-        </Routes>
+        <div>
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="login" element={<LoginForm />} />
+            <Route path="signup" element={<SignupForm />} />
+            <Route path="journals" element={<JournalList />} />
+            <Route path="journalform" element={<JournalForm/>} />
+            <Route path="calendar" element={<CalendarComp />} />
+          </Routes>
+        </div>
       </BrowserRouter>
     </AuthProvider>
   );
