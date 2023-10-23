@@ -20,3 +20,7 @@ October 13th: Its the end of the week and we have finished backend and frontend 
 October 16th: I Have installed tailwind css and started refactoring the ghi to start coding the front end. I created a folder for the components, content, and the fonts so everything is organized. I have listened to feedback from my teammates and I will take in their considerations when coding the frontend this week.
 
 October 18th: I have finished coding the Navbar and the Landing page and so far it looks great according to the feedback from my group. Later on, it will need tweaking so I will follow up with that later but right now I am going to focus on helping my teammtes with their features and get a feel for the final design of the user page to work on together.
+
+October 20th: Today, I finished the UserPage and the Footer for the project and made it look professional with css and added pokemon to make it feel catered to the user. We are planning to do unit tests next week on monday with everyone together. So far everyones feedback for the user page was positive so I will continue to do css work for the login and signup page.
+
+October 23th: 

@@ -21,7 +21,7 @@ function SignupForm() {
 
         register(userData, "http://localhost:8000/api/accounts");
         e.target.reset();
-        navigate("/");
+        navigate("/user");
     }
 
     return (

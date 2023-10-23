@@ -16,7 +16,7 @@ const LoginForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         login(inputs.username, inputs.password)
-        navigate("/")
+        navigate("/user")
     }
     return (
         <form className="form-container">
