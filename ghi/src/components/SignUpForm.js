@@ -1,6 +1,6 @@
 import useToken from "@galvanize-inc/jwtdown-for-react";
 import { useState } from "react";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function SignupForm() {
   const [username, setUsername] = useState();
@@ -8,7 +8,7 @@ function SignupForm() {
   const [firstName, setFirstName] = useState();
   const [lastName, setLastName] = useState();
   const { register } = useToken();
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -21,7 +21,7 @@ function SignupForm() {
 
     register(userData, "http://localhost:8000/api/accounts");
     e.target.reset();
-    // navigate("/info");
+    navigate("/");
   };
 
   return (

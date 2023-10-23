@@ -70,14 +70,14 @@ function LandingPage() {
             Ready to Start Journaling?
           </h2>
           <a
-            href="/"
+            href="/signup"
             className="py-2 px-6 bg-PokeBlue text-White rounded-full shadow-lg hover:bg-opacity-70 transition duration-300"
           >
             Sign Up Now
           </a>
         </div>
         <div className="text-center mt-4">
-          <a href="/" className="hover:opacity-70">
+          <a href="/login" className="hover:opacity-70">
             Already have an account?
           </a>
         </div>
