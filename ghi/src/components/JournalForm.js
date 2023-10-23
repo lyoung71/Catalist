@@ -1,6 +1,4 @@
 import { useState } from "react";
-import '../mark.css';
-import Carousel from "./Carousel";
 import RandomPokemon from "./RandomPokemon";
 import useToken from "@galvanize-inc/jwtdown-for-react";
 
@@ -55,11 +53,6 @@ export default function JournalForm() {
     }
 
     return (
-        // <>
-        //     <form onSubmit={(e) => handleChange(e)}>
-        //         <input onChange={(e) => handleSubmit(e)} id="mood" value={journal.desc} placeholder="mood" type="text"></input>
-        //     </form>
-        // </>
         <div id="entirething">
             <div id="image"></div>
             <div id="journal">
