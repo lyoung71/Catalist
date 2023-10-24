@@ -25,35 +25,24 @@ function SignupForm() {
     }
 
     return (
-        <form onSubmit={handleSubmit} className="form-container">
-            <label htmlFor="username">Username: </label>
-            <input
-            name="username"
-            onChange={(e) => setUsername(e.target.value)}
-            ></input>
-            <label htmlFor="password">Password: </label>
-            <input
-            name="password"
-            type="password"
-            onChange={(e) => setPassword(e.target.value)}
-            ></input>
-            <label htmlFor="firstName">First Name: </label>
-            <input
-            name="firstName"
-            onChange={(e) => setFirstName(e.target.value)}
-            ></input>
-            <label htmlFor="lastName">Last Name: </label>
-            <input
-            name="lastName"
-            onChange={(e) => setLastName(e.target.value)}
-            ></input>
-            <button
-            type="submit"
-            className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-4 py-2"
-            >
-            Create User
-            </button>
-        </form>
+        <div className="flex justify-center items-center h-screen bg-PokeYellow">
+            <form className="bg-PokeBlue text-center p-6 rounded-lg PokemonDigital mb-10" onSubmit={handleSubmit}>
+                <label className="text-PokeYellow" htmlFor="username">Username</label>
+                <input className="block rounded-lg text-PokeBlue p-2 border shadow-xl" name="username" onChange={(e) => setUsername(e.target.value)}/>
+                <label className="text-PokeYellow" htmlFor="password">Password</label>
+                <input className="block rounded-lg text-PokeBlue p-2 border shadow-xl" name="password" type="password" onChange={(e) => setPassword(e.target.value)} />
+                <label className="text-PokeYellow" htmlFor="firstName">First Name</label>
+                <input className="block rounded-lg text-PokeBlue p-2 border shadow-xl" name="firstName" onChange={(e) => setFirstName(e.target.value)} />
+                <label className="text-PokeYellow" htmlFor="lastName">Last Name</label>
+                <input className="block rounded-lg text-PokeBlue p-2 border shadow-xl" name="lastName" onChange={(e) => setLastName(e.target.value)} />
+                <button
+                type="submit"
+                className="bg-White text-PokeBlue hover:bg-opacity-80 border rounded-lg mt-4 px-4 py-2 shadow-xl"
+                >
+                Create User
+                </button>
+            </form>
+        </div>
         );
     }
 

@@ -14,7 +14,7 @@ from queries.accounts import (
     AccountIn,
     AccountOut,
     AccountOutWithPassword,
-    AccountQueries
+    AccountQueries,
 )
 
 router = APIRouter()
@@ -37,7 +37,8 @@ class HttpError(BaseModel):
 async def get_token(
     request: Request,
     account: AccountOutWithPassword = Depends(
-        authenticator.try_get_current_account_data)
+        authenticator.try_get_current_account_data
+    ),
 ) -> AccountToken | None:
     print("this is running")
     if authenticator.cookie_name in request.cookies:
@@ -46,6 +47,16 @@ async def get_token(
             "type": "Bearer",
             "account": account,
         }
+
+
+@router.get(
+    "/api/accounts/{username}/", tags=["accounts"], response_model=AccountOut
+)
+async def get_account(
+    username: str,
+    accounts: AccountQueries = Depends(),
+):
+    return accounts.get(username)
 
 
 @router.post("/api/accounts", response_model=AccountToken | HttpError)
