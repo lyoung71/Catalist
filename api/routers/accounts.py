@@ -32,7 +32,7 @@ class HttpError(BaseModel):
     detail: str
 
 
-@router.get("/token", response_model=AccountToken | None)
+@router.get("/token", response_model=AccountToken | Error)
 async def get_token(
     request: Request,
     account: AccountOutWithPassword = Depends(

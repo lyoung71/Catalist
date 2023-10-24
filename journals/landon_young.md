@@ -15,3 +15,6 @@ Worked with Emre to make navigation bar and add conditional rendering to change 
 
 10/19/2023
 Worked on calendar but we ultimately decided that it would be better left as a stretch goal. Added some styling to the log in and signup forms. Currently experiencing problems with the navbar not rerendering automatically upon logging in. Will try some more tomorrow.
+
+10/24/2023
+Spent a long time trying to get the unit test to work. With a lot of time and assistance I managed to get it working. Started working on preparing the site for deployment.
