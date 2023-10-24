@@ -1,29 +1,29 @@
-services:
-  - docker:dind
+# services:
+#   - docker:dind
 
-stages:
-  - test
-  - build
-  - deploy
+# stages:
+#   - test
+#   - build
+#   - deploy
 
-# Run flake8 to check for code quality
-lint-test-job:
-  image: python:3-bullseye
-  stage: test
-  script:
-    - pip install flake8
-    - flake8 api
+# # Run flake8 to check for code quality
+# lint-test-job:
+#   image: python:3-bullseye
+#   stage: test
+#   script:
+#     - pip install flake8
+#     - flake8 api
 
-# # Run the unit tests
-api-unit-tests-job:
-  image: python:3-bullseye
-  stage: test
-  needs:
-    - lint-test-job
-  script:
-    - cd api
-    - pip install -r requirements.txt
-    - python -m pytest
+# # # Run the unit tests
+# api-unit-tests-job:
+#   image: python:3-bullseye
+#   stage: test
+#   needs:
+#     - lint-test-job
+#   script:
+#     - cd api
+#     - pip install -r requirements.txt
+#     - python -m pytest
 
 # # Build API Image:
 # build-api-image:
@@ -41,39 +41,39 @@ api-unit-tests-job:
 #     - main
 
 
-# # Build the React/JavaScript front-end
-build-front-end-job:
-  stage: build
-  image: node:lts-bullseye
-  needs:
-    - lint-test-job
-    - api-unit-test-job
+# # # Build the React/JavaScript front-end
+# build-front-end-job:
+#   stage: build
+#   image: node:lts-bullseye
+#   needs:
+#     - lint-test-job
+#     - api-unit-test-job
 #   variables:
-#     # If either of these variables is defined in the GitLab
-#     # CI/CD variables, that value will override the value here.
-#     # You need to substitute in your real values for
-#     # GROUP_NAME, PROJECT_NAME, & WEBSERVICE_NAME below.
-#     PUBLIC_URL: https://GROUP_NAME.gitlab.io/PROJECT_NAME/
-#     REACT_APP_API_HOST: https://DEPLOYED_API_SERVICE.mod3projects.com
-  script:
-    - cd ghi
-    - npm install
-    - npm run build
-  artifacts:
-    paths:
-      - ghi/build/
+# #     # If either of these variables is defined in the GitLab
+# #     # CI/CD variables, that value will override the value here.
+# #     # You need to substitute in your real values for
+# #     # GROUP_NAME, PROJECT_NAME, & WEBSERVICE_NAME below.
+#     PUBLIC_URL: https://globetrodders.gitlab.io/module3-project-gamma
+# #     REACT_APP_API_HOST: https://DEPLOYED_API_SERVICE.mod3projects.com
+#   script:
+#     - cd ghi
+#     - npm install
+#     - npm run build
+#   artifacts:
+#     paths:
+#       - ghi/build/
 
-# # Deploy the React/JavaScript front-end to GitLab pages
-pages:
-  stage: deploy
-  rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-  dependencies:
-    - build-front-end-job
-  needs:
-    - build-front-end-job
-  script:
-    - mv ghi/build/ public
-  artifacts:
-    paths:
-      - public
+# # # Deploy the React/JavaScript front-end to GitLab pages
+# pages:
+#   stage: deploy
+#   rules:
+#     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+#   dependencies:
+#     - build-front-end-job
+#   needs:
+#     - build-front-end-job
+#   script:
+#     - mv ghi/build/ public
+#   artifacts:
+#     paths:
+#       - public

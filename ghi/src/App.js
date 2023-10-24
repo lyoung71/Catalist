@@ -11,9 +11,11 @@ import JournalForm from "./components/JournalForm";
 
 
 function App() {
+  const domain = /https:\/\/[^/]+/;
+  const basename = process.env.PUBLIC_URL.replace(domain, '');
   return (
     <AuthProvider baseUrl="http://localhost:8000">
-      <BrowserRouter>
+      <BrowserRouter basename={basename}>
         <Nav />
         <div>
           <Routes>
