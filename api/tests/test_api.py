@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 from main import app
-from authenticator import authenticator
+# from authenticator import authenticator
 from queries.journals import JournalQueries
 from fastapi.testclient import TestClient
 
@@ -27,11 +27,12 @@ def fake_get_current_account_data():
         first_name="Notorious",
         last_name="BIG",
         username="Big Poppa"
-        )
+    )
 
 
 # def test_get_token():
-#     app.dependency_overrides[authenticator.get_current_account_data] = fake_get_current_account_data
+#     app.dependency_overrides[authenticator.get_current_account_data]
+#  = fake_get_current_account_data
 #     response = client.get("/token")
 #     app.dependency_overrides = {}
 #     assert response.status_code == 200
@@ -54,8 +55,10 @@ class fake_journal_queries:
             "id": "6536c9fdd609f361065f6e8b"
         }
 
+
 def test_get_journal():
-    # app.dependency_overrides[authenticator.get_current_account_data] = fake_get_current_account_data
+    # app.dependency_overrides[authenticator.get_current_account_data]
+    #  = fake_get_current_account_data
     app.dependency_overrides[JournalQueries] = fake_journal_queries
     response = client.get("/api/journals/6536c9fdd609f361065f6e8b")
     app.dependency_overrides = {}

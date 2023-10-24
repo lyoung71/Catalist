@@ -32,7 +32,7 @@ class HttpError(BaseModel):
     detail: str
 
 
-@router.get("/token", response_model=AccountToken | Error)
+@router.get("/token", response_model=AccountToken)
 async def get_token(
     request: Request,
     account: AccountOutWithPassword = Depends(
@@ -45,6 +45,7 @@ async def get_token(
             "type": "Bearer",
             "account": account,
         }
+
 
 @router.post("/api/accounts", response_model=AccountToken | HttpError)
 async def create_account(
