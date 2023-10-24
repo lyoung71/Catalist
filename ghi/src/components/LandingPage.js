@@ -3,6 +3,7 @@ import ft1 from "../content/ft1.png";
 import ft2 from "../content/ft2.png";
 import ft3 from "../content/ft3.png";
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { useAuthContext } from "@galvanize-inc/jwtdown-for-react";
 
 function LandingPage() {
@@ -68,10 +69,10 @@ function LandingPage() {
             <section className="bg-White text-PokeBlue py-16 PokemonDigital tracking-tighter">
                 <div className="text-center">
                     <h2 className="text-4xl font-bold mt-4 mb-12">Ready to Start Journaling?</h2>
-                    <a href="/" className="py-2 px-6 bg-PokeBlue text-White rounded-full shadow-lg hover:bg-opacity-70 transition duration-300">Sign Up Now</a>
+                    <Link to="signup" className="py-2 px-6 bg-PokeBlue text-White rounded-full shadow-lg hover:bg-opacity-70 transition duration-300">Sign Up Now</Link>
                 </div>
                 <div className="text-center mt-4">
-                    <a href="/" className="hover:opacity-70">Already have an account?</a>
+                    <Link to="login" className="hover:opacity-70">Already have an account?</Link>
                 </div>
             </section>
     </>
