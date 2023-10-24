@@ -8,6 +8,7 @@ import SignupForm from "./components/SignUpForm";
 import JournalList from "./components/JournalList";
 import CalendarComp from "./components/CalendarComp";
 import JournalForm from "./components/JournalForm";
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
             <Route path="calendar" element={<CalendarComp />} />
           </Routes>
         </div>
+        <Footer/>
       </BrowserRouter>
     </AuthProvider>
   );
