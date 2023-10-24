@@ -18,7 +18,20 @@ function JournalList() {
     }
   };
 
-  console.log(journals)
+  const handleDelete = async (journalToDelete) => {
+    const response = await fetch(`http://localhost:8000/api/journals/${journalToDelete.id}`, {
+      method: "DELETE",
+
+    });
+
+    if (response.ok) {
+      setJournals(prevJournals => prevJournals.filter(journal => journal.id != journalToDelete.id))
+
+    }
+
+
+  }
+
   useEffect(() => {
     getData();
   }, []);
@@ -57,6 +70,7 @@ function JournalList() {
                     <button
                       type="button"
                       className="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"
+                      onClick={() => handleDelete(journal)}
                     >
                       Delete
                     </button>
