@@ -1,6 +1,7 @@
 import { useState } from "react";
 import RandomPokemon from "./RandomPokemon";
 import useToken from "@galvanize-inc/jwtdown-for-react";
+import Poke from "./test";
 
 export default function JournalForm() {
     const [mood, setMood] = useState('')
@@ -55,6 +56,7 @@ export default function JournalForm() {
 
     return (
         <div id="entirething">
+            {Poke()}
             <div id="image"></div>
             <div id="journal">
                 <form onSubmit={handleSubmit}>
