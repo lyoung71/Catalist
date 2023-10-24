@@ -12,7 +12,7 @@ class JournalQueries(Queries):
             for journal in result:
                 journal["id"] = str(journal["_id"])
             return result
-        return {"message": "This collection has no journals"}
+        return []
 
     def get_journal_by_id(self, journal_id):
         try:

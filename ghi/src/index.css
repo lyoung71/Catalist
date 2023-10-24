@@ -330,3 +330,7 @@ form label {
 form input {
   margin: 5px;
 }
+
+.px-14 {
+  border: 5px solid gold;
+}

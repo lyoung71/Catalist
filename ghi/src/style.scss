@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dcdcdc;
+}
+
+.pokemon-card {
+  height: 672px;
+  width: 450px;
+  background-color: green;
+  border-radius: 15px;
+  display: grid;
+  overflow: hidden;
+  box-shadow: 20px 12px 20px 0px black;
+  border: 15px solid #e7c30d;
+  font-family: arial, sans-serif;
+}
+
+.title-row {
+  display: grid;
+  grid-template-areas:
+    "rarity rarity rarity"
+    "name health type";
+  grid-template-columns: auto 75px 25px;
+  grid-template-rows: 15px 25px;
+  align-items: center;
+  column-gap: 5px;
+  margin: 5px 20px 0px 20px;
+
+  .rarity {
+    grid-area: rarity;
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+  .name {
+    grid-area: name;
+  }
+
+  .health {
+    grid-area: health;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: right;
+    color: red;
+  }
+
+  .type {
+    grid-area: type;
+    width: 100%;
+  }
+}
+
+.element-icon {
+  height: 100%;
+}
+
+.character-img {
+  margin: 0 20px;
+  background-color: blue;
+  height: 270px;
+  border: 5px solid yellow;
+  overflow: hidden;
+  img {
+    height: 100%;
+  }
+}
+
+.character-meta {
+  background-color: yellow;
+  height: 25px;
+  margin: 0 40px;
+  display: grid;
+  align-items: center;
+  p {
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: italic;
+  }
+}
+
+.character-ability {
+  height: 75px;
+  display: grid;
+  grid-template-columns: 65px auto 65px;
+  gap: 5px;
+  align-items: center;
+  justify-items: center;
+  margin: 0 10px;
+  border-bottom: 2px solid black;
+
+  .ability-cost {
+    img {
+      width: 30px;
+    }
+  }
+
+  .ability-description {
+    text-align: center;
+    .ability-name {
+      font-weight: bold;
+      height: 16px;
+      float: left;
+    }
+    p {
+      &before {
+        content: "\00a0";
+      }
+      img {
+        height: 18px;
+        vertical-align: middle;
+      }
+      text-align: left;
+    }
+  }
+
+  .ability-damage {
+    font-weight: bold;
+    font-size: 30px;
+  }
+}

@@ -6,14 +6,14 @@ class TodosQueries(Queries):
     DB_NAME = "tasks"
     COLLECTION = "todos"
 
-    def get_todos(self):
+    def get_todos(self, account):
         try:
-            result = list(self.collection.find())
+            result = list(self.collection.find({"account_id": account}))
             if len(result) > 0:
                 for todo in result:
                     todo["id"] = str(todo["_id"])
                 return result
-            return {"message": "Please create a to-do item!"}
+            return []
         except Exception as e:
             raise Exception(e)
 
@@ -29,9 +29,11 @@ class TodosQueries(Queries):
             raise Exception(e)
 
 
-    def create_todo(self, todo):
+    def create_todo(self, todo, account_data):
         try:
-            return self.collection.insert_one(todo.dict())
+            result = todo.dict()
+            result["account_id"] = account_data
+            return self.collection.insert_one(result)
         except Exception as e:
             raise Exception(e)
 

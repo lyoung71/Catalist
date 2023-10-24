@@ -9,6 +9,7 @@ function LandingPage() {
       <section className="flex justify-center items-center relative h-screen PokemonDigital font-bold">
         <img
           src={hero}
+          // style={{ border: "5px solid blue" }}
           alt="Hero Description"
           className="absolute w-full h-full object-cover"
         />

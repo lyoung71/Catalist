@@ -18,6 +18,7 @@ function JournalList() {
     }
   };
 
+  console.log(journals)
   useEffect(() => {
     getData();
   }, []);
@@ -45,7 +46,7 @@ function JournalList() {
                   <td className="px-6">
                     <a href={journal.mood}>{journal.mood}</a>
                   </td>
-                  <td className="px-6">{journal.journal_date}</td>
+                  <td className="px-6">{journal.created}</td>
                   <td className="p-3 px-5 flex justify-end">
                     <button
                       type="button"

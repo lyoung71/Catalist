@@ -2,15 +2,18 @@ from fastapi import APIRouter, Depends, status, Response
 from queries.todos import TodosQueries
 from models.todos import Todo, TodoWithId
 from models.errors import Error
+from authenticator import authenticator
 
 router = APIRouter()
 
 @router.get("/", status_code=200, response_model=list[TodoWithId] | Error)
-def get_todos(response: Response, queries: TodosQueries=Depends()):
+def get_todos(
+    response: Response,
+    queries: TodosQueries=Depends(),
+    account_data: dict = Depends(authenticator.get_current_account_data),
+    ):
     try:
-        result = queries.get_todos()
-        if isinstance(result, dict):
-            response.status_code = status.HTTP_204_NO_CONTENT
+        result = queries.get_todos(account_data["id"])
         return result
     except Exception as e:
         response.status_code = status.HTTP_400_BAD_REQUEST
@@ -30,9 +33,14 @@ def get_todo_by_id(id: str, response: Response, queries: TodosQueries = Depends(
 
 
 @router.post("/", status_code=201, response_model=TodoWithId | Error)
-def create_todo(todo: Todo, response: Response, queries: TodosQueries = Depends()):
+def create_todo(
+    todo: Todo,
+    response: Response,
+    queries: TodosQueries = Depends(),
+    account_data: dict = Depends(authenticator.get_current_account_data),
+    ):
     try:
-        result = queries.create_todo(todo)
+        result = queries.create_todo(todo, account_data["id"])
         if result:
             return {"message": "Successfully created todo", "success": True}
         response.status_code=status.HTTP_400_BAD_REQUEST

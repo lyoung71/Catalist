@@ -47,7 +47,19 @@ function Nav() {
                   Journals
                 </a>
                 <a
-                  href="/"
+                  href="/todos"
+                  className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-4 py-2"
+                >
+                  Todo List
+                </a>
+                <a
+                  href="/todoform"
+                  className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-4 py-2"
+                >
+                  Todo Form
+                </a>
+                <a
+                  href="/about"
                   className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-4 py-2"
                 >
                   About

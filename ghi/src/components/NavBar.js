@@ -23,6 +23,11 @@ const NavBar = () => {
               </NavLink>
             </li>
             <li>
+              <NavLink to="/todos" activeStyle>
+                Todos
+              </NavLink>
+            </li>
+            <li>
               <NavLink to="/userinfo" activeStyle>
                 My Account
               </NavLink>
