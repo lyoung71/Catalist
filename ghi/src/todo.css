@@ -1,0 +1,42 @@
+#journal {
+  /* font-family: url('./fonts/rainyhearts.ttf'); */
+  width: 50%;
+  margin: auto;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  opacity: 90%;
+}
+
+.input {
+  width: auto;
+  margin: auto;
+  margin-right: 5px;
+  border-radius: 1px;
+  padding: 3px;
+}
+
+#textarea {
+  /* font-family: url('./fonts/rainyhearts.ttf'); */
+  display: block;
+  width: 100%;
+  overflow: scroll;
+  resize: both;
+  min-height: 40px;
+  line-height: 20px;
+  border: 2px solid #bdc7d9;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  border-radius: 5px 50px 30px;
+}
+
+#pokeDiv {
+  vertical-align: middle;
+}
