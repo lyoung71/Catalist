@@ -57,13 +57,14 @@ function JournalList() {
                   key={journal.id}
                 >
                   <td className="px-6">
-                    <a href={journal.desc}>{journal.mood}</a>
+                    <a href={`/journals/${journal.id}`}>{journal.mood}</a>
                   </td>
                   <td className="px-6">{journal.journal_date}</td>
                   <td className="p-3 px-5 flex justify-end">
                     <button
                       type="button"
                       className="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"
+                      href={`/journals/${journal.id}`}
                     >
                       Edit
                     </button>
