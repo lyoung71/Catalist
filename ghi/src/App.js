@@ -27,8 +27,8 @@ function App() {
             <Route path="journalform" element={<JournalForm/>} />
             <Route path="calendar" element={<CalendarComp />} />
           </Routes>
+          <Footer/>
         </div>
-        <Footer/>
       </BrowserRouter>
     </AuthProvider>
   );
