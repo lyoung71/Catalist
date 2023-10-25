@@ -1,0 +1,117 @@
+/* .card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 3rem;
+} */
+
+@font-face {
+  font-family: "PokemonDigital";
+  src: local("PokemonDigital"), url(./fonts/PokemonDigital.woff) format("woff");
+}
+
+body {
+  margin: 0;
+  font-family: systems-ui;
+}
+
+.todo-container {
+  background-image: url("../src/content/emerald.jpg");
+  height: 95vh;
+  /* filter: blur(5px); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+.todolist-page {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.todo-heading {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 50px;
+  font-family: PokemonDigital;
+  color: rgb(0, 0, 0);
+  background-color: rgb(224, 235, 255);
+  border: 5px solid black;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  padding-left: 15px;
+}
+
+/* #footer {
+    background-color: rgb(158, 222, 171);
+    width: 100%;
+    margin-top: 0.25rem;
+    font-family: 'Domine', sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+} */
+
+#card {
+  background-color: rgb(108, 186, 255);
+  box-shadow: 10px 10px 6px 1px rgba(0, 0, 0, 0.22);
+  position: absolute;
+  z-index: 2;
+}
+
+.card-body {
+  text-align: center;
+  padding: 0;
+  font-family: "Domine", sans-serif;
+  margin-top: 1.5rem;
+}
+
+.todo-table {
+  background-color: azure;
+  border: 3px solid;
+  font-family: PokemonDigital;
+}
+
+.btn {
+  background-color: rgba(255, 0, 0, 0.632);
+  border: 2px solid black;
+  padding-left: 5px;
+  border-radius: 5px;
+}
+
+#table-heads {
+  font-size: 20px;
+  border: 1px solid;
+  background-color: rgba(159, 233, 159, 0.533);
+}
+
+th,
+td {
+  border: 1px solid;
+}
+
+.dels {
+  border: 0px;
+}
+/* .todo-table .button {
+  border: 0;
+} */
+
+.todo-table-container {
+  display: flex;
+  justify-content: center;
+}
+
+.table-heading {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 50px;
+  /* font-family: "PokemonDi; */
+  color: rgb(100, 89, 205);
+  position: absolute;
+  z-index: 2;
+}

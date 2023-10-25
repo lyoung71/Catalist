@@ -1,3 +1,5 @@
+import "../todos.css";
+// import emerald from "../content/emerald.jpg";
 import { useState, useEffect } from "react";
 
 function TodoList() {
@@ -25,18 +27,40 @@ function TodoList() {
     }, []);
 
     return (
-        <>
-            <div className="p-4 flex">
-                <h1 className="text-3xl">My Todos</h1>
+        <div className="todo-container">
+            <div className="todolist-page">
+                {/* <img src={emerald} alt="Background Description"></img> */}
+                <h1 className="todo-heading">TO-DO LIST</h1>
             </div>
-            <div className="px-3 py-4flex justify-center">
-                <table className="w-full text-md bg-white shadow-md rounded mb-4">
+            {/* {todos.map(todo => {
+                const cardWidth = {
+                    width: "18rem"
+                }
+                return (
+                    <div className="card" style={cardWidth} key={todo.id} id="card">
+                        <div className="card-body">
+                            <h3 className="card-title">{todo.name}</h3>
+                            <p className="card-text">Description: {todo.description}</p>
+                            <p className="card-text">Completed?: {todo.completed ? 'Yes' : 'No'}</p>
+                            <p className="card-text">Created: {todo.created}</p>
+                        </div>
+                        <button onClick={() => handleDelete(shoe.id)} className="btn btn-info btn-small">Delete Shoe</button>
+                    </div>
+                ) */}
+            {/* })} */}
+            {/* <div className="card-container"> */}
+            {/* <h1 className="table-heading">Todo List!</h1> */}
+            {/* <div className="px-3 py-4flex justify-center"> */}
+            <div className="todo-table-container">
+                {/* <table className="w-full text-md bg-white shadow-md rounded mb-4"> */}
+                <table className="todo-table">
                     <thead>
-                        <tr className="border-b">
+                        <tr id="table-heads" className="border-b">
                             <th className="text-left p-3 px-5">Task</th>
                             <th className="text-left p-3 px-5">Description</th>
                             <th className="text-left p-3 px-5">Is completed</th>
                             <th className="text-left p-3 px-5">Created On: </th>
+                            <th className="text-left p-3 px-5">Delete?: </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -52,16 +76,10 @@ function TodoList() {
                                     <td className="px-6">{todo.description}</td>
                                     <td className="px-6">{todo.completed ? 'Yes' : 'No'}</td>
                                     <td className="px-6">{todo.created}</td>
-                                    <td className="p-3 px-5 flex justify-end">
+                                    <td className="p-3 px-5 flex justify-center dels">
                                         <button
                                             type="button"
-                                            className="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"
-                                        >
-                                            Edit
-                                        </button>
-                                        <button
-                                            type="button"
-                                            className="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"
+                                            className="btn"
                                         >
                                             Delete
                                         </button>
@@ -72,7 +90,7 @@ function TodoList() {
                     </tbody>
                 </table>
             </div>
-        </>
+        </div>
     );
 }
 
