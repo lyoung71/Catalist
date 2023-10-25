@@ -39,11 +39,11 @@ export default function Poke() {
     let pokeDay = dayOfYear(new Date())
 
     const fetchData = async () => {
-        const url = `https://pokeapi.co/api/v2/pokemon/297`
+        const url = `https://pokeapi.co/api/v2/pokemon-species/297`
         const response = await fetch(url)
         if (response.ok) {
             const data = await response.json()
-            setPokemon(data)
+            setPokemon(data.flavor_text_entries[5])
         }
     }
 
@@ -51,11 +51,9 @@ export default function Poke() {
         fetchData()
     }, [])
 
-    console.log('pokemon', pokemon)
-
     return (
         <>
-            <h1></h1>
+            <p>{pokeDay}</p>
         </>
     )
 }
