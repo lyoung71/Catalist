@@ -31,3 +31,7 @@
 - fixed formatting on journalform
 - added pokemon of the day section
 - git pulled/pushed everything to main
+
+10/23/23
+- fixed bug where journallist was not working on the backend on my local branch
+- 

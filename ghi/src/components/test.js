@@ -50,6 +50,7 @@ export default function Poke() {
     useEffect(() => {
         fetchData()
     }, [])
+    console.log(poke)
 
     return (
         <>
