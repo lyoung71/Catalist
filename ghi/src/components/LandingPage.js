@@ -34,7 +34,7 @@ function LandingPage() {
                 <div className="text-center z-10 bg-White bg-opacity-70 text-PokeBlue rounded-full px-6 py-2">
                     <h1 className="text-5xl mb-4">Welcome to Catalist</h1>
                     <p className="text-xl mb-8">Your personal space to reflect, grow, and thrive.</p>
-                    <a href="/" className="bg-PokeBlue text-White hover:bg-opacity-80 rounded-full py-2 px-6">Start Journaling</a>
+                    <a href="/signup" className="bg-PokeBlue text-White hover:bg-opacity-80 rounded-full py-2 px-6">Start Journaling</a>
                 </div>
             </section>
             <section>
