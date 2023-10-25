@@ -10,13 +10,6 @@ from test_py import AccountQuery, AccountQueries
 
 client = TestClient(app)
 
-# def fake_get_journal_data():
-#     return JournalWithId(
-#         mood="sad",
-#         desc="madge",
-#         journal_date="10/24/23",
-#         id="6536d0b41778f7317f33d50c",)
-
 
 class AccountQuery:
     def get(self, username: str):
@@ -36,13 +29,6 @@ class MockJournalQueriesId:
             "journal_date": "10/24/23",
             "id": "6536d0b41778f7317f33d50c",
         }
-        # return JournalWithId(
-        #     mood="sad",
-        #     desc="madge",
-        #     journal_date="10/24/23",
-        #     id="6536d0b41778f7317f33d50c",
-        #     # account_data={}
-        #     )
 
 
 class MockJournalQueries:
@@ -74,18 +60,21 @@ class MockJournalQueries:
             },
         ]
 
+    def create_journal(self, params: Journal, account):
+        return {
+            "mood": "string",
+            "desc": "string",
+            "journal_date": "string",
+            "id": "65392045508ab544db271124",
+        }
 
-# class MockDeleteJournal:
-#     def delete_journal(self, journal_id):
-#         self.collection.delete_one({"_id": ObjectId(journal_id)})
-#         return {"message": "Successfully deleted journal."}
-
-
-# class AccountOut(BaseModel):
-#     id: str
-#     first_name: str
-#     last_name: str
-#     username: str
+    def update_journal(self, id, journal: JournalWithId):
+        return {
+            "mood": "a",
+            "desc": "a",
+            "journal_date": "a",
+            "id": "65392045508ab544db271124",
+        }
 
 
 def fake_get_current_account_data():
@@ -150,40 +139,38 @@ def test_get_all_journals():
     app.dependency_overrides = {}
 
 
-# def test_authorization():
-#     # Setup/arrange
-#     # app.dependency_overrides[authenticator.get_current_account_data] = MockJournalQueries.get_journals
-#     app.dependency_overrides[JournalQueries] = MockJournalQueries
-#     # Enact/Act
-#     response = client.get("/api/journals/")
-#     app.dependency_overrides = {}
-#     # Assert
-#     assert response.status_code == 401
-#     # assert response.json() == []
+def test_create_journal():
+    app.dependency_overrides[
+        authenticator.get_current_account_data
+    ] = fake_get_current_account_data
+    app.dependency_overrides[JournalQueries] = MockJournalQueries
+    entry = {
+        "mood": "string",
+        "desc": "string",
+        "journal_date": "string",
+    }
+    response = client.post("/api/journals", json=entry)
+    data = response.json()
+    assert response.status_code == 200
+    assert data["id"] == "65392045508ab544db271124"
+
+    app.dependency_overrides = {}
 
 
-# def test_create_journal():
-#     app.dependency_overrides[
-#         authenticator.get_current_account_data
-#     ] = MockJournalQueries.get_journals
-#     app.dependency_overrides[JournalQueries] = MockJournalQueriesId
-#     pass
+def test_update_journal():
+    app.dependency_overrides[
+        authenticator.get_current_account_data
+    ] = fake_get_current_account_data
+    app.dependency_overrides[JournalQueries] = MockJournalQueries
+    entry = {
+        "mood": "a",
+        "desc": "a",
+        "journal_date": "a",
+        "id": "65392045508ab544db271124",
+    }
+    response = client.put("/api/journals/{id}", json=entry)
+    data = response.json()
+    assert response.status_code == 200
+    assert data["mood"] == "a"
 
-#     # def create_journal(self, journal, account_data):
-#     #     result = journal.dict()
-#     #     result["account_id"] = account_data
-#     #     print(result)
-#     #     self.collection.insert_one(result)
-#     #     return {"message": "successfully created journal"}
-
-
-# def test_delete_journal():
-#     # Setup/arrange
-#     # app.dependency_overrides[authenticator.get_current_account_data] = fake_get_journal_data
-#     app.dependency_overrides[JournalQueries] = MockJournalQueriesId
-#     # Enact/Act
-#     response = client.get("/api/journals/{id}")
-#     app.dependency_overrides = {}
-#     # Assert
-#     assert response.status_code == 200
-#     # assert response.json() == []
+    app.dependency_overrides = {}
