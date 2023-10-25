@@ -7,12 +7,12 @@ client = TestClient(app)
 
 
 class AccountQuery:
-    def get():
+    def get(self, username: str):
         return {
             "id": "61318bf5e4dfcd730b2e213f",
             "first_name": "Emre",
             "last_name": "Akilli",
-            "username": "emreakilli",
+            "username": "emreakilli"
         }
 
 
@@ -22,7 +22,7 @@ def test_get_by_username():
         "id": "61318bf5e4dfcd730b2e213f",
         "first_name": "Emre",
         "last_name": "Akilli",
-        "username": "emreakilli",
+        "username": "emreakilli"
     }
     response = client.get("/api/accounts/emreakilli")
     assert response.status_code == 200

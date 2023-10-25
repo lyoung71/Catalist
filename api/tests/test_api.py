@@ -47,7 +47,7 @@ def fake_get_current_account_data():
 #     )
 
 class fake_journal_queries:
-    def get_journal_by_id():
+    def get_journal_by_id(self, id: str):
         return {
             "mood": "frustrated",
             "desc": "unit testing sucks",
