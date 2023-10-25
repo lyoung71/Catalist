@@ -35,10 +35,10 @@ function Nav() {
               </div>
               <div className="md:flex items-center space-x-20 text-PokeBlue">
                 <a
-                  href="/"
+                  href="/journalform"
                   className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-4 py-2"
                 >
-                  Home
+                  Create a Journal
                 </a>
                 <a
                   href="/journals"

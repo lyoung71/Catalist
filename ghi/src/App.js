@@ -24,7 +24,7 @@ function App() {
             <Route path="login" element={<LoginForm />} />
             <Route path="signup" element={<SignupForm />} />
             <Route path="journals" element={<JournalList />} />
-            {/* <Route path="journals:journal_id" element={<JournalDetail />} /> */}
+            {/* <Route path="journals/:journal_id" element={<JournalDetail />} /> */}
             <Route path="journalform" element={<JournalForm />} />
             <Route path="todos" element={<TodoList />} />
             <Route path="todoform" element={<TodoForm />} />
