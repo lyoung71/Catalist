@@ -15,15 +15,15 @@ lint-test-job:
     - flake8 api
 
 # # # Run the unit tests
-# api-unit-tests-job:
-#   image: python:3-bullseye
-#   stage: test
-#   needs:
-#     - lint-test-job
-#   script:
-#     - cd api
-#     - pip install -r requirements.txt
-#     - python -m pytest
+api-unit-tests-job:
+  image: python:3-bullseye
+  stage: test
+  needs:
+    - lint-test-job
+  script:
+    - cd api
+    - pip install -r requirements.txt
+    - python -m pytest
 
 # # Build API Image:
 # build-api-image:
@@ -41,7 +41,7 @@ lint-test-job:
 #     - main
 
 
-# # # Build the React/JavaScript front-end
+# # # # Build the React/JavaScript front-end
 # build-front-end-job:
 #   stage: build
 #   image: node:lts-bullseye
