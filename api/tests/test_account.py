@@ -7,7 +7,7 @@ client = TestClient(app)
 
 
 class AccountQuery:
-    def get(self, username: str):
+    def get():
         return {
             "id": "61318bf5e4dfcd730b2e213f",
             "first_name": "Emre",

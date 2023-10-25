@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 from main import app
-# from authenticator import authenticator
+from authenticator import authenticator
 from queries.journals import JournalQueries
 from fastapi.testclient import TestClient
 
@@ -47,7 +47,7 @@ def fake_get_current_account_data():
 #     )
 
 class fake_journal_queries:
-    def get_journal_by_id(self, id: str):
+    def get_journal_by_id():
         return {
             "mood": "frustrated",
             "desc": "unit testing sucks",
@@ -57,8 +57,8 @@ class fake_journal_queries:
 
 
 def test_get_journal():
-    # app.dependency_overrides[authenticator.get_current_account_data]
-    #  = fake_get_current_account_data
+    app.dependency_overrides[authenticator.get_current_account_data] = \
+        fake_get_current_account_data
     app.dependency_overrides[JournalQueries] = fake_journal_queries
     response = client.get("/api/journals/6536c9fdd609f361065f6e8b")
     app.dependency_overrides = {}
