@@ -11,9 +11,9 @@ import JournalList from "./components/JournalList";
 import TodoList from "./components/TodosList";
 import CalendarComp from "./components/CalendarComp";
 import JournalForm from "./components/JournalForm";
-
 import TodoForm from "./components/TodoForm";
 import About from "./components/About";
+
 function App() {
   const domain = /https:\/\/[^/]+/;
   const basename = process.env.PUBLIC_URL.replace(domain, '');
