@@ -38,7 +38,6 @@ function Nav() {
                                 <a href="/" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-4 py-2">Contact</a>
                             </div>
                             <div className="md:flex items-center space-x-4 py-5 px-6">
-                                <Link to="user" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-4 py-2">Account</Link>
                                 <button onClick={handleLogout} className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-4 py-2"> Log out </button>
                             </div>
                         </div>

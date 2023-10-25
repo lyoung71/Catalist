@@ -18,3 +18,6 @@ Worked on calendar but we ultimately decided that it would be better left as a s
 
 10/24/2023
 Spent a long time trying to get the unit test to work. With a lot of time and assistance I managed to get it working. Started working on preparing the site for deployment.
+
+10/25/2023
+Tried to help Mark troubleshoot his problem with his unit test but ultimately wasn't able to help him. Tried to work through the CI/CD steps again but Cirrus still gave me trouble. Added some formatting and links to the footer to make it look nicer and add some functionality. Dalonte jumped in to help out and I managed to deploy the database (I think). Going to continue working on CSS. 

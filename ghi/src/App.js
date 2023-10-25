@@ -10,7 +10,6 @@ import UserPage from "./components/UserPage";
 import JournalList from "./components/JournalList";
 import CalendarComp from "./components/CalendarComp";
 import JournalForm from "./components/JournalForm";
-import Footer from "./components/Footer";
 
 
 function App() {
@@ -20,19 +19,16 @@ function App() {
     <AuthProvider baseUrl="http://localhost:8000">
       <BrowserRouter basename={basename}>
         <Nav />
-        <div>
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="login" element={<LoginForm />} />
             <Route path="signup" element={<SignupForm />} />
-          <Route path="user" element={<UserPage />}/>
+            <Route path="user" element={<UserPage />}/>
             <Route path="journals" element={<JournalList />} />
             <Route path="journalform" element={<JournalForm/>} />
             <Route path="calendar" element={<CalendarComp />} />
           </Routes>
-      <Footer />
           <Footer/>
-        </div>
       </BrowserRouter>
     </AuthProvider>
   );
