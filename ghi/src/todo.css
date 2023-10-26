@@ -12,11 +12,12 @@
   background-size: cover;
   text-align: center;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   padding-top: 2vh;
   flex-direction: column;
   align-items: center;
 }
+
 
 .form-title {
   text-align: center;
@@ -64,35 +65,3 @@
   border: 3px solid;
   font-family: PokemonDigital;
 }
-
-/* .add-todo {
-  font-family: PokemonDigital;
-  font-size: 40px;
-} */
-/* .input {
-  width: auto;
-  margin: auto;
-  margin-right: 5px;
-  border-radius: 1px;
-  padding: 3px;
-}
-
-#textarea {
-  /* font-family: url('./fonts/rainyhearts.ttf'); */
-/* display: block;
-  width: 100%;
-  overflow: scroll;
-  resize: both;
-  min-height: 40px;
-  line-height: 20px;
-  border: 2px solid #bdc7d9;
-  padding: 5px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border-radius: 10px;
-  border-radius: 5px 50px 30px;
-} */
-
-/* #pokeDiv {
-  vertical-align: middle;
-} */
