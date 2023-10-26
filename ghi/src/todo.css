@@ -65,6 +65,10 @@
   font-family: PokemonDigital;
 }
 
+.create-task-btn {
+  margin-top: 40px;
+}
+
 /* .add-todo {
   font-family: PokemonDigital;
   font-size: 40px;

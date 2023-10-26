@@ -1,6 +1,7 @@
 import "../todos.css";
 // import emerald from "../content/emerald.jpg";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function TodoList() {
     const [todos, setTodos] = useState([]);
@@ -122,6 +123,9 @@ function TodoList() {
                         })}
                     </tbody>
                 </table>
+            </div>
+            <div className="create-task-btn">
+                <Link to="/todoform"><button id="new-task-btn" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">Create a task!</button></Link>
             </div>
         </div>
     );
