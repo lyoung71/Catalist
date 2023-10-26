@@ -13,4 +13,16 @@ Today, we decided to MOB code in an attempt to work through front end auth with 
 10/13/2023
 SpoOoOoKy! Friday the 13th! What's spookier is definitely the end of this module nearing us. We did a lot of talking as a group today and looked over some ideas for our front end. Emre showed us some photos/themes and we voted on a few. I'm still having backend issues- but as a group we've been asking for help from Whitley about the login/sign in/sign up.
 
-10/16/2023
+10/16/23
+Ok everything came crashing down. Today I was stuck because of a docker issue. Nothing would work. I attempted deleting and rebuilding containers and nothing fixed it. I eventually decided to delete all containers, volumes, and images and then pruned docker through my terminal. This resolved the issue.
+
+10/17/23 -
+Todo List is populating, however there's plenty of style issues. Dealt with some backend issues. I began coding frontend
+
+10/19/23
+Todo list and todo form progress has been working. I haven't been able to pull or push due to issues. I've accidentally gotten stuck in git hell. It seems as if rebasing is the issue
+
+10/23/23 -
+Pokemon cards in dev page are now complete. I had to write a lot from scratch due to issues in the grid.
+
+10/25/23 -

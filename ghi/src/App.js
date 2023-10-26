@@ -7,16 +7,15 @@ import LoginForm from "./components/LoginForm";
 import SignupForm from "./components/SignUpForm";
 import JournalList from "./components/JournalList";
 import TodoList from "./components/TodosList";
-import TodoList from "./components/TodosList";
 import Nav from "./components/Nav";
 import LandingPage from "./components/LandingPage";
 import JournalDetail from "./components/JournalDetail";
 import JournalForm from "./components/JournalForm";
-import UserPage from "./components/UserPage";
+// import UserPage from "./components/UserPage";
 import TodoForm from "./components/TodoForm";
 import About from "./components/About";
-import TodoForm from "./components/TodoForm";
-import About from "./components/About";
+
+
 function App() {
   return (
     <AuthProvider baseUrl="http://localhost:8000">
@@ -30,13 +29,10 @@ function App() {
             <Route path="journals" element={<JournalList />} />
             <Route path="journals/:journal_id" element={<JournalDetail />} />
             <Route path="journalform" element={<JournalForm />} />
-            <Route path="user" element={<UserPage />} />
-            <Route path="todos" element={<TodoList />} />
-            <Route path="todoform" element={<TodoForm />} />
+            {/* <Route path="user" element={<UserPage />} /> */}
             <Route path="about" element={<About />} />
             <Route path="todos" element={<TodoList />} />
             <Route path="todoform" element={<TodoForm />} />
-            <Route path="about" element={<About />} />
           </Routes>
         </div>
       </BrowserRouter>

@@ -4,7 +4,7 @@ from pydantic import BaseModel
 class Journal(BaseModel):
     mood: str
     desc: str
-    created: str
+    journal_date: str
 
 
 class JournalWithId(Journal):
