@@ -9,7 +9,7 @@ export default function PokemonOfTheMinute() {
         <div>
             <h1>Pokemon of the Minute: </h1>
             <img src={urlMinute} alt="" />
-            <p>{Poke3()}</p>
+            <div>{Poke3()}</div>
         </div>
     )
 }

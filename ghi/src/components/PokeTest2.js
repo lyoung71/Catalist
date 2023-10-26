@@ -15,7 +15,7 @@ export default function Poke2() {
             console.log(data)
             setPokemon(data.name)
             setHappiness(data.base_happiness)
-            setFlavortext(data.flavor_text_entries[0]["flavor_text"])
+            setFlavortext(data.flavor_text_entries[1]["flavor_text"])
         }
     }
 

@@ -10,7 +10,7 @@ export default function PokemonOfTheHour() {
         <div>
             <h1>Pokemon of the Hour: </h1>
             <img src={urlHour} alt="" />
-            <p>{Poke2()}</p>
+            <div>{Poke2()}</div>
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import { React, useEffect, useState } from "react";
 
-export default function Poke2() {
+export default function Poke3() {
     const [pokemon, setPokemon] = useState('')
     const [happiness, setHappiness] = useState('')
     const [flavortext, setFlavortext] = useState('')
@@ -15,7 +15,7 @@ export default function Poke2() {
             console.log(data)
             setPokemon(data.name)
             setHappiness(data.base_happiness)
-            setFlavortext(data.flavor_text_entries[0]["flavor_text"])
+            setFlavortext(data.flavor_text_entries[1]["flavor_text"])
         }
     }
 
