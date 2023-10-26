@@ -1,6 +1,8 @@
 import { useState } from "react";
 import PokemonOfTheDay from "./PokemonOfTheDay";
 import useToken from "@galvanize-inc/jwtdown-for-react";
+import PokemonOfTheHour from "./PokemonOfTheHour";
+import PokemonOfTheMinute from "./PokemonOfTheMinute";
 
 export default function JournalForm() {
     const [mood, setMood] = useState('')
@@ -89,7 +91,9 @@ export default function JournalForm() {
                         Submit
                     </button>
                 </form >
-                <div id="PokeCard" className="PokemonDigital">{PokemonOfTheDay()}</div>
+                <div id="PokeCard" className="PokemonDigital">{PokemonOfTheDay()}
+                </div>
+
             </div >
         </div>
     )
