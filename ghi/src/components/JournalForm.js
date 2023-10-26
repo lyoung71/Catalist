@@ -94,6 +94,7 @@ export default function JournalForm() {
                 <div id="PokeCard" className="PokemonDigital">{PokemonOfTheDay()}
                 </div>
 
+                <div id="PokeCard" className="PokemonDigital">{PokemonOfTheDay()}</div>
             </div >
         </div>
     )

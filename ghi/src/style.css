@@ -1,0 +1,286 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* html,
+body {
+  height: 100%;
+} */
+/* .ability-cost {
+  height: 75px;
+  display: grid;
+  grid-template-columns: 65px auto 65px;
+  gap: 5px;
+  align-items: center;
+  justify-items: center;
+  margin: 0 10px;
+  border-bottom: 2px solid black;
+} */
+
+/* body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dcdcdc;
+} */
+
+/* .ability-name .ability-cost {
+  height: 75px;
+  display: grid;
+  grid-template-columns: 65px auto 65px;
+  gap: 5px;
+  align-items: center;
+  justify-items: center;
+  margin: 0 10px;
+  border-bottom: 2px solid black;
+} */
+.flex-container {
+  display: flex;
+  justify-self: left;
+}
+#card-name-one {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+#middle-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 3px;
+}
+
+#middle-mid-row {
+  display: inline;
+  text-align: left;
+  line-height: 18px;
+}
+
+#mini-fire {
+  display: inline;
+  width: 18px;
+}
+.pokemon-card {
+  height: 672px;
+  width: 435px;
+  border-radius: 15px;
+  display: grid;
+  overflow: hidden;
+  box-shadow: 20px 12px 20px 0px black;
+  border: 15px solid #e7c30d;
+  font-family: arial, sans-serif;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-image: url("./background.jpg"); */
+    background-size: cover;
+    z-index: -1;
+    filter: hue-rotate(140deg);
+  }
+}
+
+.gameboy-card {
+  height: 672px;
+  width: 435px;
+  border-radius: 15px;
+  display: grid;
+  overflow: hidden;
+  box-shadow: 20px 12px 20px 0px black;
+  border: 15px solid #e7c30d;
+  font-family: arial, sans-serif;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-image: url("./background.jpg"); */
+    background-size: cover;
+    z-index: -1;
+    filter: hue-rotate(140deg);
+  }
+}
+
+/* .testing {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+} */
+
+.title-row {
+  display: grid;
+  grid-template-areas: "rarity rarity rarity" "name health type";
+  grid-template-columns: auto 75px 25px;
+  grid-template-rows: 15px 25px;
+  align-items: center;
+  -moz-column-gap: 5px;
+  column-gap: 5px;
+  margin: 5px 20px 0px 20px;
+}
+.title-row .rarity {
+  grid-area: rarity;
+  font-weight: bold;
+  font-size: 12px;
+}
+.title-row .name {
+  grid-area: name;
+}
+.title-row .health {
+  grid-area: health;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: right;
+  color: red;
+}
+.title-row .type {
+  grid-area: type;
+  width: 100%;
+}
+
+.gameboy-row {
+  /* display: grid;
+  grid-template-areas: "rarity rarity rarity" "name health type";
+  grid-template-columns: auto 75px 25px;
+  grid-template-rows: 15px 25px; */
+  align-items: center;
+  -moz-column-gap: 5px;
+  column-gap: 5px;
+  margin: 5px 5px 0px 5px;
+}
+
+.element-icon {
+  height: 100%;
+}
+
+.character-img {
+  margin: 0 20px;
+  background-color: blue;
+  height: 270px;
+  border: 5px solid yellow;
+  overflow: hidden;
+}
+.character-img img {
+  height: 100%;
+}
+
+.character-img-pika {
+  margin: 0 20px;
+  background-color: rgb(255, 221, 0);
+  height: 270px;
+  border: 5px solid yellow;
+  overflow: hidden;
+}
+.character-img img {
+  height: 100%;
+}
+
+.character-img-sp {
+  margin: 0 20px;
+  background-color: rgb(255, 221, 0);
+  height: 270px;
+  width: 355px;
+  border: 5px solid yellow;
+  overflow: hidden;
+}
+.character-img img {
+  height: 100%;
+}
+
+.character-img-snor {
+  margin: 0 20px;
+  background-color: rgb(255, 221, 0);
+  height: 270px;
+  width: 355px;
+  border: 5px solid yellow;
+  overflow: hidden;
+}
+.character-img img {
+  height: 100%;
+  width: 100%;
+}
+
+.character-img-snom {
+  margin: 0 20px;
+  background-color: rgb(136, 0, 255);
+  height: 270px;
+  width: 355px;
+  border: 5px solid yellow;
+  overflow: hidden;
+}
+.character-img img {
+  height: 100%;
+  width: 100%;
+}
+
+.gameboy-img {
+  margin: 0 20px;
+  background-color: rgb(251, 247, 255);
+  height: 270px;
+  width: 355px;
+  border: 15px solid rgb(195, 193, 191);
+  overflow: hidden;
+}
+.character-img img {
+  height: 100%;
+  width: 100%;
+}
+
+.character-meta {
+  background-color: yellow;
+  height: 25px;
+  margin: 0 40px;
+  display: grid;
+  align-items: center;
+}
+.character-meta p {
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.character-ability {
+  height: 75px;
+  display: grid;
+  grid-template-columns: 65px auto 65px;
+  gap: 5px;
+  align-items: center;
+  justify-items: center;
+  margin: 0 10px;
+  border-bottom: 2px solid black;
+}
+.character-ability .ability-cost img {
+  width: 30px;
+}
+.character-ability .ability-description {
+  text-align: center;
+}
+.character-ability .ability-description .ability-name {
+  font-weight: bold;
+  height: 16px;
+  float: left;
+}
+.character-ability .ability-description p {
+  text-align: left;
+}
+.character-ability .ability-description pbefore {
+  content: " ";
+}
+.character-ability .ability-description p img {
+  height: 18px;
+  vertical-align: middle;
+}
+.character-ability .ability-damage {
+  font-weight: bold;
+  font-size: 30px;
+} /*# sourceMappingURL=style.css.map */
