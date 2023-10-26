@@ -34,4 +34,7 @@
 
 10/23/23
 - fixed bug where journallist was not working on the backend on my local branch
-- 
+
+10/25/23
+- Got unit test for get_all_journals working, mob coded update_journal and create_journal tests
+- Flex goal: Get specific property from pokeapi to show up on journalform

@@ -377,21 +377,13 @@ form input {
   background-size: cover;
 }
 
-#RandomPokemon {
-    display: flex;
-    margin-top: 20px;
-    padding: 10px;
-    background-color: white;
-    border-radius: 5px 50px 30px;
-    flex-wrap: wrap;
-    font-size: 10px;
-}
-
 #pokeDiv {
     vertical-align: middle;
 }
 
 #submit-button {
+  margin-top: 10px;
+  margin-left: 10px;
   padding: 15px 25px;
   font-size: 24px;
   text-align: center;
@@ -402,6 +394,7 @@ form input {
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #fad933;
+  font-family: PokemonDigital;
 }
 
 #submit-button:hover {background-color: #083b81}
@@ -410,4 +403,14 @@ form input {
   background-color: #0245a3;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+
+#PokeCard {
+  display: flex;
+  margin-top: 50px;
+  padding: 2%;
+  background-color: white;
+  border-radius: 5px 50px 30px;
+  flex-wrap: wrap;
+  font-size: 15px;
 }
