@@ -32,10 +32,10 @@ function Nav() {
                                 </div>
                             </div>
                             <div className="md:flex items-center space-x-20 text-PokeBlue">
-                                <Link to="/" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-4 py-2">Home</Link>
                                 <Link to="journals" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-4 py-2">Journals</Link>
+                                <Link to="todos" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-4 py-2">Todo List</Link>
                                 <Link to="calendar" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-4 py-2">Calendar</Link>
-                                <a href="/" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-4 py-2">Contact</a>
+                                <Link to="about" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-4 py-2">About</Link>
                             </div>
                             <div className="md:flex items-center space-x-4 py-5 px-6">
                                 <button onClick={handleLogout} className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-4 py-2"> Log out </button>
@@ -64,7 +64,7 @@ function Nav() {
                                 <a href="/" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-4 py-2">Home</a>
                                 <a href="/" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-4 py-2">Services</a>
                                 <a href="/" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-4 py-2">About</a>
-                                <a href="/" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-4 py-2">Contact</a>
+                            <Link to="about" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 rounded px-4 py-2">About</Link>
                             </div>
                             <div className="md:flex items-center space-x-4 py-5 px-6">
                                 <Link to="/signup" className="text-PokeYellow bg-PokeBlue hover:bg-opacity-80 rounded px-4 py-2">Sign Up</ Link>
