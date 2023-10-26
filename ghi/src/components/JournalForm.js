@@ -44,12 +44,22 @@ export default function JournalForm() {
         }
 
         const response = await fetch(journalUrl, fetchConfig)
-        if (response.ok) {
-            // const newJournal = await response.json()
-            console.log("journal created!")
+        if (mood.length < 1) {
+            alert("Please enter a mood!")
+        }
+        if (journalDate.length < 1) {
+            alert("Please enter a date!")
+        }
+        if (desc.length < 1) {
+            alert("Please enter at least 5 characters!")
+        }
+        if (response.ok && (mood.length + journalDate.length + desc.length >= 3)) {
+            alert("Journal created!")
             setMood('')
             setDesc('')
             setJournalDate('')
+        } else {
+            alert.log("Please enter more info!")
         }
     }
 

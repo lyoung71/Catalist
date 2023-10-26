@@ -5,7 +5,6 @@ from queries.accounts import AccountQueries
 from authenticator import authenticator
 from pydantic import BaseModel
 from models.journals import Journal, JournalWithId
-from test_py import AccountQuery, AccountQueries
 
 
 client = TestClient(app)
