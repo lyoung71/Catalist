@@ -1,0 +1,370 @@
+// * {
+//   padding: 0;
+//   margin: 0;
+//   box-sizing: border-box;
+// }
+
+// html,
+// body {
+//   height: 100%;
+// }
+
+// body {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   background-color: #dcdcdc;
+// }
+
+.pokemon-card-char {
+  height: 672px;
+  width: 435px;
+  border-radius: 15px;
+  display: grid;
+  overflow: hidden;
+  box-shadow: 12px 12px 12px 0px rgb(255, 2, 2);
+  border: 15px solid #e7c30d;
+  font-family: arial, sans-serif;
+  background: linear-gradient(
+    to bottom right,
+    #ffbfba,
+    #e7281a,
+    #e66018,
+    #f3473a,
+    #f37d16,
+    #ff978f
+  );
+}
+
+.pokemon-card-pika {
+  height: 672px;
+  width: 435px;
+  border-radius: 15px;
+  display: grid;
+  overflow: hidden;
+  box-shadow: 12px 12px 12px 0px rgb(255, 159, 25);
+  border: 15px solid #e7c30d;
+  font-family: arial, sans-serif;
+  background: linear-gradient(
+    to bottom right,
+    #ffdb0c,
+    #fff530af,
+    #ffea00,
+    #ffc800,
+    #ffffa4,
+    #ffd502
+  );
+}
+
+.pokemon-card-sp {
+  height: 672px;
+  width: 435px;
+  border-radius: 15px;
+  display: grid;
+  overflow: hidden;
+  box-shadow: 12px 12px 12px 0px rgb(173, 73, 245);
+  border: 15px solid #e7c30d;
+  font-family: arial, sans-serif;
+  background: linear-gradient(
+    to bottom right,
+    #e5bbf5,
+    #641ce1af,
+    #da75ff,
+    #a023e4,
+    #d1a4ff,
+    #c430ff
+  );
+}
+
+.pokemon-card-snor {
+  height: 672px;
+  width: 435px;
+  border-radius: 15px;
+  display: grid;
+  overflow: hidden;
+  box-shadow: 12px 12px 12px 0px rgb(26, 9, 255);
+  border: 15px solid #e7c30d;
+  font-family: arial, sans-serif;
+  background: linear-gradient(
+    to bottom right,
+    #bcbbf5,
+    #1509ffaf,
+    #7577ff,
+    #2343e4,
+    #a4b9ff,
+    #024cf8
+  );
+}
+
+.pokemon-card-snom {
+  height: 672px;
+  width: 435px;
+  border-radius: 15px;
+  display: grid;
+  overflow: hidden;
+  box-shadow: 12px 12px 12px 0px rgb(133, 200, 255);
+  border: 15px solid #e7c30d;
+  font-family: arial, sans-serif;
+  background: linear-gradient(
+    to bottom right,
+    #edecfc,
+    #cccaefaf,
+    #afb1f7,
+    #7e94ff,
+    #cdd8ff,
+    #a6bffa
+  );
+}
+
+.gameboy-card {
+  height: 672px;
+  width: 435px;
+  border-radius: 15px;
+  display: grid;
+  overflow: hidden;
+  box-shadow: 12px 12px 12px 0px black;
+  border: 15px solid #767676;
+  font-family: arial, sans-serif;
+  background: rgb(177, 225, 204);
+}
+
+.title-row {
+  display: grid;
+  grid-template-areas:
+    "rarity rarity rarity"
+    "name health type";
+  grid-template-columns: auto 75px 25px;
+  grid-template-rows: 15px 25px;
+  align-items: center;
+  column-gap: 5px;
+  margin: 5px 20px 0px 20px;
+
+  .rarity {
+    grid-area: rarity;
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+  .name {
+    grid-area: name;
+    color: black;
+  }
+
+  #pokemon-card-one {
+    color: black;
+  }
+
+  .health {
+    grid-area: health;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: right;
+    color: red;
+  }
+
+  .type {
+    grid-area: type;
+    width: 100%;
+  }
+}
+
+.character-stats {
+  height: 45px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  .character-stat {
+    display: grid;
+    justify-items: center;
+    grid-template-rows: 20px 25px;
+    p {
+      font-size: 12px;
+      font-weight: bold;
+    }
+  }
+}
+
+.character-description {
+  height: 40px;
+  margin: 0 20px;
+  border: 2px solid yellow;
+  display: grid;
+  align-items: center;
+  p {
+    font-style: italic;
+    font-size: 12px;
+    padding: 0 10px;
+    font-weight: bold;
+  }
+}
+
+.card-details {
+  height: 15px;
+  display: grid;
+  grid-template-columns: 95px auto 45px;
+  font-size: 8px;
+  align-items: center;
+  margin: 0 5px;
+  .artist {
+    font-weight: bold;
+  }
+  .company {
+    text-align: center;
+  }
+  .collector-card-num {
+    font-weight: bold;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    &:after {
+      content: "☻";
+      font-size: 9px;
+      line-height: 9px;
+      padding: 0 5px;
+    }
+  }
+}
+
+.element-icon {
+  height: 100%;
+}
+
+.character-img {
+  margin: 0 20px;
+  background-color: blue;
+  height: 270px;
+  border: 5px solid yellow;
+  overflow: hidden;
+  img {
+    height: 100%;
+  }
+}
+
+.character-img-pika {
+  margin: 0 20px;
+  background-color: rgb(225, 221, 0);
+  height: 270px;
+  border: 5px solid yellow;
+  overflow: hidden;
+  img {
+    height: 100%;
+  }
+}
+
+.character-img-sp {
+  margin: 0 20px;
+  background-color: rgb(60, 0, 225);
+  height: 270px;
+  border: 5px solid yellow;
+  overflow: hidden;
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.character-img-snor {
+  margin: 0 20px;
+  background-color: rgb(60, 0, 225);
+  height: 270px;
+  border: 5px solid yellow;
+  overflow: hidden;
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.character-img-snom {
+  margin: 0 20px;
+  background-color: rgb(136, 0, 255);
+  height: 270px;
+  border: 5px solid yellow;
+  overflow: hidden;
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.gameboy-img {
+  position: relative;
+  top: -40px;
+  // margin: 0 40px;
+  background-color: rgb(227, 225, 228);
+  height: 250px;
+  border: 5px solid rgb(85, 85, 85);
+  overflow: hidden;
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.character-meta {
+  background-color: yellow;
+  height: 25px;
+  margin: 0 40px;
+  display: grid;
+  align-items: center;
+  p {
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: italic;
+  }
+}
+
+.console {
+  position: relative;
+  top: -100px;
+  margin: 0 40px;
+  display: grid;
+  align-items: left;
+  p {
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+  }
+}
+
+.character-ability {
+  height: 75px;
+  display: grid;
+  grid-template-columns: 65px auto 65px;
+  gap: 5px;
+  align-items: center;
+  justify-items: center;
+  margin: 0 10px;
+  border-bottom: 2px solid black;
+
+  .ability-cost {
+    img {
+      width: 30px;
+    }
+  }
+
+  .ability-description {
+    text-align: center;
+    .ability-name {
+      font-weight: bold;
+      height: 16px;
+      float: left;
+    }
+    p {
+      &before {
+        content: "\00a0";
+      }
+      img {
+        height: 18px;
+        vertical-align: middle;
+      }
+      text-align: left;
+    }
+  }
+
+  .ability-damage {
+    font-weight: bold;
+    font-size: 30px;
+  }
+}

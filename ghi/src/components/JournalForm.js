@@ -1,5 +1,5 @@
 import { useState } from "react";
-import PokemonOfTheDay from "./test"
+import PokemonOfTheDay from "./PokemonOfTheDay"
 import useToken from "@galvanize-inc/jwtdown-for-react";
 
 export default function JournalForm() {
