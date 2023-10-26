@@ -1,8 +1,9 @@
-// import { Outlet, RouterProvider } from "react-router-dom";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./App.css";
-import "./fonts.css";
 import { AuthProvider } from "@galvanize-inc/jwtdown-for-react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./fonts.css";
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
+import LandingPage from "./components/LandingPage";
 import LoginForm from "./components/LoginForm";
 import SignupForm from "./components/SignUpForm";
 import JournalList from "./components/JournalList";
@@ -17,9 +18,11 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 
 function App() {
+  const domain = /https:\/\/[^/]+/;
+  const basename = process.env.PUBLIC_URL.replace(domain, '');
   return (
     <AuthProvider baseUrl="http://localhost:8000">
-      <BrowserRouter>
+      <BrowserRouter basename={basename}>
         <Nav />
         <div>
           <Routes>

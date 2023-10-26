@@ -6,14 +6,14 @@ function TodoList() {
     const [todos, setTodos] = useState([]);
     // const { token } = useToken();
 
-    function toggleCompleted(id) {
-        const updatedTodos = todos.map(todo => {
-            if (todo.id === id) {
-                return { ...todo, completed: !todo.completed }
-            }
-            return todo
-        })
-        setTodos(updatedTodos)
+    const handleDelete = async (todoToDelete) => {
+        const response = await fetch(`http://localhost:8000/api/todos/${todoToDelete.id}`, {
+            method: "DELETE",
+        });
+        if (response.ok) {
+            setTodos(prevTodos => prevTodos.filter(todo => todo.id != todoToDelete.id))
+
+        }
     }
 
     const getData = async () => {
@@ -49,6 +49,7 @@ function TodoList() {
     useEffect(() => {
         getData();
     }, []);
+
 
     return (
         <div className="todo-container">
@@ -112,7 +113,7 @@ function TodoList() {
                                         <button
                                             type="button"
                                             className="btn"
-                                            onClick={() => handleDelete(todo)}
+                                            onClick={handleDelete}
                                         >
                                             Delete
                                         </button>
@@ -123,9 +124,7 @@ function TodoList() {
                     </tbody>
                 </table>
             </div>
-            <div className="create-task-btn">
-                <Link to="/todoform"><button id="new-task-btn" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">Create a task!</button></Link>
-            </div>
+            <Link to="/todoform"><button id="submit-button" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">Create a task!</button></Link>
         </div>
     );
 }

@@ -9,12 +9,13 @@ COPY main.py main.py
 
 # Copy all of the subdirectories in your service's directory
 # Modify these instructions to do that
-# COPY queries queries
-# COPY routers routers
+COPY queries queries
+COPY routers routers
+COPY models models
 
 RUN python -m pip install -r requirements.txt
 
-CMD uvicorn main:app --host 0.0.0.0 --port 80
+CMD uvicorn main:app --reload --host 0.0.0.0 --port 80
 
 
 # If you're using a relational database and want migrations

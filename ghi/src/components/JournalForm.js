@@ -1,6 +1,8 @@
 import { useState } from "react";
-import PokemonOfTheDay from "./PokemonOfTheDay"
+import PokemonOfTheDay from "./PokemonOfTheDay";
 import useToken from "@galvanize-inc/jwtdown-for-react";
+import PokemonOfTheHour from "./PokemonOfTheHour";
+import PokemonOfTheMinute from "./PokemonOfTheMinute";
 
 export default function JournalForm() {
     const [mood, setMood] = useState('')
@@ -45,6 +47,8 @@ export default function JournalForm() {
             setMood('')
             setDesc('')
             setJournalDate('')
+        } else {
+            alert.log("Please enter more info!")
         }
     }
 
@@ -54,7 +58,6 @@ export default function JournalForm() {
             <div id="journal">
                 <form onSubmit={handleSubmit}>
                     <div className="border-blue-500 border-opacity-75">
-
                         <input className="input" type="text" onChange={handleJournalDateChange} placeholder={"date"} value={journalDate}></input>
                         <input className="input" type="text" onChange={handleMoodChange} placeholder={"mood"} value={mood}></input>
                         <textarea
@@ -68,13 +71,13 @@ export default function JournalForm() {
                             value={desc}
                             onChange={handleDescChange}>
                         </textarea>
-
                     </div>
                     <button id="submit-button" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
                         Submit
                     </button>
                 </form >
-                <div id="PokeCard" className="PokemonDigital">{PokemonOfTheDay()}</div>
+                <div id="PokeCard" className="PokemonDigital">{PokemonOfTheDay()}
+                </div>
             </div >
         </div>
     )

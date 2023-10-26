@@ -2,36 +2,37 @@ import hero from "../content/hero.jpg"
 import ft1 from "../content/ft1.png"
 import ft2 from "../content/ft2.png"
 import ft3 from "../content/ft3.png"
-import React, {useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { useAuthContext } from "@galvanize-inc/jwtdown-for-react";
 
 function LandingPage() {
-    const [accounts, setAccounts] = useState({});
-    const { token } = useAuthContext();
-    const getData = async () => {
-        const url = "http://localhost:8000/token/";
-        const config = {credentials: "include"}
-        const response = await fetch(url, config);
-        if (response.ok) {
-            const data = await response.json();
-            setAccounts(data);
-        }
+  const [accounts, setAccounts] = useState({});
+  const { token } = useAuthContext();
+  const getData = async () => {
+    const url = "http://localhost:8000/token/";
+    const config = { credentials: "include" }
+    const response = await fetch(url, config);
+    if (response.ok) {
+      const data = await response.json();
+      setAccounts(data);
     }
-    useEffect (() => {
-        if(token) {
-        getData()
-        }
-    }, [token]);
-    {/* {token && accounts ? <h1>Hello, {accounts?.account.first_name} </h1> : <h1>Hello World</h1>} */}
+  }
+  useEffect(() => {
+    if (token) {
+      getData()
+    }
+  }, [token]);
+  {/* {token && accounts ? <h1>Hello, {accounts?.account.first_name} </h1> : <h1>Hello World</h1>} */ }
 
-    return (
+  return (
     <>
         <section className="flex justify-center items-center relative h-screen PokemonDigital font-bold">
                 <img src={hero} alt="Hero Description" className="absolute w-full h-full object-cover" />
                 <div className="text-center z-10 bg-White bg-opacity-70 text-PokeBlue rounded-full px-6 py-2">
                     <h1 className="text-5xl mb-4">Welcome to Catalist</h1>
                     <p className="text-xl mb-8">Your personal space to reflect, grow, and thrive.</p>
-                    <a href="/signup" className="bg-PokeBlue text-White hover:bg-opacity-80 rounded-full py-2 px-6">Start Journaling</a>
+                    <Link to="signup" className="bg-PokeBlue text-White hover:bg-opacity-80 rounded-full py-2 px-6">Start Journaling</Link>
                 </div>
             </section>
             <section>
@@ -66,10 +67,10 @@ function LandingPage() {
             <section className="bg-White text-PokeBlue py-16 PokemonDigital tracking-tighter">
                 <div className="text-center">
                     <h2 className="text-4xl font-bold mt-4 mb-12">Ready to Start Journaling?</h2>
-                    <a href="/signup" className="py-2 px-6 bg-PokeBlue text-White rounded-full shadow-lg hover:bg-opacity-70 transition duration-300">Sign Up Now</a>
+                    <Link to="signup" className="py-2 px-6 bg-PokeBlue text-White rounded-full shadow-lg hover:bg-opacity-70 transition duration-300">Sign Up Now</Link>
                 </div>
                 <div className="text-center mt-4">
-                    <a href="/login" className="hover:opacity-70">Already have an account?</a>
+                    <Link to="login" className="hover:opacity-70">Already have an account?</Link>
                 </div>
             </section>
     </>

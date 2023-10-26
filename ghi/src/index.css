@@ -15,8 +15,8 @@ body {
 }
 
 h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
   color: #05ca40ce;
 }
 
@@ -331,13 +331,11 @@ form input {
   margin: 5px;
 }
 
-
-
 #journal {
   width: 50%;
   margin: auto;
   position: absolute;
-  top: 60%;
+  top: 600px;
   left: 50%;
   right: 50%;
   transform: translate(-50%, -50%);
@@ -349,10 +347,10 @@ form input {
 
 .input {
   width: auto;
-  margin: auto;
   margin-right: 5px;
-  border-radius: 1px;
-  padding:3px
+  border-radius: 3px;
+  padding:5px;
+  font-family: PokemonDigital;
 }
 
 #textarea {
@@ -368,10 +366,11 @@ form input {
   margin-bottom: 5px;
   border-radius: 10px;
   border-radius: 5px 50px 30px;
+  font-family: PokemonDigital;
 }
 
 #image {
-  height: 1000px;
+  height: 1200px;
   background-image: url("./content/route119.png");
   filter: blur(5px);
   background-position: center;
@@ -424,4 +423,25 @@ form input {
   border-radius: 5px 50px 30px;
   flex-wrap: wrap;
   font-size: 15px;
+}
+
+#PokeCard2 {
+  display: flex;
+  margin-top: 50px;
+  padding: 2%;
+  background-color: white;
+  border-radius: 5px 50px 30px;
+  flex-wrap: wrap;
+  font-size: 15px;
+}
+
+#PokeCard3 {
+  margin-top: 1rem;
+  background-color: white;
+  border-radius: 5px 50px 30px;
+  font-size: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  padding: 5%;
 }
