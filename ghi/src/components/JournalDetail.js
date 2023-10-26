@@ -1,19 +1,21 @@
 import { useState, useEffect } from "react";
-import useToken from "@galvanize-inc/jwtdown-for-react";
-import { useParams } from "react-router-dom";
+import PokemonOfTheDay from "./PokemonOfTheDay"
+import {useAuthContext} from "@galvanize-inc/jwtdown-for-react";
+import { useParams, useNavigate } from "react-router-dom";
 
 function JournalDetail() {
   const [journal, setJournal] = useState({});
-  const { token } = useToken();
+  const { token } = useAuthContext();
   const { journal_id } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchJournal = async () => {
       const response = await fetch(`http://localhost:8000/api/journals/${journal_id}`, {
         credentials: "include",
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
+        // headers: {
+        //   Authorization: `Bearer ${token}`,
+        // },
       });
 
       if (response.ok) {
@@ -23,23 +25,22 @@ function JournalDetail() {
     };
 
     fetchJournal();
-  }, [journal_id, token]);
+  }, [journal_id]);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
-    // Update the journal state with the user's changes
     setJournal({ ...journal, [name]: value });
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  const handleSubmit = async () => {
+
 
     const journalUrl = `http://localhost:8000/api/journals/${journal_id}`;
     const fetchConfig = {
       method: "PUT",
-      body: JSON.stringify(journal), // Send the updated journal data
+      body: JSON.stringify(journal),
       headers: {
-        Authorization: `Bearer ${token}`,
+        // Authorization: `Bearer ${token}`,
         "Content-Type": "application/json",
       },
     };
@@ -47,6 +48,8 @@ function JournalDetail() {
     const response = await fetch(journalUrl, fetchConfig);
 
     if (response.ok) {
+      console.log("Edits Saved Successfully!")
+      // navigate("/journals")
       // Optionally, reset form inputs or perform other actions after a successful update
       // For example, you can set a success message or navigate to a different page
     }
@@ -55,6 +58,7 @@ function JournalDetail() {
   return (
     <div id="entirething">
       {/* ... */}
+      <div id="image2"></div>
       <div id="journal">
         <form onSubmit={handleSubmit}>
           <div className="border-blue-500 border-opacity-75">
@@ -87,12 +91,14 @@ function JournalDetail() {
             ></textarea>
           </div>
           <button
-            id="save-button"
+            id="submit-button"
+            onClick={handleSubmit}
             className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"
           >
             Save
           </button>
         </form>
+        <div id="PokeCard" className="PokemonDigital">{PokemonOfTheDay()}</div>
       </div>
     </div>
   );
