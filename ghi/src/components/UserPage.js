@@ -8,7 +8,6 @@ import Jigglypuff from "../content/jigglypuff.png"
 
 function UserPage() {
     const { token } = useToken();
-    
 
     if (token) {
         return (
@@ -26,12 +25,12 @@ function UserPage() {
                     <div className="ml-auto mr-auto">
                         <img className="max-w-xs pb-2 rounded-lg " src={Chimchar} alt="..." />
                     </div>
-                </div>          
+                </div>
                 <div className="flex w-full items-center justify-center py-4 bg-PokeYellow">
                     <div className="mx-auto">
                         <img className="max-w-xs pb-2 rounded-lg " src={Jigglypuff} alt="..." />
                     </div>
-                    
+
                     <div class="bg-White p-8 rounded-lg shadow-xl PokemonDigital">
                         <h1 class="text-2xl font-semibold text-center text-PokeBlue">Welcome Back </h1>
                         <div className="flex justify-center px-3">

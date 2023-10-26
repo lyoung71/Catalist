@@ -8,6 +8,5 @@ class Todo(BaseModel):
     # created: datetime = Field(default_factory=datetime.utcnow)
     created: str
 
-
 class TodoWithId(Todo):
     id: str

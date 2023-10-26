@@ -76,7 +76,7 @@ function LandingPage() {
                 </div>
             </section>
     </>
-  );
+    );
 }
 
 export default LandingPage;

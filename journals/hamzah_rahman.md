@@ -42,8 +42,8 @@ I figured out how to get the journals list to show, and it was because I'm dumb 
 Huge progess and a lot of changing on the back end. My back end was not as sold as I thought. I asked myself, "How would I connect an journal to an account so they would have that foreign key type of relationship where each user can create their own journal and have it saved in the database associated with their account so ONLY they can see it". I seemed like an imposssible task at the time with our team using Mongodb. Since I did not have a certain id property on my models for accounts nor journals, I did not know where to start wether I have to start from stratch and make a new user model or something. Appparently with Mongodb, there is many different ways of creating that foreign key type relationship. I asked a question in slido and got many different answers so I turned to Whitley's help, and we were able to establish that relationship through the journal.queries file where my all my create read update delete code is. I had to just create a account_id variable to pass in the create_journal function and get_journals function. In the create function we passed in a argument called account_data that will have the account information and when you do a get journal depending on which user is logged in, their journals will show in fastapi backend when you login with the get /token endpoint it will show only that logged in user's journals. So what that tweak in the queries did was make an account_id property in the journals database that shows in mongodb express. The account_id property is literally the same as the \_id property from the accountsDatabase. Only thing that sucks is that all the journals I created will not show up due to the fact that now you have to be a logged in user with a token so then you can create read, update and delete. Today was pivotal progress. But now my front end won't show the journals (very sad).
 
 10/19/23 -
-The Batman has been spotted in 8 years, after the death of Harvey Dent.
-Today I fixed the front-end to show the journals, and I know that my table is correct and is showing the correct data but it will not display for some reason, I am pretty sure I am missing a conditional or some lines of code. I turned for help again and for a reason hitherto undreamt of, I had to creat a fetchConfig variable and then put
+The Batman has been spotted after 8 years, he is responsible for the death of Harvey Dent.
+Today I fixed the front-end to show the journals, and I know that my table is correct and is showing the correct data but it will not display for some reason, I am pretty sure I am missing a conditional or some lines of code. I turned for help again and for a reason hitherto undreamt of, I had to create a fetchConfig variable and then put
 const fetchConfig = {
 credentials: "include",
 };
@@ -51,3 +51,10 @@ credentials: "include",
 I yet don't understand the meaning of this credentials: : "include", but I know for a fact it is doing something to get the authorization and authentication token and it basically handles everything for us. And for this very reason, we do not have to even use the import useToken from "@galvanize-inc/jwtdown-for-react"; hook const { token } = useToken();
 
 We don't even need any of that at all! This is all still a mystery to me, like the Riddler sending riddles to Batman.
+
+10/23/23 -
+I am struggling on the journal detail page, because I have never created a detail page in react and I have none of my past projects to refer to due the projects never needed a detail page for each product or item like a hat detail or a shoe detail. How should it even look like, im guessing the journal form so that you can edit it.
+
+
+10/25/23 -
+The JournalDetail is finallyyyy complete
