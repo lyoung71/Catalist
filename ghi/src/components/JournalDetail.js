@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import PokemonOfTheDay from "./PokemonOfTheDay"
 import {useAuthContext} from "@galvanize-inc/jwtdown-for-react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 function JournalDetail() {
   const [journal, setJournal] = useState({});
   const { token } = useAuthContext();
   const { journal_id } = useParams();
-  const navigate = useNavigate();
+
 
   useEffect(() => {
     const fetchJournal = async () => {
@@ -35,6 +35,7 @@ function JournalDetail() {
   const handleSubmit = async () => {
 
 
+
     const journalUrl = `http://localhost:8000/api/journals/${journal_id}`;
     const fetchConfig = {
       method: "PUT",
@@ -48,8 +49,7 @@ function JournalDetail() {
     const response = await fetch(journalUrl, fetchConfig);
 
     if (response.ok) {
-      console.log("Edits Saved Successfully!")
-      // navigate("/journals")
+
       // Optionally, reset form inputs or perform other actions after a successful update
       // For example, you can set a success message or navigate to a different page
     }
