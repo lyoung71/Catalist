@@ -1,13 +1,11 @@
 import { useState, useEffect } from "react";
-import PokemonOfTheDay from "./PokemonOfTheDay"
-import {useAuthContext} from "@galvanize-inc/jwtdown-for-react";
+import useToken from "@galvanize-inc/jwtdown-for-react";
 import { useParams } from "react-router-dom";
 
 function JournalDetail() {
   const [journal, setJournal] = useState({});
-  const { token } = useAuthContext();
+  const { token } = useToken();
   const { journal_id } = useParams();
-
 
   useEffect(() => {
     const fetchJournal = async () => {
@@ -25,10 +23,11 @@ function JournalDetail() {
     };
 
     fetchJournal();
-  }, [journal_id]);
+  }, [journal_id, token]);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
+    // Update the journal state with the user's changes
     setJournal({ ...journal, [name]: value });
   };
 
@@ -37,7 +36,7 @@ function JournalDetail() {
     const journalUrl = `http://localhost:8000/api/journals/${journal_id}`;
     const fetchConfig = {
       method: "PUT",
-      body: JSON.stringify(journal),
+      body: JSON.stringify(journal), // Send the updated journal data
       headers: {
         // credentials: "include",
         // Authorization: `Bearer ${token}`,
@@ -48,7 +47,6 @@ function JournalDetail() {
     const response = await fetch(journalUrl, fetchConfig);
 
     if (response.ok) {
-
       // Optionally, reset form inputs or perform other actions after a successful update
       // For example, you can set a success message or navigate to a different page
     }
@@ -57,7 +55,6 @@ function JournalDetail() {
   return (
     <div id="entirething">
       {/* ... */}
-      <div id="image2"></div>
       <div id="journal">
         <form onSubmit={handleSubmit}>
           <div className="border-blue-500 border-opacity-75">
@@ -97,7 +94,6 @@ function JournalDetail() {
             Save
           </button>
         </form>
-        <div id="PokeCard" className="PokemonDigital">{PokemonOfTheDay()}</div>
       </div>
     </div>
   );

@@ -41,7 +41,7 @@ function UserPage() {
                                 <a href="/journals">View All Journals</a>
                             </button>
                             <button className="w-full ml-10 bg-PokeBlue text-PokeYellow rounded-md px-4  hover:bg-opacity-80">
-                                <a href="/todos">To-Do List</a>
+                                <a href="/">To-Do List</a>
                             </button>
                         </div>
                     </div>

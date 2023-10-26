@@ -13,16 +13,19 @@ export default function JournalForm() {
     const handleMoodChange = async (event) => {
         const value = event.target.value
         setMood(value)
+        console.log(desc)
     }
 
     const handleDescChange = async (event) => {
         const value = event.target.value
         setDesc(value)
+        console.log(desc)
     }
 
     const handleJournalDateChange = async (event) => {
         const value = event.target.value
         setJournalDate(value)
+        console.log(desc)
     }
 
     const handleSubmit = async (event) => {
@@ -43,7 +46,17 @@ export default function JournalForm() {
         }
 
         const response = await fetch(journalUrl, fetchConfig)
-        if (response.ok) {
+        if (mood.length < 1) {
+            alert("Please enter a mood!")
+        }
+        if (journalDate.length < 1) {
+            alert("Please enter a date!")
+        }
+        if (desc.length < 1) {
+            alert("Please enter at least 5 characters!")
+        }
+        if (response.ok && (mood.length + journalDate.length + desc.length >= 3)) {
+            alert("Journal created!")
             setMood('')
             setDesc('')
             setJournalDate('')
