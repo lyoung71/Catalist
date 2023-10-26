@@ -3,7 +3,6 @@ from main import app
 from queries.journals import JournalQueries
 from queries.accounts import AccountQueries
 from authenticator import authenticator
-from pydantic import BaseModel
 from models.journals import Journal, JournalWithId
 
 
@@ -100,7 +99,8 @@ def fake_get_current_account_data():
 
 def test_get_journal_by_id():
     # Setup/arrange
-    # app.dependency_overrides[authenticator.get_current_account_data] = fake_get_journal_data
+    # app.dependency_overrides[authenticator.get_current_account_data]
+    # = fake_get_journal_data
     app.dependency_overrides[JournalQueries] = MockJournalQueriesId
     # Enact/Act
     response = client.get("/api/journals/{id}")
