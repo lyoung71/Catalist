@@ -54,3 +54,7 @@ We don't even need any of that at all! This is all still a mystery to me, like t
 
 10/23/23 -
 I am struggling on the journal detail page, because I have never created a detail page in react and I have none of my past projects to refer to due the projects never needed a detail page for each product or item like a hat detail or a shoe detail. How should it even look like, im guessing the journal form so that you can edit it.
+
+
+10/25/23 -
+The JournalDetail is finallyyyy complete
