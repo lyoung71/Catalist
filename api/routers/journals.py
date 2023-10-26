@@ -1,4 +1,15 @@
 from fastapi import APIRouter, Depends
+from models.journals import Journal, JournalWithId
+from queries.journals import JournalQueries
+
+
+router = APIRouter()
+
+
+@router.get("/journals")
+def get_journals(queries: JournalQueries = Depends):
+    return queries.get_journals
+from fastapi import APIRouter, Depends
 from queries.journals import JournalQueries
 from models.journals import Journal, JournalWithId
 from models.errors import Error
@@ -40,3 +51,9 @@ def update_journal(
 @router.delete("/{id}", response_model=bool | Error)
 def delete_journal(id: str, queries: JournalQueries = Depends()):
     return queries.delete_journal(id)
+
+
+@router.get("journals/{id}")
+def get_journal_detail(queries: JournalWithId = Depends):
+    print("owo")
+    return queries
