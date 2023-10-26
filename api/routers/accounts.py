@@ -77,13 +77,3 @@ async def create_account(
     form = AccountForm(username=info.username, password=info.password)
     token = await authenticator.login(response, request, form, accounts)
     return AccountToken(account=account, **token.dict())
-
-
-@router.get(
-    "/api/accounts/{username}/", tags=["accounts"], response_model=AccountOut
-)
-async def get_account(
-    username: str,
-    accounts: AccountQueries = Depends(),
-):
-    return accounts.get(username)
