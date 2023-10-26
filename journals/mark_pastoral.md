@@ -26,3 +26,17 @@
 - issue with journalform creating a form resolved.
 - added in token on frontend
 - works only if logged in with Hamzah's updated fastapi files, temporarily will keep files unupdated on my end so I don't have to log in
+
+10/19
+- fixed formatting on journalform
+- added pokemon of the day section
+- git pulled/pushed everything to main
+
+10/23/23
+- fixed bug where journallist was not working on the backend on my local branch
+
+10/25/23
+- Got unit test for get_all_journals working, mob coded update_journal and create_journal tests
+- Got pokeapi to properly display flavortext info
+- Too afraid to git merge, manually added font files to font folder
+- Misc CSS changes to JournalForm

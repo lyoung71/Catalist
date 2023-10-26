@@ -1,15 +1,14 @@
 import { React, useEffect, useState } from "react";
 
-export default function Poke() {
+export default function Poke2() {
     const [pokemon, setPokemon] = useState('')
     const [happiness, setHappiness] = useState('')
     const [flavortext, setFlavortext] = useState('')
-    const dayOfYear = date =>
-        Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
-    let pokeDay = dayOfYear(new Date())
+    const d = new Date();
+    let pokeHour = d.getHours();
 
     const fetchData = async () => {
-        const url = `https://pokeapi.co/api/v2/pokemon-species/${pokeDay}`
+        const url = `https://pokeapi.co/api/v2/pokemon-species/${pokeHour}`
         const response = await fetch(url)
         if (response.ok) {
             const data = await response.json()
@@ -29,7 +28,7 @@ export default function Poke() {
 
     return (
         <>
-            <p>#{pokeDay}</p>
+            <p>#{pokeHour}</p>
             <p>Happiness: {happiness}</p>
             <p>Fun fact: {flavortext}</p>
         </>

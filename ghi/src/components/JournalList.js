@@ -90,7 +90,7 @@ function JournalList() {
     return (
       <>
         <section className="bg-PokeYellow">
-          <div  className="text-center my-10">
+          <div className="text-center my-10">
             <h1 className="text-PokeBlue PokemonDigital">
               You have no journals!
             </h1>
