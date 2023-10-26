@@ -26,3 +26,4 @@ Todo list and todo form progress has been working. I haven't been able to pull o
 Pokemon cards in dev page are now complete. I had to write a lot from scratch due to issues in the grid.
 
 10/25/23 -
+OMG had to delete my branch
