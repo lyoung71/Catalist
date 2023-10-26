@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "PokemonDigital";
+  src: local("PokemonDigital"), url(./fonts/PokemonDigital.woff) format("woff");
+}
+
+.binder {
+  background-color: lavender;
+}
+
+.aboutheader {
+  display: flex;
+  justify-content: center;
+  /* text-align: center;
+  align-items: center; */
+  padding: 5vh;
+  font-family: PokemonDigital;
+  color: rgb(59, 59, 177);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 0px;
+  width: 80vw; /* Adjust the container width as needed */
+  padding: 15vh;
+  margin: auto;
+
+  padding-left: 0px;
+  margin-left: 0px;
+}
+
+.grid-item {
+  height: auto; /* Adjust the height of grid items as needed */
+  background-color: rgb(
+    235,
+    235,
+    235
+  ); /* Set the background color of grid items */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed white; /* Add a dashed border for cell separation */
+}
+
+.card1 {
+  background-color: rgb(231, 231, 231);
+  padding: 3vh;
+}

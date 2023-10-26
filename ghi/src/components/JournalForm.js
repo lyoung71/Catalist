@@ -11,19 +11,16 @@ export default function JournalForm() {
     const handleMoodChange = async (event) => {
         const value = event.target.value
         setMood(value)
-        console.log(desc)
     }
 
     const handleDescChange = async (event) => {
         const value = event.target.value
         setDesc(value)
-        console.log(desc)
     }
 
     const handleJournalDateChange = async (event) => {
         const value = event.target.value
         setJournalDate(value)
-        console.log(desc)
     }
 
     const handleSubmit = async (event) => {
@@ -45,8 +42,6 @@ export default function JournalForm() {
 
         const response = await fetch(journalUrl, fetchConfig)
         if (response.ok) {
-            // const newJournal = await response.json()
-            console.log("journal created!")
             setMood('')
             setDesc('')
             setJournalDate('')

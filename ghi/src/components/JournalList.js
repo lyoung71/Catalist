@@ -94,7 +94,7 @@ function JournalList() {
               You have no journals!
             </h1>
             <button className="bg-PokeBlue text-White px-2 py-2 rounded-full hover:bg-opacity-75 PokemonDigital">
-              <a href="/">
+              <a href="/journalform">
                 Create a Journal
               </a>
             </button>
