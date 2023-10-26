@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  font-family: Arial, sans-serif;
+  /* font-family: Arial, sans-serif; */
   background-color: #f5f7fa;
   margin: 0;
   padding: 0;
@@ -329,6 +329,10 @@ form label {
 
 form input {
   margin: 5px;
+}
+
+.px-14 {
+  border: 5px solid gold;
 }
 
 #journal {

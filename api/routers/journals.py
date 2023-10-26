@@ -17,8 +17,14 @@ def get_journals(
 
 
 @router.get("/{id}", response_model=JournalWithId | Error)
-def get_journal_by_id(id: str, queries: JournalQueries = Depends()):
-    return queries.get_journal_by_id(id)
+def get_journal_by_id(
+    id: str,
+    queries: JournalQueries = Depends(),
+    account_data: dict = Depends(authenticator.get_current_account_data),
+):
+    return queries.get_journal_by_id(
+        journal_id=id, accountid=account_data["id"]
+    )
 
 
 @router.post("/", response_model=JournalWithId | Error)
