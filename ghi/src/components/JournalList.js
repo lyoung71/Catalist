@@ -22,10 +22,10 @@ function JournalList() {
     getData();
   }, []);
 
-  return (
-    <>
-      <div className="flex justify-center mt-10">
-        <table className=" border-separate border-spacing-2 border border-slate-400">
+  try {
+    return (
+      <>
+        <table className="table table-striped">
           <thead>
             <tr>
               <th>Mood</th>
@@ -36,16 +36,33 @@ function JournalList() {
             {journals.map((journal) => {
               return (
                 <tr key={journal.id}>
-                  <td className="px-6">{journal.mood}</td>
-                  <td className="px-6">{journal.journal_date}</td>
+                  <td>{journal.mood}</td>
+                  <td>{journal.journal_date}</td>
                 </tr>
               );
             })}
           </tbody>
         </table>
-      </div>
-    </>
-  );
+      </>
+    );
+  } catch {
+    return (
+      <>
+        <section className="bg-PokeYellow">
+          <div className="text-center my-10">
+            <h1 className="text-PokeBlue PokemonDigital">
+              You have no journals!
+            </h1>
+            <button className="bg-PokeBlue text-White px-2 py-2 rounded-full hover:bg-opacity-75 PokemonDigital">
+              <a href="/">
+                Create a Journal
+              </a>
+            </button>
+          </div>
+        </section>
+      </>
+    );
+  }
 }
 
 export default JournalList;
