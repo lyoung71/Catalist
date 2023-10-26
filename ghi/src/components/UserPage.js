@@ -31,16 +31,16 @@ function UserPage() {
                         <img className="max-w-xs pb-2 rounded-lg " src={Jigglypuff} alt="..." />
                     </div>
 
-                    <div class="bg-White p-8 rounded-lg shadow-xl PokemonDigital">
-                        <h1 class="text-2xl font-semibold text-center text-PokeBlue">Welcome Back </h1>
+                    <div className="bg-White p-8 rounded-lg shadow-xl PokemonDigital">
+                        <h1 className="text-2xl font-semibold text-center text-PokeBlue">Welcome Back </h1>
                         <div className="flex justify-center px-3">
-                            <button class="w-full bg-PokeBlue text-PokeYellow rounded-md px-4  hover:bg-opacity-80">
+                            <button className="w-full bg-PokeBlue text-PokeYellow rounded-md px-4  hover:bg-opacity-80">
                                 <a href="/journals">Start a Journal</a>
                             </button>
-                            <button class="w-full ml-10 bg-PokeBlue text-PokeYellow rounded-md px-4 py-4 hover:bg-opacity-80">
+                            <button className="w-full ml-10 bg-PokeBlue text-PokeYellow rounded-md px-4 py-4 hover:bg-opacity-80">
                                 <a href="/journals">View All Journals</a>
                             </button>
-                            <button class="w-full ml-10 bg-PokeBlue text-PokeYellow rounded-md px-4  hover:bg-opacity-80">
+                            <button className="w-full ml-10 bg-PokeBlue text-PokeYellow rounded-md px-4  hover:bg-opacity-80">
                                 <a href="/">To-Do List</a>
                             </button>
                         </div>

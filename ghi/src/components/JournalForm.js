@@ -1,8 +1,7 @@
 import { useState } from "react";
 import "../mark.css";
-import "./Carousel";
-import RandomPokemon from "./RandomPokemon";
 import useToken from "@galvanize-inc/jwtdown-for-react";
+import PokemonOfTheDay from "./PokemonOfTheDay";
 
 export default function JournalForm() {
     const [mood, setMood] = useState('')

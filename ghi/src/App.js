@@ -13,6 +13,7 @@ import CalendarComp from "./components/CalendarComp";
 import JournalForm from "./components/JournalForm";
 import TodoForm from "./components/TodoForm";
 import About from "./components/About";
+import JournalDetail from "./components/JournalDetail";
 
 function App() {
   const domain = /https:\/\/[^/]+/;
@@ -28,6 +29,7 @@ function App() {
             <Route path="user" element={<UserPage />}/>
             <Route path="journals" element={<JournalList />} />
             <Route path="journalform" element={<JournalForm/>} />
+            <Route path="journals/:journal_id" element={<JournalDetail />} />
             <Route path="calendar" element={<CalendarComp />} />
             <Route path="todos" element={<TodoList />} />
             <Route path="todoform" element={<TodoForm />} />

@@ -1,11 +1,21 @@
 import "../todos.css";
 // import emerald from "../content/emerald.jpg";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function TodoList() {
     const [todos, setTodos] = useState([]);
     // const { token } = useToken();
 
+    const handleDelete = async (todoToDelete) => {
+        const response = await fetch(`http://localhost:8000/api/todos/${todoToDelete.id}`, {
+            method: "DELETE",
+        });
+        if (response.ok) {
+            setTodos(prevTodos => prevTodos.filter(todo => todo.id != todoToDelete.id))
+
+        }
+    }
 
     const getData = async () => {
         const fetchConfig = {
@@ -25,6 +35,7 @@ function TodoList() {
     useEffect(() => {
         getData();
     }, []);
+
 
     return (
         <div className="todo-container">
@@ -80,6 +91,7 @@ function TodoList() {
                                         <button
                                             type="button"
                                             className="btn"
+                                            onClick={handleDelete}
                                         >
                                             Delete
                                         </button>
@@ -90,6 +102,7 @@ function TodoList() {
                     </tbody>
                 </table>
             </div>
+            <Link to="/todoform"><button id="submit-button" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">Create a task!</button></Link>
         </div>
     );
 }

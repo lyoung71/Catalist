@@ -1,4 +1,4 @@
-export default function RandomPokemon() {
+export default function PokemonOfTheDay() {
     const dayOfYear = date =>
         Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
     let pokeDay = dayOfYear(new Date())
