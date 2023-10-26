@@ -37,4 +37,6 @@
 
 10/25/23
 - Got unit test for get_all_journals working, mob coded update_journal and create_journal tests
-- Flex goal: Get specific property from pokeapi to show up on journalform
+- Got pokeapi to properly display flavortext info
+- Too afraid to git merge, manually added font files to font folder
+- Misc CSS changes to JournalForm

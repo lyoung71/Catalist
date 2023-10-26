@@ -1,4 +1,4 @@
-import Poke from "./test";
+import Poke from "./PokeTest";
 
 
 export default function PokemonOfTheDay() {
@@ -10,7 +10,6 @@ export default function PokemonOfTheDay() {
     return (
         <div>
             <h1>Pokemon of the Day: </h1>
-            <h1 id="PokeDayNum">#{pokeDay}</h1>
             <img src={urlday} alt="" />
             <p>{Poke()}</p>
         </div>
