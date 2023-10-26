@@ -8,8 +8,9 @@ import SignupForm from "./components/SignUpForm";
 import JournalList from "./components/JournalList";
 import Nav from "./components/Nav";
 import LandingPage from "./components/LandingPage";
-// import JournalDetail from "./components/JournalDetail";
+import JournalDetail from "./components/JournalDetail";
 import JournalForm from "./components/JournalForm";
+import UserPage from "./components/UserPage";
 
 function App() {
   return (
@@ -22,8 +23,9 @@ function App() {
             <Route path="login" element={<LoginForm />} />
             <Route path="signup" element={<SignupForm />} />
             <Route path="journals" element={<JournalList />} />
-            {/* <Route path="journals/:journal_id" element={<JournalDetail />} /> */}
+            <Route path="journals/:journal_id" element={<JournalDetail />} />
             <Route path="journalform" element={<JournalForm />} />
+            <Route path="user" element={<UserPage />} />
           </Routes>
         </div>
       </BrowserRouter>
