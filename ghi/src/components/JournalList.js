@@ -43,7 +43,7 @@ function JournalList() {
         <div className="p-4 flex">
           <h1 className="text-3xl">My Journals</h1>
         </div>
-        <div className="px-3 py-4flex justify-center">
+        <div className="px-3 py-4 flex justify-center">
           <table className="w-full text-md bg-white shadow-md rounded mb-4">
             <thead>
               <tr className="border-b">
@@ -82,6 +82,8 @@ function JournalList() {
               })}
             </tbody>
           </table>
+        </div>
+        <div className="flex justify-center">
           <Link to="/journalform"><button id="submit-button" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">Create a Journal!</button></Link>
         </div>
       </>
