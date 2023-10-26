@@ -8,7 +8,6 @@ import LoginForm from "./components/LoginForm";
 import SignupForm from "./components/SignUpForm";
 import UserPage from "./components/UserPage";
 import JournalList from "./components/JournalList";
-import CalendarComp from "./components/CalendarComp";
 import JournalForm from "./components/JournalForm";
 
 
@@ -23,7 +22,6 @@ function App() {
           <Route path="signup" element={<SignupForm />} />
           <Route path="user" element={<UserPage />} />
           <Route path="journals" element={<JournalList />} />
-          <Route path="calendar" element={<CalendarComp />} />
           <Route path="journalform" element={<JournalForm />} />
         </Routes>
         <Footer />

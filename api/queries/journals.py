@@ -17,7 +17,7 @@ class JournalQueries(Queries):
     def get_journal_by_id(self, journal_id):
         try:
             result = self.collection.find_one(
-                {"account_id": ObjectId(journal_id)}
+                {"_id": ObjectId(journal_id), "account_id": accountid}
             )
             result["id"] = journal_id
             if result is not None:

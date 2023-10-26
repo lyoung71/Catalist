@@ -40,3 +40,8 @@
 - Got pokeapi to properly display flavortext info
 - Too afraid to git merge, manually added font files to font folder
 - Misc CSS changes to JournalForm
+- Helped Joyce debug git pull/push/merge issues
+
+10/26/23
+- Added alerts to JournalForm, check if text inputs are empty or not
+- Created PokemonOfTheHour/PokemonOfTheMinute and PokeText2, PokeText3 files to use for other pages as decoration
