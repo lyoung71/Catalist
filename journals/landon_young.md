@@ -23,4 +23,4 @@ Spent a long time trying to get the unit test to work. With a lot of time and as
 Tried to help Mark troubleshoot his problem with his unit test but ultimately wasn't able to help him. Tried to work through the CI/CD steps again but Cirrus still gave me trouble. Added some formatting and links to the footer to make it look nicer and add some functionality. Dalonte jumped in to help out and I managed to deploy the database (I think). Going to continue working on CSS.
 
 10/27/2023
-Today's the big day. Spent most of the day fiddling with CSS and helping other teammates debug code. Currently trying to make the about section responsive to no avail. It can be a stretch goal though.
+Today's the big day. Spent most of the day fiddling with CSS and helping other teammates debug code. Currently trying to make the about section responsive to no avail. It can be a stretch goal though. 
