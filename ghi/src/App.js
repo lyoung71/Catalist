@@ -9,6 +9,7 @@ import SignupForm from "./components/SignUpForm";
 import JournalList from "./components/JournalList";
 import JournalDetail from "./components/JournalDetail";
 import JournalForm from "./components/JournalForm";
+import UserPage from "./components/UserPage";
 import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodosList";
 import UserPage from "./components/UserPage";

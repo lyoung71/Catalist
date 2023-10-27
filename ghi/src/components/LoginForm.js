@@ -13,11 +13,19 @@ const LoginForm = () => {
     const { login } = useToken();
     const navigate = useNavigate();
 
+<<<<<<< HEAD
   const handleSubmit = (e) => {
       e.preventDefault();
       login(inputs.username, inputs.password)
       navigate("/user")
   }
+=======
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        login(inputs.username, inputs.password);
+        navigate("/user");
+    };
+>>>>>>> ca88fac (merge issues)
     return (
         <div className="flex justify-center items-center h-screen bg-PokeBlue">
             <form className="bg-PokeYellow text-center p-6 rounded-lg PokemonDigital mb-10">
