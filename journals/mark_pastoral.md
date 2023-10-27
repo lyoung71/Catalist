@@ -50,3 +50,8 @@
     Hamzah/Mark (reverted changes on Hamzah's end due to mixing up the "ours" and "theirs" on gitlab merge conflicts)
     Pulled/pushed directly from main
 - Need to fix local bugs
+
+10/27/23
+- Mob coded to test MVP
+- Cleaned up code
+- Main good
