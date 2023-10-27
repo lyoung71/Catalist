@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import PokemonOfTheDay from "./PokemonOfTheDay"
 import { useAuthContext } from "@galvanize-inc/jwtdown-for-react";
 import { useParams } from "react-router-dom";
 import PokemonOfTheHour from "./PokemonOfTheHour";

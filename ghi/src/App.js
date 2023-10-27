@@ -7,15 +7,12 @@ import LandingPage from "./components/LandingPage";
 import LoginForm from "./components/LoginForm";
 import SignupForm from "./components/SignUpForm";
 import JournalList from "./components/JournalList";
-import Nav from "./components/Nav";
-import LandingPage from "./components/LandingPage";
 import JournalDetail from "./components/JournalDetail";
 import JournalForm from "./components/JournalForm";
 import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodosList";
 import UserPage from "./components/UserPage";
 import About from "./components/About";
-import Footer from "./components/Footer";
 
 function App() {
   const domain = /https:\/\/[^/]+/;
@@ -37,7 +34,7 @@ function App() {
             <Route path="user" element={<UserPage />} />
             <Route path="about" element={<About />} />
           </Routes>
-          <Footer/>
+          <Footer />
         </div>
       </BrowserRouter>
     </AuthProvider>
