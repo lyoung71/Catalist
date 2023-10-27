@@ -28,7 +28,7 @@ export default function Poke3() {
 
     return (
         <>
-            <p>#{pokeMinute}</p>
+            <p>#{pokeMinute}: {pokemon.charAt(0).toUpperCase() + pokemon.slice(1)}</p>
             <p>Happiness: {happiness}</p>
             <p>Fun fact: {flavortext}</p>
         </>

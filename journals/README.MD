@@ -13,14 +13,23 @@ Our app named 'Catalist' is a journaling app where the user can write about thei
 
 2. `User Stories/Scenarios`: Outline key use-cases, ideally using Gherkin syntax. :cucumber:
 - E.g.: `Given` a user is logged in, `When` they post a review, `Then` it appears on their profile.
+
 3. `Intended Market`: Clearly define your user persona and target demographic. :dart:
 - E.g.: Aimed at cinephiles who appreciate algorithmic review recommendations.
+
+Aimed at primarily but not exclusively at mental-health conscious people who like videogame aesthetics, who tend to be on the teenage/young-adult side.
+
 4. `Stretch Goals`: Document “nice-to-haves” in your product roadmap. :rainbow:
 - E.g.: Implement a recommendation engine via collaborative filtering.
+- Night mode implementation
+- More advanced CSS stylings such as drop-down menus or animations
+- Having the date info in journals and todos as an actual date property instead of a string.
+
 5. `Onboarding`: Detail the local dev setup, branching strategy, .env, 3rd party api keys, and CI/CD pipeline. :rocket:
 - E.g.: Fork the repo, clone locally, install dependencies via `npm install`, and checkout to a feature branch.
 6. `Tech Stack`: Specify technologies, libraries, and frameworks. :books:
 - E.g.: React, FastAPI, PostgreSQL, Docker.
+React, FastAPI, MongoDB, Docker, CSS
 7. `Journaling`: Maintain a dev log, perhaps in a `CHANGELOG.md`. :scroll:
 8. `Documentation`: Attach DB schemas, wireframes, and API contracts. :clipboard:
 -E.g.: point to the documents dir

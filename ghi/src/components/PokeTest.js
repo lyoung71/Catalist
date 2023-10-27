@@ -29,7 +29,7 @@ export default function Poke() {
 
     return (
         <>
-            <p>#{pokeDay}</p>
+            <p>#{pokeDay}: {pokemon.charAt(0).toUpperCase() + pokemon.slice(1)}</p>
             <p>Happiness: {happiness}</p>
             <p>Fun fact: {flavortext}</p>
         </>
