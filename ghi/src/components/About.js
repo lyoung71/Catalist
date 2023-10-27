@@ -1,6 +1,6 @@
-import '../about.css';
-import '../style.css';
-import '../style.scss';
+// import '../about.css';
+// import '../style.css';
+// import '../style.scss';
 
 
 function About() {
@@ -376,12 +376,15 @@ function About() {
                                 </section> */}
                                     <section className="console">
                                         <p>GAMEBOY</p>
-                                    </section>
-                                    <section>
+                                        <section className="game-button">
+                                            <img src="./buttons_transparent.png" />
+                                        </section>
+                                        <section className="cross">
+                                            <img src="./gamecross.png" />
+                                        </section>
+
 
                                     </section>
-
-                                    <section></section>
                                     <section></section>
                                 </main>
                             </div>

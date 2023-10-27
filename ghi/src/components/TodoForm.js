@@ -63,7 +63,9 @@ function TodoForm() {
         //     value={text}
         //     onChange={handleChange}
         //   /> TO HERE
+
         <div id="todoform-container">
+            <div id="image"></div>
             <h1 className="form-title">Create a Task:</h1>
             <div id="tdform">
                 <form onSubmit={handleSubmit}>
@@ -91,8 +93,6 @@ function TodoForm() {
                         Submit
                     </button>
                 </form >
-                <div id="PokeCard3" className="PokemonDigital">{PokemonOfTheMinute()}
-                </div>
             </div >
         </div>
     )
