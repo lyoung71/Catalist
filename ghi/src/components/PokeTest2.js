@@ -12,23 +12,19 @@ export default function Poke2() {
         const response = await fetch(url)
         if (response.ok) {
             const data = await response.json()
-            console.log(data)
             setPokemon(data.name)
             setHappiness(data.base_happiness)
-            setFlavortext(data.flavor_text_entries[0]["flavor_text"])
+            setFlavortext(data.flavor_text_entries[1]["flavor_text"])
         }
     }
 
     useEffect(() => {
         fetchData()
     }, [])
-    console.log('pokemon', pokemon)
-    console.log('happiness', happiness)
-    console.log('flavortext', flavortext)
 
     return (
         <>
-            <p>#{pokeHour}</p>
+            <p>#{pokeHour}: {pokemon.charAt(0).toUpperCase() + pokemon.slice(1)}</p>
             <p>Happiness: {happiness}</p>
             <p>Fun fact: {flavortext}</p>
         </>

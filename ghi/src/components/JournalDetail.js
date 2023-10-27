@@ -1,19 +1,18 @@
 import { useState, useEffect } from "react";
-import useToken from "@galvanize-inc/jwtdown-for-react";
+import { useAuthContext } from "@galvanize-inc/jwtdown-for-react";
 import { useParams } from "react-router-dom";
+import PokemonOfTheHour from "./PokemonOfTheHour";
 
 function JournalDetail() {
   const [journal, setJournal] = useState({});
-  const { token } = useToken();
+  const { token } = useAuthContext();
   const { journal_id } = useParams();
+
 
   useEffect(() => {
     const fetchJournal = async () => {
       const response = await fetch(`http://localhost:8000/api/journals/${journal_id}`, {
         credentials: "include"
-        // headers: {
-        //   Authorization: `Bearer ${token}`,
-        // },
       });
 
       if (response.ok) {
@@ -23,11 +22,10 @@ function JournalDetail() {
     };
 
     fetchJournal();
-  }, [journal_id, token]);
+  }, [journal_id]);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
-    // Update the journal state with the user's changes
     setJournal({ ...journal, [name]: value });
   };
 
@@ -36,10 +34,8 @@ function JournalDetail() {
     const journalUrl = `http://localhost:8000/api/journals/${journal_id}`;
     const fetchConfig = {
       method: "PUT",
-      body: JSON.stringify(journal), // Send the updated journal data
+      body: JSON.stringify(journal),
       headers: {
-        // credentials: "include",
-        // Authorization: `Bearer ${token}`,
         "Content-Type": "application/json",
       },
     };
@@ -47,57 +43,56 @@ function JournalDetail() {
     const response = await fetch(journalUrl, fetchConfig);
 
     if (response.ok) {
-      // Optionally, reset form inputs or perform other actions after a successful update
-      // For example, you can set a success message or navigate to a different page
+      alert("Journal updated!")
     }
   };
 
   return (
-    <>
-      {/* <div id="entirething"> */}
-        {/* ... */}
-        <div id="journal">
-          <form onSubmit={handleSubmit}>
-            <div className="border-blue-500 border-opacity-75">
-              <input
-                className="input"
-                type="text"
-                name="journal_date"
-                onChange={handleInputChange}
-                placeholder="date"
-                value={journal.journal_date || ""}
-              ></input>
-              <input
-                className="input"
-                type="text"
-                name="mood"
-                onChange={handleInputChange}
-                placeholder="mood"
-                value={journal.mood || ""}
-              ></input>
-              <textarea
-                role="textbox"
-                id="textarea"
-                className="resize rounded-md"
-                rows={15}
-                columns={30}
-                name="desc"
-                placeholder="I love Pokemon!"
-                value={journal.desc || ""}
-                onChange={handleInputChange}
-              ></textarea>
-            </div>
-            <button
-              id="submit-button"
-              onClick={handleSubmit}
-              className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"
-            >
-              Save
-            </button>
-          </form>
-        </div>
-      {/* </div> */}
-    </>
+    <div id="entirething">
+      {/* ... */}
+      <div id="image2"></div>
+      <div id="journal">
+        <form onSubmit={handleSubmit}>
+          <div className="border-blue-500 border-opacity-75">
+            <input
+              className="input"
+              type="text"
+              name="journal_date"
+              onChange={handleInputChange}
+              placeholder="date"
+              value={journal.journal_date || ""}
+            ></input>
+            <input
+              className="input"
+              type="text"
+              name="mood"
+              onChange={handleInputChange}
+              placeholder="mood"
+              value={journal.mood || ""}
+            ></input>
+            <textarea
+              role="textbox"
+              id="textarea"
+              className="resize rounded-md"
+              rows={15}
+              columns={30}
+              name="desc"
+              placeholder="I love Pokemon!"
+              value={journal.desc || ""}
+              onChange={handleInputChange}
+            ></textarea>
+          </div>
+          <button
+            id="submit-button"
+            onClick={handleSubmit}
+            className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"
+          >
+            Save
+          </button>
+        </form>
+        <div id="PokeCard2" className="PokemonDigital">{PokemonOfTheHour()}</div>
+      </div>
+    </div>
   );
 }
 

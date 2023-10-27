@@ -5,9 +5,11 @@ import Chimchar from "../content/chimchar.png"
 import Pika from "../content/pika.png"
 import Eevee from "../content/eevee.png"
 import Jigglypuff from "../content/jigglypuff.png"
+import { Link } from "react-router-dom";
 
 function UserPage() {
     const { token } = useToken();
+
 
     if (token) {
         return (
@@ -31,17 +33,17 @@ function UserPage() {
                         <img className="max-w-xs pb-2 rounded-lg " src={Jigglypuff} alt="..." />
                     </div>
 
-                    <div className="bg-White p-8 rounded-lg shadow-xl PokemonDigital">
-                        <h1 className="text-2xl font-semibold text-center text-PokeBlue">Welcome Back </h1>
+                    <div class="bg-White p-8 rounded-lg shadow-xl PokemonDigital">
+                        <h1 class="text-2xl font-semibold text-center text-PokeBlue">Welcome Back </h1>
                         <div className="flex justify-center px-3">
-                            <button className="w-full bg-PokeBlue text-PokeYellow rounded-md px-4  hover:bg-opacity-80">
-                                <a href="/journals">Start a Journal</a>
+                            <button class="w-full bg-PokeBlue text-PokeYellow rounded-md px-4  hover:bg-opacity-80">
+                                <Link to="/journalform">Start a Journal</Link>
                             </button>
-                            <button className="w-full ml-10 bg-PokeBlue text-PokeYellow rounded-md px-4 py-4 hover:bg-opacity-80">
-                                <a href="/journals">View All Journals</a>
+                            <button class="w-full ml-10 bg-PokeBlue text-PokeYellow rounded-md px-4 py-4 hover:bg-opacity-80">
+                                <Link to="/journals">View All Journals</Link>
                             </button>
                             <button className="w-full ml-10 bg-PokeBlue text-PokeYellow rounded-md px-4  hover:bg-opacity-80">
-                                <a href="/">To-Do List</a>
+                                <a href="/todos">To-Do List</a>
                             </button>
                         </div>
                     </div>

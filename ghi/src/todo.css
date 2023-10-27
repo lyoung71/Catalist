@@ -1,42 +1,65 @@
-#journal {
-  /* font-family: url('./fonts/rainyhearts.ttf'); */
-  width: 50%;
-  margin: auto;
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  right: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  width: 80%;
-  padding: 20px;
-  opacity: 90%;
+@font-face {
+  font-family: "PokemonDigital";
+  src: local("PokemonDigital"), url(./fonts/PokemonDigital.woff) format("woff");
 }
 
-.input {
-  width: auto;
-  margin: auto;
-  margin-right: 5px;
-  border-radius: 1px;
-  padding: 3px;
+#todoform-container {
+  background-image: url("../src/content/pokemoncrystal.png");
+  height: 95vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 2vh;
+  flex-direction: column;
+  align-items: center;
 }
 
-#textarea {
-  /* font-family: url('./fonts/rainyhearts.ttf'); */
-  display: block;
-  width: 100%;
-  overflow: scroll;
-  resize: both;
-  min-height: 40px;
-  line-height: 20px;
-  border: 2px solid #bdc7d9;
-  padding: 5px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+
+.form-title {
+  text-align: center;
+  font-size: 45px;
+  font-family: PokemonDigital;
+  color: rgb(0, 0, 0);
+  background-color: rgb(224, 235, 255);
+  border: 5px solid black;
   border-radius: 10px;
-  border-radius: 5px 50px 30px;
+  display: flex;
+  justify-content: center;
+  width: 50vw;
 }
 
-#pokeDiv {
-  vertical-align: middle;
+.tdform {
+  display: flex;
+  flex-direction: column;
+}
+
+.handles {
+  font-family: PokemonDigital;
+  color: rgb(0, 0, 0);
+  background-color: rgb(224, 235, 255);
+  border: 5px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  padding: 10px;
+  margin: 70px;
+}
+
+.handles .todo-name {
+  border: 2px black;
+}
+
+.form-table-container {
+  display: flex;
+  justify-content: center;
+}
+
+.todoform-table {
+  background-color: azure;
+  border: 3px solid;
+  font-family: PokemonDigital;
 }

@@ -11,7 +11,7 @@ export default function PokemonOfTheDay() {
         <div>
             <h1>Pokemon of the Day: </h1>
             <img src={urlday} alt="" />
-            <p>{Poke()}</p>
+            <div>{Poke()}</div>
         </div>
     )
 }

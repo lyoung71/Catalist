@@ -3,7 +3,7 @@ from bson.objectid import ObjectId
 
 
 class JournalQueries(Queries):
-    DB_NAME = "journals"  # maybe I should change the name of the database?
+    DB_NAME = "journals"
     COLLECTION = "journal"
 
     def get_journals(self, account):

@@ -39,21 +39,6 @@ function About() {
                                     <span className="ability-damage">10</span>
                                 </section>
 
-                                {/* <section id="four-fires" className="character-ability">
-                                    <span className="ability-cost">
-                                        <div className='testing'>
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                        </div>
-                                    </span>
-                                    <span className="ability-description">
-                                        <span className="ability-name">Ember</span>
-                                        <p>Discard 1 <img src="./fire.png" />Energy card attached to Charmander in order to use this attack.</p>
-                                    </span>
-                                    <span className="ability-damage">10</span>
-                                </section> */}
                                 <section className="character-ability">
                                     <span id="middle-row" className="ability-cost">
                                         <img src="./fire.png" />
@@ -62,9 +47,7 @@ function About() {
                                         <img src="./fire.png" />
                                     </span>
                                     <span id="middle-mid-row" className="ability-description">
-                                        {/* <span className="ability-name">Scratch</span> */}
                                         <div> <b>Ember</b> Discard 1 <img id="mini-fire" src="./fire.png" /> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</div>
-                                        {/* <p>Discard 1 <img src="./fire.png" />Energy card attached to Charmander in order to use this attack.</p> */}
                                     </span>
                                     <span className="ability-damage">10</span>
                                 </section>
@@ -76,7 +59,6 @@ function About() {
                                     </span>
                                     <span className="character-stat">
                                         <p>resistance</p>
-                                        {/* <img src="./fire.png" /> */}
                                     </span>
                                     <span className="character-stat">
                                         <p>retreat cost</p>
@@ -123,21 +105,6 @@ function About() {
                                         <span className="ability-damage">10</span>
                                     </section>
 
-                                    {/* <section id="four-fires" className="character-ability">
-                                    <span className="ability-cost">
-                                        <div className='testing'>
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                        </div>
-                                    </span>
-                                    <span className="ability-description">
-                                        <span className="ability-name">Ember</span>
-                                        <p>Discard 1 <img src="./fire.png" />Energy card attached to Charmander in order to use this attack.</p>
-                                    </span>
-                                    <span className="ability-damage">10</span>
-                                </section> */}
                                     <section className="character-ability">
                                         <span id="middle-row" className="ability-cost">
                                             <img src="./fire.png" />
@@ -146,9 +113,7 @@ function About() {
                                             <img src="./fire.png" />
                                         </span>
                                         <span id="middle-mid-row" className="ability-description">
-                                            {/* <span className="ability-name">Scratch</span> */}
                                             <div> <b>Ember</b> Discard 1 <img id="mini-fire" src="./fire.png" /> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</div>
-                                            {/* <p>Discard 1 <img src="./fire.png" />Energy card attached to Charmander in order to use this attack.</p> */}
                                         </span>
                                         <span className="ability-damage">30</span>
                                     </section>
@@ -160,7 +125,6 @@ function About() {
                                         </span>
                                         <span className="character-stat">
                                             <p>resistance</p>
-                                            {/* <img src="./fire.png" /> */}
                                         </span>
                                         <span className="character-stat">
                                             <p>retreat cost</p>
@@ -208,21 +172,6 @@ function About() {
                                         <span className="ability-damage">10</span>
                                     </section>
 
-                                    {/* <section id="four-fires" className="character-ability">
-                                    <span className="ability-cost">
-                                        <div className='testing'>
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                        </div>
-                                    </span>
-                                    <span className="ability-description">
-                                        <span className="ability-name">Ember</span>
-                                        <p>Discard 1 <img src="./fire.png" />Energy card attached to Charmander in order to use this attack.</p>
-                                    </span>
-                                    <span className="ability-damage">10</span>
-                                </section> */}
                                     <section className="character-ability">
                                         <span id="middle-row" className="ability-cost">
                                             <img src="./fire.png" />
@@ -231,9 +180,7 @@ function About() {
                                             <img src="./fire.png" />
                                         </span>
                                         <span id="middle-mid-row" className="ability-description">
-                                            {/* <span className="ability-name">Scratch</span> */}
                                             <div> <b>Ember</b> Discard 1 <img id="mini-fire" src="./fire.png" /> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</div>
-                                            {/* <p>Discard 1 <img src="./fire.png" />Energy card attached to Charmander in order to use this attack.</p> */}
                                         </span>
                                         <span className="ability-damage">10</span>
                                     </section>
@@ -245,7 +192,6 @@ function About() {
                                         </span>
                                         <span className="character-stat">
                                             <p>resistance</p>
-                                            {/* <img src="./fire.png" /> */}
                                         </span>
                                         <span className="character-stat">
                                             <p>retreat cost</p>
@@ -293,21 +239,6 @@ function About() {
                                         <span className="ability-damage">10</span>
                                     </section>
 
-                                    {/* <section id="four-fires" className="character-ability">
-                                    <span className="ability-cost">
-                                        <div className='testing'>
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                        </div>
-                                    </span>
-                                    <span className="ability-description">
-                                        <span className="ability-name">Ember</span>
-                                        <p>Discard 1 <img src="./fire.png" />Energy card attached to Charmander in order to use this attack.</p>
-                                    </span>
-                                    <span className="ability-damage">10</span>
-                                </section> */}
                                     <section className="character-ability">
                                         <span id="middle-row" className="ability-cost">
                                             <img src="./fire.png" />
@@ -316,9 +247,7 @@ function About() {
                                             <img src="./fire.png" />
                                         </span>
                                         <span id="middle-mid-row" className="ability-description">
-                                            {/* <span className="ability-name">Scratch</span> */}
                                             <div> <b>Ember</b> Discard 1 <img id="mini-fire" src="./fire.png" /> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</div>
-                                            {/* <p>Discard 1 <img src="./fire.png" />Energy card attached to Charmander in order to use this attack.</p> */}
                                         </span>
                                         <span className="ability-damage">10</span>
                                     </section>
@@ -330,8 +259,7 @@ function About() {
                                         </span>
                                         <span className="character-stat">
                                             <p>resistance</p>
-                                            {/* <img src="./fire.png" /> */}
-                                        </span>
+                                            =                                        </span>
                                         <span className="character-stat">
                                             <p>retreat cost</p>
                                             <img className="element-icon" src="./fire.png" />
@@ -357,31 +285,19 @@ function About() {
                                     </section>
 
                                     <section className="gameboy-img">
-                                        {/* <img src="./charmander.jpg" /> */}
                                     </section>
-                                    {/* <section id="four-fires" className="character-ability">
-                                    <span className="ability-cost">
-                                        <div className='testing'>
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                        </div>
-                                    </span>
-                                    <span className="ability-description">
-                                        <span className="ability-name">Ember</span>
-                                        <p>Discard 1 <img src="./fire.png" />Energy card attached to Charmander in order to use this attack.</p>
-                                    </span>
-                                    <span className="ability-damage">10</span>
-                                </section> */}
+
                                     <section className="console">
                                         <p>GAMEBOY</p>
-                                    </section>
-                                    <section>
+                                        <section className="game-button">
+                                            <img src="./buttons_transparent.png" />
+                                        </section>
+                                        <section className="cross">
+                                            <img src="./gamecross.png" />
+                                        </section>
+
 
                                     </section>
-
-                                    <section></section>
                                     <section></section>
                                 </main>
                             </div>
@@ -415,21 +331,6 @@ function About() {
                                         <span className="ability-damage">10</span>
                                     </section>
 
-                                    {/* <section id="four-fires" className="character-ability">
-                                    <span className="ability-cost">
-                                        <div className='testing'>
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                        </div>
-                                    </span>
-                                    <span className="ability-description">
-                                        <span className="ability-name">Ember</span>
-                                        <p>Discard 1 <img src="./fire.png" />Energy card attached to Charmander in order to use this attack.</p>
-                                    </span>
-                                    <span className="ability-damage">10</span>
-                                </section> */}
                                     <section className="character-ability">
                                         <span id="middle-row" className="ability-cost">
                                             <img src="./fire.png" />
@@ -438,9 +339,7 @@ function About() {
                                             <img src="./fire.png" />
                                         </span>
                                         <span id="middle-mid-row" className="ability-description">
-                                            {/* <span className="ability-name">Scratch</span> */}
                                             <div> <b>Ember</b> Discard 1 <img id="mini-fire" src="./fire.png" /> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</div>
-                                            {/* <p>Discard 1 <img src="./fire.png" />Energy card attached to Charmander in order to use this attack.</p> */}
                                         </span>
                                         <span className="ability-damage">10</span>
                                     </section>
@@ -452,7 +351,6 @@ function About() {
                                         </span>
                                         <span className="character-stat">
                                             <p>resistance</p>
-                                            {/* <img src="./fire.png" /> */}
                                         </span>
                                         <span className="character-stat">
                                             <p>retreat cost</p>
