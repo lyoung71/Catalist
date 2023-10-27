@@ -12,7 +12,6 @@ import JournalForm from "./components/JournalForm";
 import UserPage from "./components/UserPage";
 import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodosList";
-import UserPage from "./components/UserPage";
 import About from "./components/About";
 
 function App() {

@@ -176,3 +176,7 @@ form input {
 footer {
   margin-top: auto;
 }
+
+.px-14 {
+  border: 5px solid gold;
+}

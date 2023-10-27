@@ -116,11 +116,11 @@ td {
   justify-content: center;
 }
 
-/* .table-heading {
+.table-heading {
   text-align: center;
   font-size: 50px;
   margin-top: 50px;
-  font-family: "PokemonDi;
+  /* font-family: "PokemonDi; */
   color: rgb(100, 89, 205);
   position: absolute;
   z-index: 2;

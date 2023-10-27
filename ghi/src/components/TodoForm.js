@@ -7,7 +7,6 @@ function TodoForm() {
     const [name, setName] = useState('')
     const [description, setDescription] = useState('')
     const [date, setDate] = useState('')
-    const [date, setDate] = useState('')
     const { token } = useToken()
 
     const handleNameChange = async (event) => {
