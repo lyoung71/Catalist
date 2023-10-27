@@ -3,7 +3,6 @@ import logo from "../content/logo.png"
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import useToken from "@galvanize-inc/jwtdown-for-react";
-import { useNavigate } from "react-router-dom";
 
 function Nav() {
     const { token, logout } = useToken();

@@ -1,4 +1,5 @@
 import "../todos.css";
+// import emerald from "../content/emerald.jpg";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
@@ -6,14 +7,14 @@ function TodoList() {
     const [todos, setTodos] = useState([]);
     // const { token } = useToken();
 
-    const handleDelete = async (todoToDelete) => {
-        const response = await fetch(`http://localhost:8000/api/todos/${todoToDelete.id}`, {
-            method: "DELETE",
-        });
-        if (response.ok) {
-            setTodos(prevTodos => prevTodos.filter(todo => todo.id != todoToDelete.id))
-
-        }
+    function toggleCompleted(id) {
+        const updatedTodos = todos.map(todo => {
+            if (todo.id === id) {
+                return { ...todo, completed: !todo.completed }
+            }
+            return todo
+        })
+        setTodos(updatedTodos)
     }
 
     const getData = async () => {
@@ -113,7 +114,7 @@ function TodoList() {
                                         <button
                                             type="button"
                                             className="btn"
-                                            onClick={handleDelete}
+                                            onClick={() => handleDelete(todo)}
                                         >
                                             Delete
                                         </button>
@@ -124,7 +125,9 @@ function TodoList() {
                     </tbody>
                 </table>
             </div>
-            <Link to="/todoform"><button id="submit-button" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">Create a task!</button></Link>
+            <div className="create-task-btn">
+                <Link to="/todoform"><button id="new-task-btn" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">Create a task!</button></Link>
+            </div>
         </div>
     );
 }
