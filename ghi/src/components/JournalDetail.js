@@ -44,14 +44,6 @@ function JournalDetail() {
         "Content-Type": "application/json",
       },
     };
-
-    const response = await fetch(journalUrl, fetchConfig);
-
-    if (response.ok) {
-
-      // Optionally, reset form inputs or perform other actions after a successful update
-      // For example, you can set a success message or navigate to a different page
-    }
   };
 
   return (

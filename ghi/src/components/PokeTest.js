@@ -23,9 +23,6 @@ export default function Poke() {
     useEffect(() => {
         fetchData()
     }, [])
-    console.log('pokemon', pokemon)
-    console.log('happiness', happiness)
-    console.log('flavortext', flavortext)
 
     return (
         <>
