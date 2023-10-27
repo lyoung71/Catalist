@@ -56,11 +56,13 @@ class JournalQueries(Queries):
             for journal in result:
                 journal["id"] = str(journal["_id"])
             return result
-        return []
+        return {"message": "This collection has no journals"}
 
-    def get_journal_by_id(self, journal_id):
+    def get_journal_by_id(self, journal_id, accountid):
         try:
-            result = self.collection.find_one({"_id": ObjectId(journal_id)})
+            result = self.collection.find_one(
+                {"_id": ObjectId(journal_id), "account_id": accountid}
+            )
             result["id"] = journal_id
             if result is not None:
                 return result

@@ -1,12 +1,17 @@
 import { useState } from "react";
 import '../todo.css';
 import useToken from "@galvanize-inc/jwtdown-for-react";
+import { useNavigate } from "react-router-dom";
 
 function TodoForm() {
     const [name, setName] = useState('')
     const [description, setDescription] = useState('')
     const [date, setDate] = useState('')
     const { token } = useToken()
+
+
+    
+
 
     const handleNameChange = async (event) => {
         const value = event.target.value
@@ -21,6 +26,11 @@ function TodoForm() {
     const handleDateChange = async (event) => {
         const value = event.target.value
         setDate(value)
+    }
+
+    const handleCreatedChange = async (event) => {
+        const value = event.target.value
+        setCreated(value)
     }
 
     const handleSubmit = async (event) => {
@@ -88,7 +98,7 @@ function TodoForm() {
                             onChange={handleDateChange}
                         />
                     </div>
-                    <button id="submit-button" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+                    <button id="submit-button" onClick={handleSubmit} className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
                         Submit
                     </button>
                 </form >

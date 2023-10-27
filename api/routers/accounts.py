@@ -4,7 +4,7 @@ from fastapi import (
     status,
     Response,
     HTTPException,
-    Request,
+    Request
 )
 from jwtdown_fastapi.authentication import Token
 from authenticator import authenticator
@@ -14,9 +14,8 @@ from queries.accounts import (
     AccountIn,
     AccountOut,
     AccountOutWithPassword,
-    AccountQueries
+    AccountQueries,
 )
-
 router = APIRouter()
 
 
@@ -33,11 +32,12 @@ class HttpError(BaseModel):
     detail: str
 
 
-@router.get("/token", response_model=AccountToken | None)
+@router.get("/token", response_model=AccountToken)
 async def get_token(
     request: Request,
     account: AccountOutWithPassword = Depends(
-        authenticator.try_get_current_account_data)
+        authenticator.try_get_current_account_data
+    ),
 ) -> AccountToken | None:
     if authenticator.cookie_name in request.cookies:
         return {
@@ -45,6 +45,16 @@ async def get_token(
             "type": "Bearer",
             "account": account,
         }
+
+
+@router.get(
+    "/api/accounts/{username}/", tags=["accounts"], response_model=AccountOut
+)
+async def get_account(
+    username: str,
+    accounts: AccountQueries = Depends(),
+):
+    return accounts.get(username)
 
 
 @router.post("/api/accounts", response_model=AccountToken | HttpError)
