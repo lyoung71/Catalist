@@ -45,3 +45,8 @@
 10/26/23
 - Added alerts to JournalForm, check if text inputs are empty or not
 - Created PokemonOfTheHour/PokemonOfTheMinute and PokeText2, PokeText3 files to use for other pages as decoration
+- Main merges made today:
+    Emre/Mark
+    Hamzah/Mark (reverted changes on Hamzah's end due to mixing up the "ours" and "theirs" on gitlab merge conflicts)
+    Pulled/pushed directly from main
+- Need to fix local bugs

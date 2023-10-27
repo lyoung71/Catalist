@@ -115,3 +115,17 @@ td {
   position: absolute;
   z-index: 2;
 }
+
+#new-task-btn {
+  margin-top: 15px;
+  padding: 15px 25px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fad933;
+  background-color: #0245a3;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #fad933;
+  font-family: PokemonDigital;
+}

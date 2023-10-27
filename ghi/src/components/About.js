@@ -1,6 +1,6 @@
-// import '../about.css';
-// import '../style.css';
-// import '../style.scss';
+import '../about.css';
+import '../style.css';
+import '../style.scss';
 
 
 function About() {
