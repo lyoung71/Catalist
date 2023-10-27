@@ -23,7 +23,7 @@ October 18th: I have finished coding the Navbar and the Landing page and so far 
 
 October 20th: Today, I finished the UserPage and the Footer for the project and made it look professional with css and added pokemon to make it feel catered to the user. We are planning to do unit tests next week on monday with everyone together. So far everyones feedback for the user page was positive so I will continue to do css work for the login and signup page.
 
-October 23th: It is monday and we have a week left till thwe deadline of this project. The practice test in the morning was great and I liked the little puzzle at the end using hidden coordinates to find a geo location. So for this week we are wrapping up, hopefully we can start CI/CD by wednesday and for me, I have to finish writing the unit test for accounts.
+October 23rd: It is monday and we have a week left till thwe deadline of this project. The practice test in the morning was great and I liked the little puzzle at the end using hidden coordinates to find a geo location. So for this week we are wrapping up, hopefully we can start CI/CD by wednesday and for me, I have to finish writing the unit test for accounts.
 
 October 25th: Wednesday! It is coming to an end and I am so proud of what the group and I have accomplished. I have finished my unit test for account username and I have been assissting the group with emerging bugs lately. We are cleaning up the code and polishing the css and addign quality of life features for the user experience on the website such as being able to access features all from one place. 
 
