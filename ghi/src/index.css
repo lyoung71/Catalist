@@ -125,6 +125,21 @@ form input {
   font-family: PokemonDigital;
 }
 
+#back-to-journals-button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 8px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #050503;
+  background-color: #7dc0ed;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 3px #ba66fa;
+  font-family: PokemonDigital;
+}
+
 #submit-button:hover {background-color: #083b81}
 
 #submit-button:active {

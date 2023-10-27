@@ -3,6 +3,7 @@ import PokemonOfTheDay from "./PokemonOfTheDay";
 import useToken from "@galvanize-inc/jwtdown-for-react";
 import PokemonOfTheHour from "./PokemonOfTheHour";
 import PokemonOfTheMinute from "./PokemonOfTheMinute";
+import { Link } from "react-router-dom";
 
 export default function JournalForm() {
     const [mood, setMood] = useState('')
@@ -13,16 +14,19 @@ export default function JournalForm() {
     const handleMoodChange = async (event) => {
         const value = event.target.value
         setMood(value)
+        console.log(desc)
     }
 
     const handleDescChange = async (event) => {
         const value = event.target.value
         setDesc(value)
+        console.log(desc)
     }
 
     const handleJournalDateChange = async (event) => {
         const value = event.target.value
         setJournalDate(value)
+        console.log(desc)
     }
 
     const handleSubmit = async (event) => {
@@ -43,7 +47,17 @@ export default function JournalForm() {
         }
 
         const response = await fetch(journalUrl, fetchConfig)
-        if (response.ok) {
+        if (mood.length < 1) {
+            alert("Please enter a mood!")
+        }
+        if (journalDate.length < 1) {
+            alert("Please enter a date!")
+        }
+        if (desc.length < 1) {
+            alert("Please enter at least 5 characters!")
+        }
+        if (response.ok && (mood.length + journalDate.length + desc.length >= 3)) {
+            alert("Journal created!")
             setMood('')
             setDesc('')
             setJournalDate('')
@@ -55,7 +69,9 @@ export default function JournalForm() {
     return (
         <div id="entirething">
             <div id="image"></div>
+
             <div id="journal">
+                <div><Link to="/journals"><button id="back-to-journals-button" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">Back to Journals!</button></Link></div>
                 <form onSubmit={handleSubmit}>
                     <div className="border-blue-500 border-opacity-75">
                         <input className="input" type="text" onChange={handleJournalDateChange} placeholder={"date"} value={journalDate}></input>
@@ -75,6 +91,7 @@ export default function JournalForm() {
                     <button id="submit-button" className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
                         Submit
                     </button>
+
                 </form >
                 <div id="PokeCard" className="PokemonDigital">{PokemonOfTheDay()}
                 </div>
