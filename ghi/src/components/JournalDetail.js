@@ -13,9 +13,6 @@ function JournalDetail() {
     const fetchJournal = async () => {
       const response = await fetch(`http://localhost:8000/api/journals/${journal_id}`, {
         credentials: "include"
-        // headers: {
-        //   Authorization: `Bearer ${token}`,
-        // },
       });
 
       if (response.ok) {
@@ -39,11 +36,15 @@ function JournalDetail() {
       method: "PUT",
       body: JSON.stringify(journal),
       headers: {
-        // credentials: "include",
-        // Authorization: `Bearer ${token}`,
         "Content-Type": "application/json",
       },
     };
+
+    const response = await fetch(journalUrl, fetchConfig);
+
+    if (response.ok) {
+      alert("Journal updated!")
+    }
   };
 
   return (

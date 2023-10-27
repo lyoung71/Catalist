@@ -23,9 +23,7 @@ def get_todos(
 
 @router.get("/{id}", status_code=200, response_model=TodoWithId | Error)
 def get_todo_by_id(
-    id: str,
-    response: Response,
-    queries: TodosQueries = Depends()
+    id: str, response: Response, queries: TodosQueries = Depends()
 ):
     try:
         result = queries.get_todo_by_id(id)
@@ -51,26 +49,28 @@ def create_todo(
         response.status_code = status.HTTP_400_BAD_REQUEST
         return {"message": "The todo-item was not created"}
     except Exception as e:
-        # status_code = status.HTTP_400_BAD_REQUEST
         return {"message": str(e)}
 
 
 @router.put("/{id}", status_code=201, response_model=TodoWithId | Error)
-def update_todo(id: str, response: Response, todo: TodoWithId,
-                queries: TodosQueries = Depends()):
+def update_todo(
+    id: str,
+    response: Response,
+    todo: TodoWithId,
+    queries: TodosQueries = Depends(),
+):
     try:
         result = queries.update_todo(id, todo)
         if not result["success"]:
-            # status_code = status.HTTP_404_NOT_FOUND
             return result
     except Exception as e:
-        # status_code = status.HTTP_400_BAD_REQUEST
         return {"message": str(e)}
 
 
 @router.delete("/{id}", status_code=201, response_model=bool | Error)
-def delete_todo(id: str, response: Response,
-                queries: TodosQueries = Depends()):
+def delete_todo(
+    id: str, response: Response, queries: TodosQueries = Depends()
+):
     try:
         result = queries.delete_todo(id)
         if result["success"] is False:

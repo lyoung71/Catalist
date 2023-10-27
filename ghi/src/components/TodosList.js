@@ -1,11 +1,9 @@
 import "../todos.css";
-// import emerald from "../content/emerald.jpg";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function TodoList() {
     const [todos, setTodos] = useState([]);
-    // const { token } = useToken();
 
     function toggleCompleted(id) {
         const updatedTodos = todos.map(todo => {
@@ -33,52 +31,25 @@ function TodoList() {
     };
 
     const handleDelete = async (todoToDelete) => {
-        const response = await fetch(`http://localhost:8000/api/todos/${todoToDelete.id}`, {
-            method: "DELETE",
-
-        });
-
+        const response = await fetch(`http://localhost:8000/api/todos/${todoToDelete.id}`,
+            {
+                method: "DELETE",
+            });
         if (response.ok) {
             setTodos(prevTodos => prevTodos.filter(todo => todo.id != todoToDelete.id))
-
         }
-
-
     }
-
 
     useEffect(() => {
         getData();
     }, []);
 
-
     return (
         <div className="todo-container">
             <div className="todolist-page">
-                {/* <img src={emerald} alt="Background Description"></img> */}
                 <h1 className="todo-heading">TO-DO LIST</h1>
             </div>
-            {/* {todos.map(todo => {
-                const cardWidth = {
-                    width: "18rem"
-                }
-                return (
-                    <div className="card" style={cardWidth} key={todo.id} id="card">
-                        <div className="card-body">
-                            <h3 className="card-title">{todo.name}</h3>
-                            <p className="card-text">Description: {todo.description}</p>
-                            <p className="card-text">Completed?: {todo.completed ? 'Yes' : 'No'}</p>
-                            <p className="card-text">Created: {todo.created}</p>
-                        </div>
-                        <button onClick={() => handleDelete(shoe.id)} className="btn btn-info btn-small">Delete Shoe</button>
-                    </div>
-                ) */}
-            {/* })} */}
-            {/* <div className="card-container"> */}
-            {/* <h1 className="table-heading">Todo List!</h1> */}
-            {/* <div className="px-3 py-4flex justify-center"> */}
             <div className="todo-table-container">
-                {/* <table className="w-full text-md bg-white shadow-md rounded mb-4"> */}
                 <table className="todo-table">
                     <thead>
                         <tr id="table-heads" className="border-b">
@@ -114,8 +85,7 @@ function TodoList() {
                                         <button
                                             type="button"
                                             className="btn"
-                                            onClick={() => handleDelete(todo)}
-                                        >
+                                            onClick={() => handleDelete(todo)}>
                                             Delete
                                         </button>
                                     </td>

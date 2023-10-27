@@ -6,7 +6,6 @@
 #todoform-container {
   background-image: url("../src/content/pokemoncrystal.png");
   height: 95vh;
-  /* filter: blur(5px); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -22,7 +21,6 @@
 .form-title {
   text-align: center;
   font-size: 45px;
-  /* margin-top: 10px; */
   font-family: PokemonDigital;
   color: rgb(0, 0, 0);
   background-color: rgb(224, 235, 255);

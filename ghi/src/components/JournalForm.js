@@ -1,8 +1,6 @@
 import { useState } from "react";
 import PokemonOfTheDay from "./PokemonOfTheDay";
 import useToken from "@galvanize-inc/jwtdown-for-react";
-import PokemonOfTheHour from "./PokemonOfTheHour";
-import PokemonOfTheMinute from "./PokemonOfTheMinute";
 import { Link } from "react-router-dom";
 
 export default function JournalForm() {
