@@ -93,8 +93,6 @@ export default function JournalForm() {
                 </form >
                 <div id="PokeCard" className="PokemonDigital">{PokemonOfTheDay()}
                 </div>
-
-                <div id="PokeCard" className="PokemonDigital">{PokemonOfTheDay()}</div>
             </div >
         </div>
     )

@@ -38,7 +38,7 @@ function TodoList() {
 
 
     return (
-        <div className="todo-container">
+        <div className="todo-container relative h-screen">
             <div className="todolist-page">
                 {/* <img src={emerald} alt="Background Description"></img> */}
                 <h1 className="todo-heading">TO-DO LIST</h1>

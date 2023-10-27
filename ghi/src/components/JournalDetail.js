@@ -53,49 +53,51 @@ function JournalDetail() {
   };
 
   return (
-    <div id="entirething">
-      {/* ... */}
-      <div id="journal">
-        <form onSubmit={handleSubmit}>
-          <div className="border-blue-500 border-opacity-75">
-            <input
-              className="input"
-              type="text"
-              name="journal_date"
-              onChange={handleInputChange}
-              placeholder="date"
-              value={journal.journal_date || ""}
-            ></input>
-            <input
-              className="input"
-              type="text"
-              name="mood"
-              onChange={handleInputChange}
-              placeholder="mood"
-              value={journal.mood || ""}
-            ></input>
-            <textarea
-              role="textbox"
-              id="textarea"
-              className="resize rounded-md"
-              rows={15}
-              columns={30}
-              name="desc"
-              placeholder="I love Pokemon!"
-              value={journal.desc || ""}
-              onChange={handleInputChange}
-            ></textarea>
-          </div>
-          <button
-            id="submit-button"
-            onClick={handleSubmit}
-            className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"
-          >
-            Save
-          </button>
-        </form>
-      </div>
-    </div>
+    <>
+      {/* <div id="entirething"> */}
+        {/* ... */}
+        <div id="journal">
+          <form onSubmit={handleSubmit}>
+            <div className="border-blue-500 border-opacity-75">
+              <input
+                className="input"
+                type="text"
+                name="journal_date"
+                onChange={handleInputChange}
+                placeholder="date"
+                value={journal.journal_date || ""}
+              ></input>
+              <input
+                className="input"
+                type="text"
+                name="mood"
+                onChange={handleInputChange}
+                placeholder="mood"
+                value={journal.mood || ""}
+              ></input>
+              <textarea
+                role="textbox"
+                id="textarea"
+                className="resize rounded-md"
+                rows={15}
+                columns={30}
+                name="desc"
+                placeholder="I love Pokemon!"
+                value={journal.desc || ""}
+                onChange={handleInputChange}
+              ></textarea>
+            </div>
+            <button
+              id="submit-button"
+              onClick={handleSubmit}
+              className="bg-PokeBlue text-PokeYellow hover:bg-opacity-80 font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"
+            >
+              Save
+            </button>
+          </form>
+        </div>
+      {/* </div> */}
+    </>
   );
 }
 
