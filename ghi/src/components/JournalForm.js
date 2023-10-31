@@ -75,7 +75,6 @@ export default function JournalForm() {
                         <input className="input" type="text" onChange={handleJournalDateChange} placeholder={"date"} value={journalDate}></input>
                         <input className="input" type="text" onChange={handleMoodChange} placeholder={"mood"} value={mood}></input>
                         <textarea
-                            role="textbox"
                             id="textarea"
                             className="resize rounded-md"
                             rows={15}
