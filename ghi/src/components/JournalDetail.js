@@ -1,11 +1,9 @@
 import { useState, useEffect } from "react";
-import { useAuthContext } from "@galvanize-inc/jwtdown-for-react";
 import { useParams } from "react-router-dom";
 import PokemonOfTheHour from "./PokemonOfTheHour";
 
 function JournalDetail() {
   const [journal, setJournal] = useState({});
-  const { token } = useAuthContext();
   const { journal_id } = useParams();
 
 
@@ -49,7 +47,6 @@ function JournalDetail() {
 
   return (
     <div id="entirething">
-      {/* ... */}
       <div id="image2"></div>
       <div id="journal">
         <form onSubmit={handleSubmit}>

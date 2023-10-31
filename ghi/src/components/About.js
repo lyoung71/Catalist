@@ -76,7 +76,7 @@ function About() {
                                 </section>
                             </main>
                         </div>
-                        {/* <---------------new card(joyce)------------> */}
+
                         <div className="grid-item">
                             <div className="grid-item card1">
                                 <main className="pokemon-card-pika">
@@ -143,7 +143,7 @@ function About() {
                                 </main>
                             </div>
                         </div>
-                        {/* <------------ new card(hamzah) ------------> */}
+
                         <div className="grid-item">
                             <div className="grid-item card1">
                                 <main className="pokemon-card-sp">
@@ -210,7 +210,7 @@ function About() {
                                 </main>
                             </div>
                         </div>
-                        {/* <------------ new card (landon) ------------> */}
+
                         <div className="grid-item">
                             <div className="grid-item card1">
                                 <main className="pokemon-card-snor">
@@ -277,7 +277,7 @@ function About() {
                                 </main>
                             </div>
                         </div>
-                        {/* <------------ new card (gameboy) ------------> */}
+
                         <div className="grid-item">
                             <div className="grid-item card1">
                                 <main className="gameboy-card">
@@ -302,7 +302,7 @@ function About() {
                                 </main>
                             </div>
                         </div>
-                        {/* <------------ new card(mark)------------> */}
+
                         <div className="grid-item">
                             <div className="grid-item card1">
                                 <main className="pokemon-card-snom">
