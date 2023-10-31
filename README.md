@@ -1,6 +1,6 @@
 # Catalist
 
-The Gobetrotterz:
+The Globetrotterz:
 - Emre Akilli | [GitLab](https://gitlab.com/emreakilli)
 - Landon Young | [GitLab](https://gitlab.com/lyoung71)
 - Joyce Dionisio | [GitLab](https://gitlab.com/jojodionisio)
