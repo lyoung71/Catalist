@@ -2,9 +2,7 @@ import hero from "../content/hero.jpg"
 import ft1 from "../content/ft1.png"
 import ft2 from "../content/ft2.png"
 import ft3 from "../content/ft3.png"
-// import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-// import { useAuthContext } from "@galvanize-inc/jwtdown-for-react";
 
 function LandingPage() {
     // const [accounts, setAccounts] = useState({});
