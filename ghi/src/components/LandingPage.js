@@ -7,16 +7,16 @@ import { Link } from "react-router-dom";
 import { useAuthContext } from "@galvanize-inc/jwtdown-for-react";
 
 function LandingPage() {
-    const [accounts, setAccounts] = useState({});
+    // const [accounts, setAccounts] = useState({});
     const { token } = useAuthContext();
     const getData = async () => {
         const url = "http://localhost:8000/token/";
         const config = { credentials: "include" }
         const response = await fetch(url, config);
-        if (response.ok) {
-            const data = await response.json();
-            setAccounts(data);
-        }
+        // if (response.ok) {
+        //     const data = await response.json();
+        //     setAccounts(data);
+        // }
     }
     useEffect(() => {
         if (token) {

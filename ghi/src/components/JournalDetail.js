@@ -68,7 +68,6 @@ function JournalDetail() {
               value={journal.mood || ""}
             ></input>
             <textarea
-              role="textbox"
               id="textarea"
               className="resize rounded-md"
               rows={15}

@@ -36,7 +36,7 @@ function TodoList() {
                 method: "DELETE",
             });
         if (response.ok) {
-            setTodos(prevTodos => prevTodos.filter(todo => todo.id != todoToDelete.id))
+            setTodos(prevTodos => prevTodos.filter(todo => todo.id !== todoToDelete.id))
         }
     }
 

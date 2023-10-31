@@ -28,7 +28,7 @@ export default function JournalList() {
     });
 
     if (response.ok) {
-      setJournals(prevJournals => prevJournals.filter(journal => journal.id != journalToDelete.id))
+      setJournals(prevJournals => prevJournals.filter(journal => journal.id !== journalToDelete.id))
 
     }
 
