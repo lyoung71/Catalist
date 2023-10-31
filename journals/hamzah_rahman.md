@@ -57,4 +57,4 @@ I am struggling on the journal detail page, because I have never created a detai
 
 
 10/25/23 -
-The JournalDetail is finallyyyy complete
+The JournalDetail is finallyyyy complete and now I can edit and view a single journal and delete it. I had to tweak the submit handler because the edit feature was working and updating in the backend and the database reflected the changes I made on a journal,and it showed on the front end but for some reason there was a terrible PUT console error that was giving an internal server error. Now that the backend is offically robust with the help of my group members, Time for the CSS for JournalDetail and JournalList.
