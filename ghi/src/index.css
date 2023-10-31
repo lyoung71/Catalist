@@ -350,7 +350,7 @@ form input {
   margin: auto;
   margin-right: 5px;
   border-radius: 1px;
-  padding:3px
+  padding: 3px;
 }
 
 #textarea {
@@ -378,7 +378,7 @@ form input {
 }
 
 #pokeDiv {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 #submit-button {
@@ -397,7 +397,9 @@ form input {
   font-family: PokemonDigital;
 }
 
-#submit-button:hover {background-color: #083b81}
+#submit-button:hover {
+  background-color: #083b81;
+}
 
 #submit-button:active {
   background-color: #0245a3;
@@ -413,4 +415,16 @@ form input {
   border-radius: 5px 50px 30px;
   flex-wrap: wrap;
   font-size: 15px;
+}
+
+.px-14 {
+  border: 5px solid gold;
+}
+
+.nav {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
 }

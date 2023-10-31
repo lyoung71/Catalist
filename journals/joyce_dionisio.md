@@ -17,13 +17,16 @@ SpoOoOoKy! Friday the 13th! What's spookier is definitely the end of this module
 Ok everything came crashing down. Today I was stuck because of a docker issue. Nothing would work. I attempted deleting and rebuilding containers and nothing fixed it. I eventually decided to delete all containers, volumes, and images and then pruned docker through my terminal. This resolved the issue.
 
 10/17/23 -
-Todo List is populating, however there's plenty of style issues. Dealt with some backend issues. I began coding frontend
+Todo List is populating, however there's plenty of style issues. Dealt with some backend issues. I began coding frontend. My biggest issue has been attempting to install SASS correctly. I've tried multiple terminal commands but the only one that worked for me was `npm install sass --save -dev`. Docker still showed issues, so I decided to delete my images and containers and then rebuilt and did docker compose up.
 
 10/19/23
-Todo list and todo form progress has been working. I haven't been able to pull or push due to issues. I've accidentally gotten stuck in git hell. It seems as if rebasing is the issue
+Todo list and todo form progress has been working. I haven't been able to pull or push due to issues. I've accidentally gotten stuck in git hell. It seems as if rebasing is the issue. What helped for me was the command git reset. I ended up rebasing for hours, and had to abort the process through `git rebase --abort`. Note: `git merge --abort` is also good to try.
 
 10/23/23 -
-Pokemon cards in dev page are now complete. I had to write a lot from scratch due to issues in the grid.
+Pokemon cards in dev page are now complete. I had to write a lot from scratch due to issues in the grid. Becuase the fire icons wouldn't align I had to go in and fix the grid on that specific div. Within six hours I was able to code out 5 pokemon cards and one gameboy. My stretch goal next week is to have buttons working inside the gameboy screen.
 
 10/25/23 -
-OMG had to delete my branch
+OMG had to delete my branch with Wanda. Super stressful but needed as my remote and local branch had diverged by like 140 commits somehow. It probably broke through the use of rebasing. I was able to finalize my todo list and todo form, and managed to route the background images correctly. I sent the other backgrounds to Mark and Hamzah to implement to their pages. Debugged and helped with Dante's code in another group
+
+10/26/23-
+We mob coded some issues, and I worked on creating buttons for my pages. I did a git merge request and we mob coded through it to determine the merge conflict solutions. As of right now all my pages are accurate, just want to try and fix some of the About page so that the grid is responsive. I am also currently working on the nav bar to ensure it is responsive too.
