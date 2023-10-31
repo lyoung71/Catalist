@@ -100,9 +100,9 @@ export default function JournalList() {
           </div>
         </body >
       </>
-
     );
-  } catch {
+  } else {
+
     return (
       <>
         <body>
