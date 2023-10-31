@@ -5,43 +5,15 @@
   box-sizing: border-box;
 }
 
-/* html,
-body {
-  height: 100%;
-} */
-/* .ability-cost {
-  height: 75px;
-  display: grid;
-  grid-template-columns: 65px auto 65px;
-  gap: 5px;
-  align-items: center;
-  justify-items: center;
-  margin: 0 10px;
-  border-bottom: 2px solid black;
-} */
-
-/* body {
+.flex-container {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #dcdcdc;
-} */
-
-/* .ability-name .ability-cost {
-  height: 75px;
-  display: grid;
-  grid-template-columns: 65px auto 65px;
-  gap: 5px;
-  align-items: center;
-  justify-items: center;
-  margin: 0 10px;
-  border-bottom: 2px solid black;
-} */
-
-.flex-container {
+}
+*/ .flex-container {
   display: flex;
-  justify-content: center;
-  width: 100vw;
+  justify-self: left;
 }
 #card-name-one {
   font-size: 24px;
@@ -82,10 +54,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    /* background-image: url("./background.jpg");
-    background-size: cover;
-    z-index: -1;
-    filter: hue-rotate(140deg); */
   }
 }
 
@@ -109,12 +77,6 @@ body {
     background-color: aliceblue;
   }
 }
-
-/* .testing {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-} */
 
 .title-row {
   display: grid;
@@ -147,10 +109,6 @@ body {
 }
 
 .gameboy-row {
-  /* display: grid;
-  grid-template-areas: "rarity rarity rarity" "name health type";
-  grid-template-columns: auto 75px 25px;
-  grid-template-rows: 15px 25px; */
   align-items: center;
   -moz-column-gap: 5px;
   column-gap: 5px;
@@ -282,4 +240,4 @@ body {
 .character-ability .ability-damage {
   font-weight: bold;
   font-size: 30px;
-} /*# sourceMappingURL=style.css.map */
+}

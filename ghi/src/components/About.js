@@ -18,11 +18,11 @@ function About() {
                                     <p className="rarity">Basic Pokemon</p>
                                     <h1 id="card-name-one" className="name">Emre</h1>
                                     <p className="health">50 HP</p>
-                                    <img className="element-icon" src="fire.png" />
+                                    <img className="element-icon" src="fire.png" alt=""  />
                                 </section>
 
                                 <section className="character-img">
-                                    <img src="./charmander.jpg" />
+                                    <img src="./charmander.jpg" alt="" />
                                 </section>
 
                                 <section className="character-meta">
@@ -31,7 +31,7 @@ function About() {
 
                                 <section className="character-ability">
                                     <span className="ability-cost">
-                                        <img src="./fire.png" />
+                                        <img src="./fire.png" alt="" />
                                     </span>
                                     <span className="ability-description">
                                         <span className="ability-name">Scratch</span>
@@ -39,32 +39,15 @@ function About() {
                                     <span className="ability-damage">10</span>
                                 </section>
 
-                                {/* <section id="four-fires" className="character-ability">
-                                    <span className="ability-cost">
-                                        <div className='testing'>
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                        </div>
-                                    </span>
-                                    <span className="ability-description">
-                                        <span className="ability-name">Ember</span>
-                                        <p>Discard 1 <img src="./fire.png" />Energy card attached to Charmander in order to use this attack.</p>
-                                    </span>
-                                    <span className="ability-damage">10</span>
-                                </section> */}
                                 <section className="character-ability">
                                     <span id="middle-row" className="ability-cost">
-                                        <img src="./fire.png" />
-                                        <img src="./fire.png" />
-                                        <img src="./fire.png" />
-                                        <img src="./fire.png" />
+                                        <img src="./fire.png" alt="" />
+                                        <img src="./fire.png" alt="" />
+                                        <img src="./fire.png" alt="" />
+                                        <img src="./fire.png" alt="" />
                                     </span>
                                     <span id="middle-mid-row" className="ability-description">
-                                        {/* <span className="ability-name">Scratch</span> */}
-                                        <div> <b>Ember</b> Discard 1 <img id="mini-fire" src="./fire.png" /> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</div>
-                                        {/* <p>Discard 1 <img src="./fire.png" />Energy card attached to Charmander in order to use this attack.</p> */}
+                                        <div> <b>Ember</b> Discard 1 <img id="mini-fire" src="./fire.png" alt="" /> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</div>
                                     </span>
                                     <span className="ability-damage">10</span>
                                 </section>
@@ -72,15 +55,14 @@ function About() {
                                 <section className="character-stats">
                                     <span className="character-stat">
                                         <p>weakness</p>
-                                        <img className="element-icon" src="./fire.png" />
+                                        <img className="element-icon" src="./fire.png" alt="" />
                                     </span>
                                     <span className="character-stat">
                                         <p>resistance</p>
-                                        {/* <img src="./fire.png" /> */}
                                     </span>
                                     <span className="character-stat">
                                         <p>retreat cost</p>
-                                        <img className="element-icon" src="./fire.png" />
+                                        <img className="element-icon" src="./fire.png" alt="" />
                                     </span>
                                 </section>
 
@@ -94,7 +76,7 @@ function About() {
                                 </section>
                             </main>
                         </div>
-                        {/* <---------------new card(joyce)------------> */}
+
                         <div className="grid-item">
                             <div className="grid-item card1">
                                 <main className="pokemon-card-pika">
@@ -102,11 +84,11 @@ function About() {
                                         <p className="rarity">Basic Pokemon</p>
                                         <h1 id="card-name-one" className="name">Joyce</h1>
                                         <p className="health">40 HP</p>
-                                        <img className="element-icon" src="fire.png" />
+                                        <img className="element-icon" src="fire.png" alt="" />
                                     </section>
 
                                     <section className="character-img-pika">
-                                        <img src="./thickachu.jpg" />
+                                        <img src="./thickachu.jpg" alt="" />
                                     </section>
 
                                     <section className="character-meta">
@@ -115,7 +97,7 @@ function About() {
 
                                     <section className="character-ability">
                                         <span className="ability-cost">
-                                            <img src="./fire.png" />
+                                            <img src="./fire.png" alt="" />
                                         </span>
                                         <span className="ability-description">
                                             <span className="ability-name">Scratch</span>
@@ -123,32 +105,15 @@ function About() {
                                         <span className="ability-damage">10</span>
                                     </section>
 
-                                    {/* <section id="four-fires" className="character-ability">
-                                    <span className="ability-cost">
-                                        <div className='testing'>
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                        </div>
-                                    </span>
-                                    <span className="ability-description">
-                                        <span className="ability-name">Ember</span>
-                                        <p>Discard 1 <img src="./fire.png" />Energy card attached to Charmander in order to use this attack.</p>
-                                    </span>
-                                    <span className="ability-damage">10</span>
-                                </section> */}
                                     <section className="character-ability">
                                         <span id="middle-row" className="ability-cost">
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
+                                            <img src="./fire.png" alt="" />
+                                            <img src="./fire.png" alt="" />
+                                            <img src="./fire.png" alt="" />
+                                            <img src="./fire.png" alt="" />
                                         </span>
                                         <span id="middle-mid-row" className="ability-description">
-                                            {/* <span className="ability-name">Scratch</span> */}
-                                            <div> <b>Ember</b> Discard 1 <img id="mini-fire" src="./fire.png" /> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</div>
-                                            {/* <p>Discard 1 <img src="./fire.png" />Energy card attached to Charmander in order to use this attack.</p> */}
+                                            <div> <b>Ember</b> Discard 1 <img id="mini-fire" src="./fire.png" alt="" /> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</div>
                                         </span>
                                         <span className="ability-damage">30</span>
                                     </section>
@@ -156,15 +121,14 @@ function About() {
                                     <section className="character-stats">
                                         <span className="character-stat">
                                             <p>weakness</p>
-                                            <img className="element-icon" src="./fire.png" />
+                                            <img className="element-icon" src="./fire.png" alt="" />
                                         </span>
                                         <span className="character-stat">
                                             <p>resistance</p>
-                                            {/* <img src="./fire.png" /> */}
                                         </span>
                                         <span className="character-stat">
                                             <p>retreat cost</p>
-                                            <img className="element-icon" src="./fire.png" />
+                                            <img className="element-icon" src="./fire.png" alt="" />
                                         </span>
                                     </section>
 
@@ -179,7 +143,7 @@ function About() {
                                 </main>
                             </div>
                         </div>
-                        {/* <------------ new card(hamzah) ------------> */}
+
                         <div className="grid-item">
                             <div className="grid-item card1">
                                 <main className="pokemon-card-sp">
@@ -187,11 +151,11 @@ function About() {
                                         <p className="rarity">Basic Pokemon</p>
                                         <h1 id="card-name-one" className="name">Hamzah</h1>
                                         <p className="health">20 HP</p>
-                                        <img className="element-icon" src="fire.png" />
+                                        <img className="element-icon" src="fire.png" alt="" />
                                     </section>
 
                                     <section className="character-img-sp">
-                                        <img src="./starplat.jpg" />
+                                        <img src="./starplat.jpg" alt="" />
                                     </section>
 
                                     <section className="character-meta">
@@ -200,7 +164,7 @@ function About() {
 
                                     <section className="character-ability">
                                         <span className="ability-cost">
-                                            <img src="./fire.png" />
+                                            <img src="./fire.png" alt="" />
                                         </span>
                                         <span className="ability-description">
                                             <span className="ability-name">Speed</span>
@@ -208,32 +172,15 @@ function About() {
                                         <span className="ability-damage">10</span>
                                     </section>
 
-                                    {/* <section id="four-fires" className="character-ability">
-                                    <span className="ability-cost">
-                                        <div className='testing'>
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                        </div>
-                                    </span>
-                                    <span className="ability-description">
-                                        <span className="ability-name">Ember</span>
-                                        <p>Discard 1 <img src="./fire.png" />Energy card attached to Charmander in order to use this attack.</p>
-                                    </span>
-                                    <span className="ability-damage">10</span>
-                                </section> */}
                                     <section className="character-ability">
                                         <span id="middle-row" className="ability-cost">
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
+                                            <img src="./fire.png" alt="" />
+                                            <img src="./fire.png" alt="" />
+                                            <img src="./fire.png" alt="" />
+                                            <img src="./fire.png" alt="" />
                                         </span>
                                         <span id="middle-mid-row" className="ability-description">
-                                            {/* <span className="ability-name">Scratch</span> */}
-                                            <div> <b>Ember</b> Discard 1 <img id="mini-fire" src="./fire.png" /> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</div>
-                                            {/* <p>Discard 1 <img src="./fire.png" />Energy card attached to Charmander in order to use this attack.</p> */}
+                                            <div> <b>Ember</b> Discard 1 <img id="mini-fire" src="./fire.png" alt="" /> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</div>
                                         </span>
                                         <span className="ability-damage">10</span>
                                     </section>
@@ -241,15 +188,14 @@ function About() {
                                     <section className="character-stats">
                                         <span className="character-stat">
                                             <p>weakness</p>
-                                            <img className="element-icon" src="./fire.png" />
+                                            <img className="element-icon" src="./fire.png" alt="" />
                                         </span>
                                         <span className="character-stat">
                                             <p>resistance</p>
-                                            {/* <img src="./fire.png" /> */}
                                         </span>
                                         <span className="character-stat">
                                             <p>retreat cost</p>
-                                            <img className="element-icon" src="./fire.png" />
+                                            <img className="element-icon" src="./fire.png" alt="" />
                                         </span>
                                     </section>
 
@@ -264,7 +210,7 @@ function About() {
                                 </main>
                             </div>
                         </div>
-                        {/* <------------ new card (landon) ------------> */}
+
                         <div className="grid-item">
                             <div className="grid-item card1">
                                 <main className="pokemon-card-snor">
@@ -272,11 +218,11 @@ function About() {
                                         <p className="rarity">Basic Pokemon</p>
                                         <h1 id="card-name-one" className="name">Landon</h1>
                                         <p className="health">10 HP</p>
-                                        <img className="element-icon" src="fire.png" />
+                                        <img className="element-icon" src="fire.png" alt="" />
                                     </section>
 
                                     <section className="character-img-snor">
-                                        <img src="./snorlax.jpg" />
+                                        <img src="./snorlax.jpg" alt="" />
                                     </section>
 
                                     <section className="character-meta">
@@ -285,7 +231,7 @@ function About() {
 
                                     <section className="character-ability">
                                         <span className="ability-cost">
-                                            <img src="./fire.png" />
+                                            <img src="./fire.png" alt="" />
                                         </span>
                                         <span className="ability-description">
                                             <span className="ability-name">Scratch</span>
@@ -293,32 +239,15 @@ function About() {
                                         <span className="ability-damage">10</span>
                                     </section>
 
-                                    {/* <section id="four-fires" className="character-ability">
-                                    <span className="ability-cost">
-                                        <div className='testing'>
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                        </div>
-                                    </span>
-                                    <span className="ability-description">
-                                        <span className="ability-name">Ember</span>
-                                        <p>Discard 1 <img src="./fire.png" />Energy card attached to Charmander in order to use this attack.</p>
-                                    </span>
-                                    <span className="ability-damage">10</span>
-                                </section> */}
                                     <section className="character-ability">
                                         <span id="middle-row" className="ability-cost">
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
+                                            <img src="./fire.png" alt="" />
+                                            <img src="./fire.png" alt="" />
+                                            <img src="./fire.png" alt="" />
+                                            <img src="./fire.png" alt="" />
                                         </span>
                                         <span id="middle-mid-row" className="ability-description">
-                                            {/* <span className="ability-name">Scratch</span> */}
-                                            <div> <b>Ember</b> Discard 1 <img id="mini-fire" src="./fire.png" /> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</div>
-                                            {/* <p>Discard 1 <img src="./fire.png" />Energy card attached to Charmander in order to use this attack.</p> */}
+                                            <div> <b>Ember</b> Discard 1 <img id="mini-fire" src="./fire.png" alt="" /> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</div>
                                         </span>
                                         <span className="ability-damage">10</span>
                                     </section>
@@ -326,15 +255,14 @@ function About() {
                                     <section className="character-stats">
                                         <span className="character-stat">
                                             <p>weakness</p>
-                                            <img className="element-icon" src="./fire.png" />
+                                            <img className="element-icon" src="./fire.png" alt="" />
                                         </span>
                                         <span className="character-stat">
                                             <p>resistance</p>
-                                            {/* <img src="./fire.png" /> */}
-                                        </span>
+                                            =                                        </span>
                                         <span className="character-stat">
                                             <p>retreat cost</p>
-                                            <img className="element-icon" src="./fire.png" />
+                                            <img className="element-icon" src="./fire.png" alt="" />
                                         </span>
                                     </section>
 
@@ -349,7 +277,7 @@ function About() {
                                 </main>
                             </div>
                         </div>
-                        {/* <------------ new card (gameboy) ------------> */}
+
                         <div className="grid-item">
                             <div className="grid-item card1">
                                 <main className="gameboy-card">
@@ -357,30 +285,15 @@ function About() {
                                     </section>
 
                                     <section className="gameboy-img">
-                                        {/* <img src="./charmander.jpg" /> */}
                                     </section>
-                                    {/* <section id="four-fires" className="character-ability">
-                                    <span className="ability-cost">
-                                        <div className='testing'>
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                        </div>
-                                    </span>
-                                    <span className="ability-description">
-                                        <span className="ability-name">Ember</span>
-                                        <p>Discard 1 <img src="./fire.png" />Energy card attached to Charmander in order to use this attack.</p>
-                                    </span>
-                                    <span className="ability-damage">10</span>
-                                </section> */}
+
                                     <section className="console">
                                         <p>GAMEBOY</p>
                                         <section className="game-button">
-                                            <img src="./buttons_transparent.png" />
+                                            <img src="./buttons_transparent.png" alt="" />
                                         </section>
                                         <section className="cross">
-                                            <img src="./gamecross.png" />
+                                            <img src="./gamecross.png" alt="" />
                                         </section>
 
 
@@ -389,7 +302,7 @@ function About() {
                                 </main>
                             </div>
                         </div>
-                        {/* <------------ new card(mark)------------> */}
+
                         <div className="grid-item">
                             <div className="grid-item card1">
                                 <main className="pokemon-card-snom">
@@ -397,11 +310,11 @@ function About() {
                                         <p className="rarity">Basic Pokemon</p>
                                         <h1 id="card-name-one" className="name">Mark</h1>
                                         <p className="health">70 HP</p>
-                                        <img className="element-icon" src="fire.png" />
+                                        <img className="element-icon" src="fire.png" alt="" />
                                     </section>
 
                                     <section className="character-img-snom">
-                                        <img src="./snom.jpg" />
+                                        <img src="./snom.jpg" alt="" />
                                     </section>
 
                                     <section className="character-meta">
@@ -410,7 +323,7 @@ function About() {
 
                                     <section className="character-ability">
                                         <span className="ability-cost">
-                                            <img src="./fire.png" />
+                                            <img src="./fire.png" alt="" />
                                         </span>
                                         <span className="ability-description">
                                             <span className="ability-name">Scratch</span>
@@ -418,32 +331,15 @@ function About() {
                                         <span className="ability-damage">10</span>
                                     </section>
 
-                                    {/* <section id="four-fires" className="character-ability">
-                                    <span className="ability-cost">
-                                        <div className='testing'>
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                        </div>
-                                    </span>
-                                    <span className="ability-description">
-                                        <span className="ability-name">Ember</span>
-                                        <p>Discard 1 <img src="./fire.png" />Energy card attached to Charmander in order to use this attack.</p>
-                                    </span>
-                                    <span className="ability-damage">10</span>
-                                </section> */}
                                     <section className="character-ability">
                                         <span id="middle-row" className="ability-cost">
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
-                                            <img src="./fire.png" />
+                                            <img src="./fire.png" alt="" />
+                                            <img src="./fire.png" alt="" />
+                                            <img src="./fire.png" alt="" />
+                                            <img src="./fire.png" alt="" />
                                         </span>
                                         <span id="middle-mid-row" className="ability-description">
-                                            {/* <span className="ability-name">Scratch</span> */}
-                                            <div> <b>Ember</b> Discard 1 <img id="mini-fire" src="./fire.png" /> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</div>
-                                            {/* <p>Discard 1 <img src="./fire.png" />Energy card attached to Charmander in order to use this attack.</p> */}
+                                            <div> <b>Ember</b> Discard 1 <img id="mini-fire" src="./fire.png" alt="" /> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</div>
                                         </span>
                                         <span className="ability-damage">10</span>
                                     </section>
@@ -451,15 +347,14 @@ function About() {
                                     <section className="character-stats">
                                         <span className="character-stat">
                                             <p>weakness</p>
-                                            <img className="element-icon" src="./fire.png" />
+                                            <img className="element-icon" src="./fire.png" alt="" />
                                         </span>
                                         <span className="character-stat">
                                             <p>resistance</p>
-                                            {/* <img src="./fire.png" /> */}
                                         </span>
                                         <span className="character-stat">
                                             <p>retreat cost</p>
-                                            <img className="element-icon" src="./fire.png" />
+                                            <img className="element-icon" src="./fire.png" alt="" />
                                         </span>
                                     </section>
 

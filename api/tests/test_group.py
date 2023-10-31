@@ -33,7 +33,7 @@ def test_get_by_username():
 
 
 class MockJournalQueriesId:
-    def get_journal_by_id(self, id: str):
+    def get_journal_by_id(self, journal_id: str, accountid: str):
         return {
             "mood": "sad",
             "desc": "madge",
@@ -98,28 +98,22 @@ def fake_get_current_account_data():
 
 
 def test_get_journal_by_id():
-    # Setup/arrange
-    # app.dependency_overrides[authenticator.get_current_account_data]
-    # = fake_get_journal_data
+    app.dependency_overrides[
+        authenticator.get_current_account_data
+    ] = fake_get_current_account_data
     app.dependency_overrides[JournalQueries] = MockJournalQueriesId
-    # Enact/Act
     response = client.get("/api/journals/{id}")
     app.dependency_overrides = {}
-    # Assert
     assert response.status_code == 200
-    # assert response.json() == []
 
 
 def test_get_all_journals():
-    # Setup/arrange
     app.dependency_overrides[
         authenticator.get_current_account_data
     ] = fake_get_current_account_data
     app.dependency_overrides[JournalQueries] = MockJournalQueries
-    # Enact/Act
     response = client.get("/api/journals/")
 
-    # Assert
     assert response.status_code == 200
     assert response.json() == [
         {

@@ -15,9 +15,9 @@ const LoginForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        login(inputs.username, inputs.password);
-        navigate("/user");
-    };
+        login(inputs.username, inputs.password)
+        navigate("/user")
+    }
     return (
         <div className="flex justify-center items-center h-screen bg-PokeBlue">
             <form className="bg-PokeYellow text-center p-6 rounded-lg PokemonDigital mb-10">

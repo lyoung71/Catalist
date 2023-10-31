@@ -7,27 +7,26 @@ import { Link } from "react-router-dom";
 import { useAuthContext } from "@galvanize-inc/jwtdown-for-react";
 
 function LandingPage() {
-  const [accounts, setAccounts] = useState({});
-  const { token } = useAuthContext();
-  const getData = async () => {
-    const url = "http://localhost:8000/token/";
-    const config = { credentials: "include" }
-    const response = await fetch(url, config);
-    if (response.ok) {
-      const data = await response.json();
-      setAccounts(data);
+    // const [accounts, setAccounts] = useState({});
+    const { token } = useAuthContext();
+    const getData = async () => {
+        const url = "http://localhost:8000/token/";
+        const config = { credentials: "include" }
+        const response = await fetch(url, config);
+        // if (response.ok) {
+        //     const data = await response.json();
+        //     setAccounts(data);
+        // }
     }
-  }
-  useEffect(() => {
-    if (token) {
-      getData()
-    }
-  }, [token]);
-  {/* {token && accounts ? <h1>Hello, {accounts?.account.first_name} </h1> : <h1>Hello World</h1>} */ }
+    useEffect(() => {
+        if (token) {
+            getData()
+        }
+    }, [token]);
 
-  return (
-    <>
-        <section className="flex justify-center items-center relative h-screen PokemonDigital font-bold">
+    return (
+        <>
+            <section className="flex justify-center items-center relative h-screen PokemonDigital font-bold">
                 <img src={hero} alt="Hero Description" className="absolute w-full h-full object-cover" />
                 <div className="text-center z-10 bg-White bg-opacity-70 text-PokeBlue rounded-full px-6 py-2">
                     <h1 className="text-5xl mb-4">Welcome to Catalist</h1>
@@ -73,7 +72,7 @@ function LandingPage() {
                     <Link to="login" className="hover:opacity-70">Already have an account?</Link>
                 </div>
             </section>
-    </>
+        </>
     );
 }
 
