@@ -49,7 +49,7 @@ build-front-end-job:
   image: node:lts-bullseye
   needs:
     - lint-test-job
-    # - api-unit-test-job
+    - api-unit-test-job
   variables:
 #     # If either of these variables is defined in the GitLab
 #     # CI/CD variables, that value will override the value here.

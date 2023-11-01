@@ -36,8 +36,8 @@ services:
       - 8000:8000
     environment:
       MONGO_URL: mongodb://admin:password@mongo/admin
-      SIGNING_KEY: 87fe4a3fcfb60092dbaeb854a196bc3d9b190aed7930c734749e85245de698420c25f8e6899c421b4494e99459e01058de5daa9d49584cd62ec975da9aea33da
-      POKEMON_API: https://pokeapi.co/api/v2/pokemon-species/
+      SIGNING_KEY: 87fe4a3fcfb60092dbaeb854a196bc3d9b190aed793
+      POKEMON_API: https://pokeapi.co/api/v2/pokemon-species
       WAIT_HOSTS: mongo:27017
       WAIT_BEFORE: 5
       WAIT_TIMEOUT: 60
