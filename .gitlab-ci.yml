@@ -23,7 +23,7 @@ api-unit-test-job:
   script:
     - cd api
     - pip install -r requirements.txt
-    - python -m pytest -k test_get_by_username
+    - python -m pytest tests
 
 # # Build API Image:
 build-api-image:
