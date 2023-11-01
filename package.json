@@ -3,6 +3,7 @@
     "@galvanize-inc/jwtdown-for-react": "^0.2.2"
   },
   "devDependencies": {
+    "postcss-nesting": "^12.0.1",
     "sass": "^1.69.4"
   }
 }
