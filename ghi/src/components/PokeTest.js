@@ -22,7 +22,7 @@ export default function Poke() {
 
     useEffect(() => {
         fetchData()
-    }, [fetchData])
+    }, [])
 
     return (
         <>

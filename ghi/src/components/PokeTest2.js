@@ -20,7 +20,7 @@ export default function Poke2() {
 
     useEffect(() => {
         fetchData();
-    }, [fetchData])
+    }, [])
 
     return (
         <>
