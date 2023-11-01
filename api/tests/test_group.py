@@ -102,7 +102,7 @@ def test_get_journal_by_id():
         authenticator.get_current_account_data
     ] = fake_get_current_account_data
     app.dependency_overrides[JournalQueries] = MockJournalQueriesId
-    response = client.get("/api/journals/{id}")
+    response = client.get("/api/journals/1")
     app.dependency_overrides = {}
     assert response.status_code == 200
 
