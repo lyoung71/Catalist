@@ -1,13 +1,14 @@
 import { useState } from "react";
 import PokemonOfTheDay from "./PokemonOfTheDay";
 import useToken from "@galvanize-inc/jwtdown-for-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function JournalForm() {
     const [mood, setMood] = useState('')
     const [desc, setDesc] = useState('')
     const [journalDate, setJournalDate] = useState('')
     const { token } = useToken()
+    const navigate = useNavigate()
 
     const handleMoodChange = async (event) => {
         const value = event.target.value
@@ -46,6 +47,7 @@ export default function JournalForm() {
             setMood('')
             setDesc('')
             setJournalDate('')
+            navigate('/journals')
         } else {
             alert.log("Please enter more info!")
         }

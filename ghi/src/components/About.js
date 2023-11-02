@@ -1,7 +1,7 @@
 import '../about.css';
 import '../style.css';
 import '../style.scss';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 function About() {
@@ -56,18 +56,18 @@ function About() {
                                 <section className="character-stats">
                                     <span className="character-stat">
                                         <p>gitlab</p>
-                                        <NavLink to="https://gitlab.com/emreakilli">
+                                        <Link to="https://gitlab.com/emreakilli">
                                             <img className="element-icon" src="./git.png" alt="gitlab" />
-                                        </NavLink>
+                                        </Link>
                                     </span>
                                     <span className="character-stat">
                                         <p>resistance</p>
                                     </span>
                                     <span className="character-stat">
                                         <p>linked in</p>
-                                        <NavLink to="https://www.linkedin.com/in/eakilli/">
+                                        <Link to="https://www.linkedin.com/in/eakilli/">
                                             <img className="element-icon" src="./linked.png" alt="" />
-                                        </NavLink>
+                                        </Link >
                                     </span>
                                 </section>
 
@@ -126,18 +126,18 @@ function About() {
                                     <section className="character-stats">
                                         <span className="character-stat">
                                             <p>gitlab</p>
-                                            <NavLink to="https://gitlab.com/jojodionisio">
+                                            <Link to="https://gitlab.com/jojodionisio">
                                                 <img className="element-icon" src="./git.png" alt="gitlab" />
-                                            </NavLink>
+                                            </Link >
                                         </span>
                                         <span className="character-stat">
                                             <p>resistance</p>
                                         </span>
                                         <span className="character-stat">
                                             <p>linked in</p>
-                                            <NavLink to="https://www.linkedin.com/in/joyce-dionisio/">
+                                            <Link to="https://www.linkedin.com/in/joyce-dionisio/">
                                                 <img className="element-icon" src="./linked.png" alt="linkedin" />
-                                            </NavLink>
+                                            </Link >
                                         </span>
                                     </section>
 
@@ -197,18 +197,18 @@ function About() {
                                     <section className="character-stats">
                                         <span className="character-stat">
                                             <p>gitlab</p>
-                                            <NavLink to="https://gitlab.com/hrahman3">
+                                            <Link to="https://gitlab.com/hrahman3">
                                                 <img className="element-icon" src="./git.png" alt="gitlab" />
-                                            </NavLink>
+                                            </Link >
                                         </span>
                                         <span className="character-stat">
                                             <p>resistance</p>
                                         </span>
                                         <span className="character-stat">
                                             <p>linked in</p>
-                                            <NavLink to="https://www.linkedin.com/in/hamzahrahman/">
+                                            <Link to="https://www.linkedin.com/in/hamzahrahman/">
                                                 <img className="element-icon" src="./linked.png" alt="" />
-                                            </NavLink>
+                                            </Link >
                                         </span>
                                     </section>
 
@@ -268,18 +268,18 @@ function About() {
                                     <section className="character-stats">
                                         <span className="character-stat">
                                             <p>gitlab</p>
-                                            <NavLink to="https://gitlab.com/lyoung71">
+                                            <Link to="https://gitlab.com/lyoung71">
                                                 <img className="element-icon" src="./git.png" alt="gitlab" />
-                                            </NavLink>
+                                            </Link >
                                         </span>
                                         <span className="character-stat">
                                             <p>resistance</p>
                                         </span>
                                         <span className="character-stat">
                                             <p>linked in</p>
-                                            <NavLink to="https://www.linkedin.com/in/landon-young1/">
+                                            <Link to="https://www.linkedin.com/in/landon-young1/">
                                                 <img className="element-icon" src="./linked.png" alt="" />
-                                            </NavLink>
+                                            </Link >
                                         </span>
                                     </section>
 
@@ -304,8 +304,8 @@ function About() {
                                     <section className="gameboy-img">
                                         <p className="gb-title">&gt; SHOUT OUT TO:</p>
                                         <p className="gb-text">&gt; Chris Zaleski</p>
+                                        <p className="gb-text">&gt; Ian Schoonover</p>
                                         <p className="gb-text">&gt; Jay Wilson Jr.</p>
-                                        <p className="gb-text">&gt; Chris Harding</p>
                                         <p className="gb-text">&gt; Whitley, Kethlyn, Sabina, + Wanda</p>
                                         <p className="gb-text">&gt; Dalonte Griffin</p>
                                         <p className="gb-text">&gt; Violet Hall</p>
@@ -372,18 +372,18 @@ function About() {
                                     <section className="character-stats">
                                         <span className="character-stat">
                                             <p>gitlab</p>
-                                            <NavLink to="https://gitlab.com/mpastoral">
+                                            <Link to="https://gitlab.com/mpastoral">
                                                 <img className="element-icon" src="./git.png" alt="gitlab" />
-                                            </NavLink>
+                                            </Link >
                                         </span>
                                         <span className="character-stat">
                                             <p>resistance</p>
                                         </span>
                                         <span className="character-stat">
                                             <p>linked in</p>
-                                            <NavLink to="https://www.linkedin.com/in/mark-pastoral-66617399/">
+                                            <Link to="https://www.linkedin.com/in/mark-pastoral-66617399/">
                                                 <img className="element-icon" src="./linked.png" alt="" />
-                                            </NavLink>
+                                            </Link >
                                         </span>
                                     </section>
 

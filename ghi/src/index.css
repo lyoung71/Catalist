@@ -127,7 +127,7 @@ form input {
 #back-to-journals-button {
   margin-top: 10px;
   margin-bottom: 10px;
-  font-size: 8px;
+  font-size: 9px;
   text-align: center;
   cursor: pointer;
   outline: none;
@@ -137,6 +137,22 @@ form input {
   border-radius: 8px;
   box-shadow: 0 3px #ba66fa;
   font-family: PokemonDigital;
+}
+
+#back-to-todos-button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 8px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #050503;
+  background-color: #b5f6bd;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 3px #ba66fa;
+  font-family: PokemonDigital;
+  margin: 20px;
 }
 
 #back-to-journals-button {

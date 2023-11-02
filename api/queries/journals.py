@@ -7,12 +7,15 @@ class JournalQueries(Queries):
     COLLECTION = "journal"
 
     def get_journals(self, account):
-        result = list(self.collection.find({"account_id": account}))
-        if len(result) > 0:
-            for journal in result:
-                journal["id"] = str(journal["_id"])
-            return result
-        return {"message": "This collection has no journals"}
+        try:
+            result = list(self.collection.find({"account_id": account}))
+            if len(result) > 0:
+                for journal in result:
+                    journal["id"] = str(journal["_id"])
+                return result
+            return []
+        except Exception as e:
+                    raise Exception(e)
 
     def get_journal_by_id(self, journal_id, accountid):
         try:

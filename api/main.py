@@ -13,7 +13,7 @@ app.add_middleware(
     allow_origins=[os.environ.get("CORS_HOST", "http://localhost:3000")],
     allow_credentials=True,
     allow_methods=["*"],
-    allow_headers=["*"],
+    allow_headers=["*"]
 )
 
 app.include_router(journals.router, prefix="/api/journals")
