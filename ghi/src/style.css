@@ -5,15 +5,16 @@
   box-sizing: border-box;
 }
 
-.flex-container {
+/* .flex-container {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #dcdcdc;
-}
-*/ .flex-container {
+} */
+
+.flex-container {
   display: flex;
-  justify-self: left;
+  justify-content: center;
 }
 #card-name-one {
   font-size: 24px;

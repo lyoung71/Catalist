@@ -1,6 +1,7 @@
 import '../about.css';
 import '../style.css';
 import '../style.scss';
+import { NavLink } from 'react-router-dom';
 
 
 function About() {
@@ -8,7 +9,7 @@ function About() {
         <>
             <div className="binder">
                 <div className="aboutheader">
-                    <h1>Meet Our Developers</h1>
+                    <h1 id="abt-h1">Meet Our Developers</h1>
                 </div>
                 <div className="flex-container">
                     <div className="grid-container">
@@ -18,7 +19,7 @@ function About() {
                                     <p className="rarity">Basic Pokemon</p>
                                     <h1 id="card-name-one" className="name">Emre</h1>
                                     <p className="health">50 HP</p>
-                                    <img className="element-icon" src="fire.png" alt=""  />
+                                    <img className="element-icon" src="fire.png" alt="" />
                                 </section>
 
                                 <section className="character-img">
@@ -54,15 +55,19 @@ function About() {
 
                                 <section className="character-stats">
                                     <span className="character-stat">
-                                        <p>weakness</p>
-                                        <img className="element-icon" src="./fire.png" alt="" />
+                                        <p>gitlab</p>
+                                        <NavLink to="https://gitlab.com/emreakilli">
+                                            <img className="element-icon" src="./git.png" alt="gitlab" />
+                                        </NavLink>
                                     </span>
                                     <span className="character-stat">
                                         <p>resistance</p>
                                     </span>
                                     <span className="character-stat">
-                                        <p>retreat cost</p>
-                                        <img className="element-icon" src="./fire.png" alt="" />
+                                        <p>linked in</p>
+                                        <NavLink to="https://www.linkedin.com/in/eakilli/">
+                                            <img className="element-icon" src="./linked.png" alt="" />
+                                        </NavLink>
                                     </span>
                                 </section>
 
@@ -84,7 +89,7 @@ function About() {
                                         <p className="rarity">Basic Pokemon</p>
                                         <h1 id="card-name-one" className="name">Joyce</h1>
                                         <p className="health">40 HP</p>
-                                        <img className="element-icon" src="fire.png" alt="" />
+                                        <img className="element-icon" src="lightning.png" alt="" />
                                     </section>
 
                                     <section className="character-img-pika">
@@ -97,7 +102,7 @@ function About() {
 
                                     <section className="character-ability">
                                         <span className="ability-cost">
-                                            <img src="./fire.png" alt="" />
+                                            <img src="./lightning.png" alt="" />
                                         </span>
                                         <span className="ability-description">
                                             <span className="ability-name">Scratch</span>
@@ -107,28 +112,32 @@ function About() {
 
                                     <section className="character-ability">
                                         <span id="middle-row" className="ability-cost">
-                                            <img src="./fire.png" alt="" />
-                                            <img src="./fire.png" alt="" />
-                                            <img src="./fire.png" alt="" />
-                                            <img src="./fire.png" alt="" />
+                                            <img src="./lightning.png" alt="" />
+                                            <img src="./lightning.png" alt="" />
+                                            <img src="./lightning.png" alt="" />
+                                            <img src="./lightning.png" alt="" />
                                         </span>
                                         <span id="middle-mid-row" className="ability-description">
-                                            <div> <b>Ember</b> Discard 1 <img id="mini-fire" src="./fire.png" alt="" /> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</div>
+                                            <div> <b>Ember</b> Discard 1 <img id="mini-fire" src="./lightning.png" alt="" /> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</div>
                                         </span>
                                         <span className="ability-damage">30</span>
                                     </section>
 
                                     <section className="character-stats">
                                         <span className="character-stat">
-                                            <p>weakness</p>
-                                            <img className="element-icon" src="./fire.png" alt="" />
+                                            <p>gitlab</p>
+                                            <NavLink to="https://gitlab.com/jojodionisio">
+                                                <img className="element-icon" src="./git.png" alt="gitlab" />
+                                            </NavLink>
                                         </span>
                                         <span className="character-stat">
                                             <p>resistance</p>
                                         </span>
                                         <span className="character-stat">
-                                            <p>retreat cost</p>
-                                            <img className="element-icon" src="./fire.png" alt="" />
+                                            <p>linked in</p>
+                                            <NavLink to="https://www.linkedin.com/in/joyce-dionisio/">
+                                                <img className="element-icon" src="./linked.png" alt="linkedin" />
+                                            </NavLink>
                                         </span>
                                     </section>
 
@@ -151,7 +160,7 @@ function About() {
                                         <p className="rarity">Basic Pokemon</p>
                                         <h1 id="card-name-one" className="name">Hamzah</h1>
                                         <p className="health">20 HP</p>
-                                        <img className="element-icon" src="fire.png" alt="" />
+                                        <img className="element-icon" src="hammy.png" alt="" />
                                     </section>
 
                                     <section className="character-img-sp">
@@ -164,7 +173,7 @@ function About() {
 
                                     <section className="character-ability">
                                         <span className="ability-cost">
-                                            <img src="./fire.png" alt="" />
+                                            <img src="./hammy.png" alt="" />
                                         </span>
                                         <span className="ability-description">
                                             <span className="ability-name">Speed</span>
@@ -174,28 +183,32 @@ function About() {
 
                                     <section className="character-ability">
                                         <span id="middle-row" className="ability-cost">
-                                            <img src="./fire.png" alt="" />
-                                            <img src="./fire.png" alt="" />
-                                            <img src="./fire.png" alt="" />
-                                            <img src="./fire.png" alt="" />
+                                            <img src="./hammy.png" alt="" />
+                                            <img src="./hammy.png" alt="" />
+                                            <img src="./hammy.png" alt="" />
+                                            <img src="./hammy.png" alt="" />
                                         </span>
                                         <span id="middle-mid-row" className="ability-description">
-                                            <div> <b>Ember</b> Discard 1 <img id="mini-fire" src="./fire.png" alt="" /> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</div>
+                                            <div> <b>Ember</b> Discard 1 <img id="mini-fire" src="./hammy.png" alt="" /> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</div>
                                         </span>
                                         <span className="ability-damage">10</span>
                                     </section>
 
                                     <section className="character-stats">
                                         <span className="character-stat">
-                                            <p>weakness</p>
-                                            <img className="element-icon" src="./fire.png" alt="" />
+                                            <p>gitlab</p>
+                                            <NavLink to="https://gitlab.com/hrahman3">
+                                                <img className="element-icon" src="./git.png" alt="gitlab" />
+                                            </NavLink>
                                         </span>
                                         <span className="character-stat">
                                             <p>resistance</p>
                                         </span>
                                         <span className="character-stat">
-                                            <p>retreat cost</p>
-                                            <img className="element-icon" src="./fire.png" alt="" />
+                                            <p>linked in</p>
+                                            <NavLink to="https://www.linkedin.com/in/hamzahrahman/">
+                                                <img className="element-icon" src="./linked.png" alt="" />
+                                            </NavLink>
                                         </span>
                                     </section>
 
@@ -218,7 +231,7 @@ function About() {
                                         <p className="rarity">Basic Pokemon</p>
                                         <h1 id="card-name-one" className="name">Landon</h1>
                                         <p className="health">10 HP</p>
-                                        <img className="element-icon" src="fire.png" alt="" />
+                                        <img className="element-icon" src="normal.png" alt="" />
                                     </section>
 
                                     <section className="character-img-snor">
@@ -231,7 +244,7 @@ function About() {
 
                                     <section className="character-ability">
                                         <span className="ability-cost">
-                                            <img src="./fire.png" alt="" />
+                                            <img src="./normal.png" alt="" />
                                         </span>
                                         <span className="ability-description">
                                             <span className="ability-name">Scratch</span>
@@ -241,28 +254,32 @@ function About() {
 
                                     <section className="character-ability">
                                         <span id="middle-row" className="ability-cost">
-                                            <img src="./fire.png" alt="" />
-                                            <img src="./fire.png" alt="" />
-                                            <img src="./fire.png" alt="" />
-                                            <img src="./fire.png" alt="" />
+                                            <img src="./normal.png" alt="" />
+                                            <img src="./normal.png" alt="" />
+                                            <img src="./normal.png" alt="" />
+                                            <img src="./normal.png" alt="" />
                                         </span>
                                         <span id="middle-mid-row" className="ability-description">
-                                            <div> <b>Ember</b> Discard 1 <img id="mini-fire" src="./fire.png" alt="" /> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</div>
+                                            <div> <b>Ember</b> Discard 1 <img id="mini-fire" src="./normal.png" alt="" /> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</div>
                                         </span>
                                         <span className="ability-damage">10</span>
                                     </section>
 
                                     <section className="character-stats">
                                         <span className="character-stat">
-                                            <p>weakness</p>
-                                            <img className="element-icon" src="./fire.png" alt="" />
+                                            <p>gitlab</p>
+                                            <NavLink to="https://gitlab.com/lyoung71">
+                                                <img className="element-icon" src="./git.png" alt="gitlab" />
+                                            </NavLink>
                                         </span>
                                         <span className="character-stat">
                                             <p>resistance</p>
-                                            =                                        </span>
+                                        </span>
                                         <span className="character-stat">
-                                            <p>retreat cost</p>
-                                            <img className="element-icon" src="./fire.png" alt="" />
+                                            <p>linked in</p>
+                                            <NavLink to="https://www.linkedin.com/in/landon-young1/">
+                                                <img className="element-icon" src="./linked.png" alt="" />
+                                            </NavLink>
                                         </span>
                                     </section>
 
@@ -285,6 +302,13 @@ function About() {
                                     </section>
 
                                     <section className="gameboy-img">
+                                        <p className="gb-title">&gt; SHOUT OUT TO:</p>
+                                        <p className="gb-text">&gt; Chris Zaleski</p>
+                                        <p className="gb-text">&gt; Jay Wilson Jr.</p>
+                                        <p className="gb-text">&gt; Chris Harding</p>
+                                        <p className="gb-text">&gt; Whitley, Kethlyn, Sabina, + Wanda</p>
+                                        <p className="gb-text">&gt; Dalonte Griffin</p>
+                                        <p className="gb-text">&gt; Violet Hall</p>
                                     </section>
 
                                     <section className="console">
@@ -295,10 +319,11 @@ function About() {
                                         <section className="cross">
                                             <img src="./gamecross.png" alt="" />
                                         </section>
-
+                                        <section className="startbtn">
+                                            <img src="./startbtn.png" alt="start-button" />
+                                        </section>
 
                                     </section>
-                                    <section></section>
                                 </main>
                             </div>
                         </div>
@@ -310,7 +335,7 @@ function About() {
                                         <p className="rarity">Basic Pokemon</p>
                                         <h1 id="card-name-one" className="name">Mark</h1>
                                         <p className="health">70 HP</p>
-                                        <img className="element-icon" src="fire.png" alt="" />
+                                        <img className="element-icon" src="normal.png" alt="" />
                                     </section>
 
                                     <section className="character-img-snom">
@@ -323,7 +348,7 @@ function About() {
 
                                     <section className="character-ability">
                                         <span className="ability-cost">
-                                            <img src="./fire.png" alt="" />
+                                            <img src="./normal.png" alt="" />
                                         </span>
                                         <span className="ability-description">
                                             <span className="ability-name">Scratch</span>
@@ -333,28 +358,32 @@ function About() {
 
                                     <section className="character-ability">
                                         <span id="middle-row" className="ability-cost">
-                                            <img src="./fire.png" alt="" />
-                                            <img src="./fire.png" alt="" />
-                                            <img src="./fire.png" alt="" />
-                                            <img src="./fire.png" alt="" />
+                                            <img src="./normal.png" alt="" />
+                                            <img src="./normal.png" alt="" />
+                                            <img src="./normal.png" alt="" />
+                                            <img src="./normal.png" alt="" />
                                         </span>
                                         <span id="middle-mid-row" className="ability-description">
-                                            <div> <b>Ember</b> Discard 1 <img id="mini-fire" src="./fire.png" alt="" /> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</div>
+                                            <div> <b>Ember</b> Discard 1 <img id="mini-fire" src="./normal.png" alt="" /> lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</div>
                                         </span>
                                         <span className="ability-damage">10</span>
                                     </section>
 
                                     <section className="character-stats">
                                         <span className="character-stat">
-                                            <p>weakness</p>
-                                            <img className="element-icon" src="./fire.png" alt="" />
+                                            <p>gitlab</p>
+                                            <NavLink to="https://gitlab.com/mpastoral">
+                                                <img className="element-icon" src="./git.png" alt="gitlab" />
+                                            </NavLink>
                                         </span>
                                         <span className="character-stat">
                                             <p>resistance</p>
                                         </span>
                                         <span className="character-stat">
-                                            <p>retreat cost</p>
-                                            <img className="element-icon" src="./fire.png" alt="" />
+                                            <p>linked in</p>
+                                            <NavLink to="https://www.linkedin.com/in/mark-pastoral-66617399/">
+                                                <img className="element-icon" src="./linked.png" alt="" />
+                                            </NavLink>
                                         </span>
                                     </section>
 

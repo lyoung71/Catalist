@@ -1,5 +1,11 @@
+@font-face {
+  font-family: "PokemonDigital";
+  src: local("PokemonDigital"), url(./fonts/PokemonDigital.woff) format("woff");
+}
 
 .pokemon-card-char {
+  max-width: 30vw;
+  max-height: 46vw;
   height: 672px;
   width: 435px;
   border-radius: 15px;
@@ -21,6 +27,8 @@
 }
 
 .pokemon-card-pika {
+  max-width: 30vw;
+  max-height: 46vw;
   height: 672px;
   width: 435px;
   border-radius: 15px;
@@ -42,6 +50,8 @@
 }
 
 .pokemon-card-sp {
+  max-width: 30vw;
+  max-height: 46vw;
   height: 672px;
   width: 435px;
   border-radius: 15px;
@@ -63,6 +73,8 @@
 }
 
 .pokemon-card-snor {
+  max-width: 30vw;
+  max-height: 46vw;
   height: 672px;
   width: 435px;
   border-radius: 15px;
@@ -84,6 +96,8 @@
 }
 
 .pokemon-card-snom {
+  max-width: 30vw;
+  max-height: 46vw;
   height: 672px;
   width: 435px;
   border-radius: 15px;
@@ -105,6 +119,8 @@
 }
 
 .gameboy-card {
+  max-width: 30vw;
+  max-height: 46vw;
   height: 672px;
   width: 435px;
   border-radius: 15px;
@@ -147,7 +163,7 @@
     font-weight: bold;
     font-size: 20px;
     text-align: right;
-    color: red;
+    color: rgb(17, 15, 15);
   }
 
   .type {
@@ -312,6 +328,43 @@
   margin-right: auto;
   position: absolute;
   top: -125px;
+}
+
+.startbtn {
+  position: relative;
+  text-align: center;
+}
+
+.startbtn img {
+  height: 30px;
+  width: 80px;
+  position: absolute;
+  // bottom: 5 px;
+  vertical-align: bottom;
+  left: calc(50% + 15px);
+  margin-top: 30px;
+  // right: 5px;
+  // margin-right: auto;
+  // position: absolute;
+  // top: -125px;
+  // margin-right: auto;
+  // text-align: center;
+}
+
+.gb-title {
+  font-size: medium;
+  font-family: PokemonDigital;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  padding: 5px;
+}
+
+.gb-text {
+  font-size: small;
+  font-family: PokemonDigital;
+  color: black;
+  padding: 5px;
+  margin-left: 13px;
 }
 
 .character-meta {

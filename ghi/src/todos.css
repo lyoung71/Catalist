@@ -44,6 +44,7 @@ body {
   display: flex;
   justify-content: center;
   padding-left: 15px;
+  box-shadow: 0 4px 8px rgba(27, 6, 255, 0.531);
 }
 
 #card {
@@ -64,6 +65,7 @@ body {
   background-color: azure;
   border: 3px solid;
   font-family: PokemonDigital;
+  /* box-shadow: 0 4px 8px rgb(27, 255, 6); */
 }
 
 .btn {

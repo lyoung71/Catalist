@@ -15,17 +15,32 @@
   color: rgb(59, 59, 177);
 }
 
+#abt-h1 {
+  font-size: 50px;
+  /* text-shadow: blueviolet 1px 0 10px; */
+  text-shadow: 1px 1px 2px rgb(0, 255, 234), 0 1px 10px rgb(115, 255, 134),
+    0 0 0.2em rgb(0, 251, 38);
+  text-decoration: dotted solid black;
+  color: #05ca40ce;
+  position: absolute;
+  top: 15%;
+  /* transform: translateY(-30%); */
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 0px;
-  width: 80vw;
+  width: 100vw;
   padding: 15vh;
   margin: auto;
 
   padding-left: 0px;
   margin-left: 0px;
+  padding-right: 0px;
+  margin-right: 0px;
+  max-width: 1600px;
 }
 
 .grid-item {
@@ -35,6 +50,7 @@
   align-items: center;
   justify-content: center;
   border: 1px dashed white;
+  width: 100%;
 }
 
 .card1 {

@@ -40,7 +40,7 @@ function LandingPage() {
                         A Journey to Journal
                     </div>
                     <div className="grid grid-cols-2 gap-8 mb-10">
-                        <img src={ft1} alt="..." className="rounded-full shadow-xl px-10" />
+                        <img src={ft1} alt="..." className="rounded-full px-10" />
                         <div className="flex items-center justify-center">
                             <p className="text-3xl font-bold bg-White rounded-full shadow-lg py-12 px-6">Design your own comfy space</p>
                         </div>
@@ -51,12 +51,12 @@ function LandingPage() {
                         <div className="flex items-center">
                             <p className="text-3xl font-bold text-center bg-White rounded-full shadow-lg py-12 px-6">A comfortable way to journal your daily life</p>
                         </div>
-                        <img src={ft2} alt="Person Journaling" className="rounded-full shadow-lg px-10" />
+                        <img src={ft2} alt="Person Journaling" className="rounded-full px-10" />
                     </div>
                 </div>
                 <div className="bg-PokeYellow text-PokeBlue p-10 PokemonDigital">
                     <div className="grid grid-cols-2 gap-8 mb-10">
-                        <img src={ft3} alt="..." className="rounded-full shadow-xl px-10" />
+                        <img src={ft3} alt="..." className="rounded-full px-10" />
                         <div className="flex items-center justify-center text-center">
                             <p className="text-3xl font-bold bg-White rounded-full shadow-lg py-12 px-6">Your days at a glance from the home page</p>
                         </div>
