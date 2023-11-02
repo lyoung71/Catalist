@@ -20,7 +20,7 @@ export default function Poke2() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const url = `https://pokeapi.co/api/v2/pokemon-species/${pokeDay}`
+            const url = `https://pokeapi.co/api/v2/pokemon-species/${pokeHour}`
             const response = await fetch(url)
             if (response.ok) {
                 const data = await response.json()
